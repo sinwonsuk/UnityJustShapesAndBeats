@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c01e4cb966641854e8299904a2809e48
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 255608
+  packageName: Master Stylized Projectile
+  packageVersion: 1.0
+  assetPath: Assets/MasterStylizedProjectiles/Shaders/SwordBeam.shader
+  uploadId: 648918

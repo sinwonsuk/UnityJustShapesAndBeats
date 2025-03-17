@@ -28,23 +28,24 @@ public class GameController : MonoBehaviour
 		{
 			// 에이전트 생성, 초기화 메소드 호출
 			GameObject	clone	= Instantiate(stagePrefab);
-			Student		entity	= clone.GetComponent<Student>();
+			OneStage    entity	= clone.GetComponent<OneStage>();
 			entity.Setup(arrayStage[i]);
-
 			// 에이전트들의 재생 제어를 위해 리스트에 저장
 			entitys.Add(entity);
 		}
 
-		// Unemployed 에이전트 생성
-		//for ( int i = 0; i < arrayUnemployeds.Length; ++ i )
-		//{
-		//	GameObject	clone	= Instantiate(unemployedPrefab);
-		//	Unemployed	entity	= clone.GetComponent<Unemployed>();
-		//	entity.Setup(arrayUnemployeds[i]);
 
-		//	entitys.Add(entity);
-		//}
-	}
+        //for (int i = 0; i < arrayStage.Length; ++i)
+        //{
+        //    // 에이전트 생성, 초기화 메소드 호출
+        //    GameObject clone = Instantiate(unemployedPrefab);
+        //    OneStage entity = clone.GetComponent<OneStage>();
+        //    entity.Setup(arrayUnemployeds[i]);
+
+        //    // 에이전트들의 재생 제어를 위해 리스트에 저장
+        //    entitys.Add(entity);
+        //}
+    }
 
 	private void Update()
 	{
