@@ -4,12 +4,11 @@ using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class BallMovementPattern : State<OneStage>
-{   
+{
     public override void Enter(OneStage entity)
     {
         Debug.Log(gameObject.name);
         Invoke("CreateObject", 2);
-      
     }
 
     public override void Execute(OneStage entity)

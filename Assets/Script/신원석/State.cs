@@ -16,5 +16,6 @@ public abstract class State<T> : MonoBehaviour where T : class
 	/// 해당 상태를 종료할 때 1회 호출
 	/// </summary>
 	public abstract void Exit(T entity);
+
 }
 
