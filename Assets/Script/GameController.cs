@@ -32,22 +32,15 @@ public class GameController : MonoBehaviour
 			entity.Setup(arrayStage[i]);
 			// 에이전트들의 재생 제어를 위해 리스트에 저장
 			entitys.Add(entity);
-		}
-
-
-        //for (int i = 0; i < arrayStage.Length; ++i)
-        //{
-        //    // 에이전트 생성, 초기화 메소드 호출
-        //    GameObject clone = Instantiate(unemployedPrefab);
-        //    OneStage entity = clone.GetComponent<OneStage>();
-        //    entity.Setup(arrayUnemployeds[i]);
-
-        //    // 에이전트들의 재생 제어를 위해 리스트에 저장
-        //    entitys.Add(entity);
-        //}
+		}    
     }
 
-	private void Update()
+    private void Start()
+    {
+		SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage1);
+    }
+
+    private void Update()
 	{
 		if ( IsGameStop == true ) return;
 

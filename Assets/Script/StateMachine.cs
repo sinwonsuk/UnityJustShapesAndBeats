@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics;
+
 public class StateMachine<T> where T : class
 {
 	private	T			ownerEntity;	// StateMachine의 소유주
@@ -44,7 +47,14 @@ public class StateMachine<T> where T : class
 		}
 
 		// 새로운 상태로 변경하고, 새로 바뀐 상태의 Enter() 메소드 호출
+
+
+
+
+
+
 		currentState = newState;
+
 		currentState.Enter(ownerEntity);
 	}
 

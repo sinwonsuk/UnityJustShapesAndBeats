@@ -1,8 +1,34 @@
+using Mono.Cecil.Cil;
+using System.Collections;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class BallMovementPattern : State<OneStage>
 {   
     public override void Enter(OneStage entity)
+    {
+        Debug.Log(gameObject.name);
+        Invoke("CreateObject", 2);
+      
+    }
+
+    public override void Execute(OneStage entity)
+    {             
+        time += Time.deltaTime;
+
+        if(time > 6)
+        {
+            entity.ChangeState(StagePattern.Stage1);
+            return;
+        }
+    }
+
+    public override void Exit(OneStage entity)
+    {
+        time = 0;
+    }
+
+    public void CreateObject()
     {
         for (int i = 0; i < 20; i++)
         {
@@ -32,7 +58,7 @@ public class BallMovementPattern : State<OneStage>
 
         for (int i = 0; i < 15; i++)
         {
-            float randomPosY = Random.Range(-5.0f,5.0f);
+            float randomPosY = Random.Range(-5.0f, 5.0f);
 
             float randomPosX = Random.Range(10.0f, 22.0f);
 
@@ -48,27 +74,13 @@ public class BallMovementPattern : State<OneStage>
 
             parabolaMovement.SetSpeedX(randomposXSpeed);
 
-            float randomposYSpeed = Random.Range(5.0f,10.0f);
+            float randomposYSpeed = Random.Range(5.0f, 10.0f);
 
             parabolaMovement.SetSpeedY(randomposYSpeed);
 
         }
     }
-
-    public override void Execute(OneStage entity)
-    {
-        time += Time.deltaTime;
-
-        if(time > 5)
-        {
-            entity.ChangeState(StagePattern.Stage1);
-        }     
-    }
-
-    public override void Exit(OneStage entity)
-    {
-        time = 0;
-    }
+    
 
     [SerializeField]
     private GameObject square;

@@ -14,6 +14,12 @@ public class OneStage : BaseGameEntity
 {
 	public override void Setup(string name)
 	{
+		
+        for (int i = 0; i < pattern.Length; i++)
+		{
+            pattern[i] = Instantiate(pattern[i], transform.position, Quaternion.identity);
+        }
+
 		// 기반 클래스의 Setup 메소드 호출 (ID, 이름, 색상 설정)
 		base.Setup(name);
 
@@ -22,7 +28,7 @@ public class OneStage : BaseGameEntity
 
 		// 상태를 관리하는 StateMachine에 메모리를 할당하고, 첫 상태를 설정
 		stateMachine = new StateMachine<OneStage>();
-		stateMachine.Setup(this, states[(int)StagePattern.Stage]);	
+		stateMachine.Setup(this, pattern[(int)StagePattern.Stage].GetComponent<State<OneStage>>());	
 	}
 
 	public override void Updated()
@@ -31,12 +37,15 @@ public class OneStage : BaseGameEntity
 	}
 
 	public void ChangeState(StagePattern newState)
-	{
-		states[(int)newState].gameObject.SetActive(true);
-        stateMachine.ChangeState(states[(int)newState]);
+	{	
+        stateMachine.ChangeState(pattern[(int)newState].GetComponent<State<OneStage>>());
 	}
 
     public State<OneStage>[] states;
     private StateMachine<OneStage> stateMachine;
+
+	[SerializeField]
+	private GameObject[] pattern;
+
 }
 
