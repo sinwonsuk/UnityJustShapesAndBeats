@@ -38,6 +38,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
 		SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage1);
+
+        SoundManager.GetInstance().PlayBgm()
     }
 
     private void Update()

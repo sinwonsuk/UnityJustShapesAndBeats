@@ -1,17 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
-public class BigBallMovementPattern : State<OneStage>
+public class AAAAAAAA : State<OneStage>
 {
 
     public override void Enter(OneStage entity)
     {
         Debug.Log(gameObject.name);
-        InvokeRepeating("SpawnBigBall", 0, 1);   
+        InvokeRepeating("SpawnBigBall", 0, 1);
     }
 
     public override void Execute(OneStage entity)
-    {     
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine(test());
+        }
+
+
         if (coroutineCheck == 10)
         {
             entity.ChangeState(StagePattern.Stage);
@@ -24,11 +30,17 @@ public class BigBallMovementPattern : State<OneStage>
         CancelInvoke("SpawnBigBall");
     }
 
+    IEnumerator test()
+    {
+        Debug.Log("³ª µÈ´Ù.");
+        yield return new WaitForSeconds(1);
+    }
+
     public void SpawnBigBall()
     {
         coroutineCheck++;
         float posY = Random.Range(-5.0f, 5.0f);
-        Instantiate(bigBall, new Vector2(10, posY), Quaternion.identity);      
+        Instantiate(bigBall, new Vector2(10, posY), Quaternion.identity);
     }
 
 
@@ -36,5 +48,5 @@ public class BigBallMovementPattern : State<OneStage>
     private GameObject bigBall;
 
     private int coroutineCheck = 0;
-    public  Coroutine spawnCoroutine;
+    public Coroutine spawnCoroutine;
 }
