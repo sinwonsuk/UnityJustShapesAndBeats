@@ -28,8 +28,6 @@ public class PinkFadingColor : MonoBehaviour
         {
             spriteRenderer.color = targetColor;
         }
-
-
     }
 
     [SerializeField]
