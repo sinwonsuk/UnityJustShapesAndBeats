@@ -5,11 +5,13 @@ public class SoundManager : MonoBehaviour
     public enum sfx
     {
        none,
-
     }
     public enum bgm
     {
         Stage1,
+        Stage2,
+        Stage3,
+        Stage4,
     }
     private void Awake()
     {
