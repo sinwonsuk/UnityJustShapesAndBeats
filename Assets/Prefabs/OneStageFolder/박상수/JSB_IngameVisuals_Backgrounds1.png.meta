@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f1c08f24a40405743b0ee61d743b1397
+guid: e57e3626db9ce33439eb0a7ece253f2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 788132751165732308
-    second: ResPlayer_0
+      213: -7396537654711276948
+    second: JSB_IngameVisuals_Backgrounds1_0
+  - first:
+      213: -8449449621937935011
+    second: JSB_IngameVisuals_Backgrounds1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ResPlayer_0
+      name: JSB_IngameVisuals_Backgrounds1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 49
-        height: 50
+        y: 1689
+        width: 3847
+        height: 2407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d5b51dbf8200fa00800000000000000
-      internalID: 788132751165732308
+      spriteID: c6a222b01383a5990800000000000000
+      internalID: -7396537654711276948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_Backgrounds1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 887
+        width: 1283
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5da4d006568dba80800000000000000
+      internalID: -8449449621937935011
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ResPlayer_0: 788132751165732308
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

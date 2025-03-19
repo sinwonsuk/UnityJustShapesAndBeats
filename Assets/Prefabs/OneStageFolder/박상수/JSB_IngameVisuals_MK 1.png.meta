@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 94dd5fabb1247df4c9f883118f227bc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2281159956753197632
+    second: JSB_IngameVisuals_MK_0
+  - first:
+      213: -7106537953633535488
+    second: JSB_IngameVisuals_MK_1
+  - first:
+      213: -9092175575755429857
+    second: JSB_IngameVisuals_MK_2
+  - first:
+      213: -5331843787132773364
+    second: JSB_IngameVisuals_MK_3
+  - first:
+      213: 6570172813580074173
+    second: JSB_IngameVisuals_MK_4
+  - first:
+      213: 8172964384704768279
+    second: JSB_IngameVisuals_MK_5
+  - first:
+      213: 8683563181911819
+    second: JSB_IngameVisuals_MK_6
+  - first:
+      213: 1159415743549429202
+    second: JSB_IngameVisuals_MK_7
+  - first:
+      213: -4738216243705803469
+    second: JSB_IngameVisuals_MK_8
+  - first:
+      213: 6634263367639208175
+    second: JSB_IngameVisuals_MK_9
+  - first:
+      213: -7137027610683899453
+    second: JSB_IngameVisuals_MK_10
+  - first:
+      213: -899744917945293070
+    second: JSB_IngameVisuals_MK_11
+  - first:
+      213: 4185863579259652657
+    second: JSB_IngameVisuals_MK_12
+  - first:
+      213: 7883656215814053373
+    second: JSB_IngameVisuals_MK_13
+  - first:
+      213: -6296438287725736383
+    second: JSB_IngameVisuals_MK_14
+  - first:
+      213: 6046293106100629592
+    second: JSB_IngameVisuals_MK_15
+  - first:
+      213: -4933146293041269743
+    second: JSB_IngameVisuals_MK_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1979
+        width: 456
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04aae1205ee48af10800000000000000
+      internalID: 2281159956753197632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1679
+        width: 146
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a77da1261806d90800000000000000
+      internalID: -7106537953633535488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_2
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1687
+        width: 394
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f186d9b7c7a12d180800000000000000
+      internalID: -9092175575755429857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1323
+        width: 489
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cd31e235c7106b0800000000000000
+      internalID: -5331843787132773364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_4
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1157
+        width: 503
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc7e5a1d51fd2b50800000000000000
+      internalID: 6570172813580074173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_5
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1339
+        width: 305
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7192f304ec33c6170800000000000000
+      internalID: 8172964384704768279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1103
+        width: 238
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0fa7da97a9de1000800000000000000
+      internalID: 8683563181911819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 751
+        width: 229
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d55245d972171010800000000000000
+      internalID: 1159415743549429202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_8
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 943
+        width: 232
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d0ee43e697e3eb0800000000000000
+      internalID: -4738216243705803469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 963
+        width: 226
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0958e0263a11c50800000000000000
+      internalID: 6634263367639208175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_10
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 999
+        width: 242
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c10801a33f24fc90800000000000000
+      internalID: -7137027610683899453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 503
+        width: 179
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f66861a3c67383f0800000000000000
+      internalID: -899744917945293070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_12
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 559
+        width: 161
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a44086fbc271a30800000000000000
+      internalID: 4185863579259652657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_13
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 769
+        width: 222
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd95e21f8f586d60800000000000000
+      internalID: 7883656215814053373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_14
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 634
+        width: 222
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e40fdbcbe8e98a0800000000000000
+      internalID: -6296438287725736383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 423
+        width: 161
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850750d9b8fb8e350800000000000000
+      internalID: 6046293106100629592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_IngameVisuals_MK_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 274
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1147d3a5591f98bb0800000000000000
+      internalID: -4933146293041269743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JSB_IngameVisuals_MK_0: 2281159956753197632
+      JSB_IngameVisuals_MK_1: -7106537953633535488
+      JSB_IngameVisuals_MK_10: -7137027610683899453
+      JSB_IngameVisuals_MK_11: -899744917945293070
+      JSB_IngameVisuals_MK_12: 4185863579259652657
+      JSB_IngameVisuals_MK_13: 7883656215814053373
+      JSB_IngameVisuals_MK_14: -6296438287725736383
+      JSB_IngameVisuals_MK_15: 6046293106100629592
+      JSB_IngameVisuals_MK_16: -4933146293041269743
+      JSB_IngameVisuals_MK_2: -9092175575755429857
+      JSB_IngameVisuals_MK_3: -5331843787132773364
+      JSB_IngameVisuals_MK_4: 6570172813580074173
+      JSB_IngameVisuals_MK_5: 8172964384704768279
+      JSB_IngameVisuals_MK_6: 8683563181911819
+      JSB_IngameVisuals_MK_7: 1159415743549429202
+      JSB_IngameVisuals_MK_8: -4738216243705803469
+      JSB_IngameVisuals_MK_9: 6634263367639208175
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
