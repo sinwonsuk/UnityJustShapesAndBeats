@@ -8,6 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Player : MonoBehaviour
 {
+
     enum PlayerState
     {
         Idle,
@@ -94,6 +95,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            Instantiate(dash, dashTansform.position, quaternion.identity);
             StartCoroutine(Dash());
         }
 
@@ -118,13 +120,14 @@ public class Player : MonoBehaviour
     }
     IEnumerator Dash()
     {
+        DashCoroutine();
 
-        speed *= 2;
+        speed *= 3.0f;
 
         while (true)
         {
-            yield return new WaitForSeconds(0.2f);
-            speed /= 2;
+            yield return new WaitForSeconds(0.1f);
+            speed = 8;
             yield break;
         }     
     }
@@ -152,8 +155,7 @@ public class Player : MonoBehaviour
     {
 
         while (true)
-        {
-           
+        {         
             yield return MoveStopAni(stopAniScaleY, stopAniScaleX);
             yield return MoveStopAni(stopAniScaleX, stopAniScaleY);           
             yield return MoveStopAni(stopAniScaleY, stopAniScaleX);
@@ -162,6 +164,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    IEnumerator DashCoroutine()
+    {
+
+        while (true)
+        {
+            yield return MoveStopAni(0.6f, transform.localScale.y);
+            yield return MoveStopAni(1.2f, transform.localScale.y);
+            yield return MoveStopAni(1.0f, 1.0f);
+            yield break;
+        }
+    }
 
     [SerializeField]
     private PlayerParticleSpawn spawn;
@@ -188,7 +201,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float stopAniScaleY = 0.9f;
 
+    [SerializeField]
+    private GameObject dash;
+    [SerializeField]
+    private Transform dashTansform;
 
     private BoxCollider2D collider2D;
+
+
+
     private PlayerState playerState = PlayerState.Idle;
 }
