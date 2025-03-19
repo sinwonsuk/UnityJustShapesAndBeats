@@ -16,9 +16,9 @@ public class PlayerParticleSpawn : MonoBehaviour
 
     void CreatePlayerParticle()
     {
-        time += Time.time;
+        time += Time.deltaTime;
 
-        if (time > 0.03f)
+        if (time > 0.02f)
         {
             float posX = Random.Range(-0.1f, 0.1f);
             float posY = Random.Range(-0.2f, 0.2f);

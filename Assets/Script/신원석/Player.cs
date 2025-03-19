@@ -12,20 +12,36 @@ public class Player : MonoBehaviour
     {
         Idle,
         Move,
-        MoveStop,
     }
 
-    PlayerState playerState = PlayerState.Idle;
-
-
+  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        collider2D = gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        limitPlayerMove();
+        UpdatePlayerState();
+    }
+
+    void limitPlayerMove()
+    {
+        // 중심 좌표를 뷰포트 좌표로 변환
+        Vector3 worldpos = Camera.main.WorldToViewportPoint(transform.position);
+
+        // 월드 크기를 뷰포트 크기로 변환
+        Vector3 colliderViewportSize = Camera.main.WorldToViewportPoint(transform.position + (Vector3)collider2D.size * 0.5f) - worldpos;
+
+        worldpos.x = Mathf.Clamp(worldpos.x, colliderViewportSize.x, 1f - colliderViewportSize.x);
+        worldpos.y = Mathf.Clamp(worldpos.y, colliderViewportSize.y, 1f - colliderViewportSize.y);
+        transform.position = Camera.main.ViewportToWorldPoint(new Vector3(worldpos.x, worldpos.y, Camera.main.WorldToViewportPoint(transform.position).z));
+    }
+    
+    void UpdatePlayerState()
     {
         switch (playerState)
         {
@@ -41,25 +57,20 @@ public class Player : MonoBehaviour
                         StopCoroutine(test());
                         spawn.gameObject.SetActive(true);
                         playerState = PlayerState.Move;
-                        return;                                   
+                        return;
                     }
-
                 }
                 break;
             case PlayerState.Move:
-                {                   
-                    MovePlayer();
-                }
-                break;
-            case PlayerState.MoveStop:
                 {
-                   
+                    MovePlayer();
                 }
                 break;
             default:
                 break;
         }
     }
+
 
    void MovePlayer()
    {
@@ -81,6 +92,11 @@ public class Player : MonoBehaviour
             return;
         }
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Dash());
+        }
+
         transform.position += (Vector3)moveDir.normalized * speed * Time.deltaTime;
     }
     void ChangeScale(float targetX,float targetY)
@@ -100,6 +116,19 @@ public class Player : MonoBehaviour
         transform.localScale = new Vector3(scaleX, scaleY, 0.0f);
 
     }
+    IEnumerator Dash()
+    {
+
+        speed *= 2;
+
+        while (true)
+        {
+            yield return new WaitForSeconds(0.2f);
+            speed /= 2;
+            yield break;
+        }     
+    }
+
     IEnumerator MoveStopAni(float x,float y)
     {
                
@@ -160,4 +189,6 @@ public class Player : MonoBehaviour
     private float stopAniScaleY = 0.9f;
 
 
+    private BoxCollider2D collider2D;
+    private PlayerState playerState = PlayerState.Idle;
 }
