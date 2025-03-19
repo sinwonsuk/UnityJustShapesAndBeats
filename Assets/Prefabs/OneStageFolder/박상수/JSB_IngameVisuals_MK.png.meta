@@ -547,7 +547,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JSB_IngameVisuals_MK_0: 2281159956753197632
+      JSB_IngameVisuals_MK_1: -7106537953633535488
+      JSB_IngameVisuals_MK_10: -7137027610683899453
+      JSB_IngameVisuals_MK_11: -899744917945293070
+      JSB_IngameVisuals_MK_12: 4185863579259652657
+      JSB_IngameVisuals_MK_13: 7883656215814053373
+      JSB_IngameVisuals_MK_14: -6296438287725736383
+      JSB_IngameVisuals_MK_15: 6046293106100629592
+      JSB_IngameVisuals_MK_16: -4933146293041269743
+      JSB_IngameVisuals_MK_2: -9092175575755429857
+      JSB_IngameVisuals_MK_3: -5331843787132773364
+      JSB_IngameVisuals_MK_4: 6570172813580074173
+      JSB_IngameVisuals_MK_5: 8172964384704768279
+      JSB_IngameVisuals_MK_6: 8683563181911819
+      JSB_IngameVisuals_MK_7: 1159415743549429202
+      JSB_IngameVisuals_MK_8: -4738216243705803469
+      JSB_IngameVisuals_MK_9: 6634263367639208175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

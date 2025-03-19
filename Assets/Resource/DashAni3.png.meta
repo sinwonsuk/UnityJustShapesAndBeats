@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e57e3626db9ce33439eb0a7ece253f2b
+guid: e180cf89d7303784491b46943d0787c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7396537654711276948
-    second: JSB_IngameVisuals_Backgrounds1_0
-  - first:
-      213: -8449449621937935011
-    second: JSB_IngameVisuals_Backgrounds1_1
+      213: 6563415220753285896
+    second: DashAni3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JSB_IngameVisuals_Backgrounds1_0
+      name: DashAni3_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1689
-        width: 3847
-        height: 2407
+        y: 0
+        width: 252
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6a222b01383a5990800000000000000
-      internalID: -7396537654711276948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JSB_IngameVisuals_Backgrounds1_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 887
-        width: 1283
-        height: 804
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5da4d006568dba80800000000000000
-      internalID: -8449449621937935011
+      spriteID: 803446a6e5fe51b50800000000000000
+      internalID: 6563415220753285896
       vertices: []
       indices: 
       edges: []
@@ -172,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      JSB_IngameVisuals_Backgrounds1_0: -7396537654711276948
-      JSB_IngameVisuals_Backgrounds1_1: -8449449621937935011
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
