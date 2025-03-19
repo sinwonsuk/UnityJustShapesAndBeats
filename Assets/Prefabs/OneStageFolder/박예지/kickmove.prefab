@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7651986606845095284
+--- !u!1 &6998209990458395840
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8370049458446280915}
-  - component: {fileID: 3710940326229984326}
+  - component: {fileID: 204879212838892318}
+  - component: {fileID: -1328452123693376600}
   m_Layer: 0
-  m_Name: OneStage
+  m_Name: kickmove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8370049458446280915
+--- !u!4 &204879212838892318
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651986606845095284}
+  m_GameObject: {fileID: 6998209990458395840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,21 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3710940326229984326
+--- !u!114 &-1328452123693376600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651986606845095284}
+  m_GameObject: {fileID: 6998209990458395840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d557d458f08a0cd46814ff213a6c1842, type: 3}
+  m_Script: {fileID: 11500000, guid: 1067141e2401de647aeca912f5013a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: []
-  pattern:
-  - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
-  - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
-  - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
-  - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
+  personPrefab: {fileID: 4840623278797081727, guid: d89add8ae1a9ad04aa9f3614c4cb31a8, type: 3}
+  minSpawnTime: 0.7
+  maxSpawnTime: 1.3

@@ -136,6 +136,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -372,7 +398,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JSB_IngameVisuals_OnTheRun1_0: -8508458377197433099
+      JSB_IngameVisuals_OnTheRun1_1: -8899894928401077168
+      JSB_IngameVisuals_OnTheRun1_2: 7480123744324069199
+      JSB_IngameVisuals_OnTheRun1_3: 8979342838415034677
+      JSB_IngameVisuals_OnTheRun1_4: 3651390558127069046
+      JSB_IngameVisuals_OnTheRun1_5: -7024330467553429391
+      JSB_IngameVisuals_OnTheRun1_6: -4798337960301930184
+      JSB_IngameVisuals_OnTheRun1_7: -8503866445554653049
+      JSB_IngameVisuals_OnTheRun1_8: 6426325191004660942
+      JSB_IngameVisuals_OnTheRun1_9: 8709905470952910357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
