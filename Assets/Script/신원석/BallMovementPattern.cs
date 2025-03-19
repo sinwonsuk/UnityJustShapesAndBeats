@@ -3,28 +3,30 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 
-public class BallMovementPattern : State<OneStage>
+public class BallMovementPattern : MonoBehaviour
 {
-    public override void Enter(OneStage entity)
-    {
+    private void OnEnable()
+    { 
+        // 여기가 기본 Enter 라고 보면 됨 
+        // setActive(true)할때마다 호출됨 
         Debug.Log(gameObject.name);
         Invoke("CreateObject", 2);
     }
 
-    public override void Execute(OneStage entity)
-    {             
-        time += Time.deltaTime;
-
-        if(time > 6)
-        {
-            entity.ChangeState(StagePattern.Stage1);
-            return;
-        }
+    private void Start()
+    {
+        
     }
 
-    public override void Exit(OneStage entity)
+    private void Update()
     {
-        time = 0;
+        
+    }
+
+    private void OnDisable()
+    {
+        // 여기가 기존 Exit 라고 보면 됨 
+        // setActive(false)할때마다 호출됨 
     }
 
     public void CreateObject()
@@ -80,9 +82,8 @@ public class BallMovementPattern : State<OneStage>
         }
     }
     
-
     [SerializeField]
     private GameObject square;
 
-    private float time = 0.0f;
+
 }

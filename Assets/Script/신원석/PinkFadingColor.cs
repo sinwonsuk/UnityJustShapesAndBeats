@@ -22,8 +22,6 @@ public class PinkFadingColor : MonoBehaviour
             spriteRenderer.color = Color.Lerp(spriteRenderer.color, targetColor, lerpSpeed * Time.deltaTime);
         }
       
-
-
         if (Vector4.Distance(spriteRenderer.color, targetColor) < 0.01f)
         {
             spriteRenderer.color = targetColor;

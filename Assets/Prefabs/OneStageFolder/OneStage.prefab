@@ -44,7 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d557d458f08a0cd46814ff213a6c1842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: []
+  states:
+  - {fileID: 7085937498946046051, guid: de9eb0d9dd30d344b89a2e6d24b5fc9a, type: 3}
+  - {fileID: -5899560837822470264, guid: 83b82f42f3d375f40bdbac4a1be74f06, type: 3}
+  - {fileID: -95584130648656574, guid: 2a3cc44370cfdc04ba751e117bfdd2d5, type: 3}
+  - {fileID: 7400745891705377868, guid: 3ae8b9d70f2169241bac05d40c526efc, type: 3}
+  - {fileID: 933336033775461882, guid: 0ea52e57e2fb0c44f9278e1de030c387, type: 3}
   pattern:
   - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
   - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
