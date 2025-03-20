@@ -638,7 +638,7 @@ MonoBehaviour:
   - {fileID: 6630696774720646049, guid: 3e91d18abd506474f81273713568a03b, type: 3}
   - {fileID: 3221423774192467718, guid: 89ac3776989f3ee4b9856880d74bdf00, type: 3}
   - {fileID: 3117470218794985599, guid: 22e08e356913c4840b291e66a0038d01, type: 3}
-  stage: 0
+  stage: 2
 --- !u!4 &1232646710
 Transform:
   m_ObjectHideFlags: 0

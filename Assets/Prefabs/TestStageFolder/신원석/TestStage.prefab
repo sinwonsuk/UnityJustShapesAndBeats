@@ -44,11 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab85e2e9a269a834f9bf1ff3b54125ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testStage: 0
+  testStage: 2
   states:
   - {fileID: 4184705758344246824, guid: 49e79da09ee138f4188f88760951ee40, type: 3}
   - {fileID: 4179276096661253482, guid: fd60c217c6291ac47a2184a9e03b3ae7, type: 3}
   - {fileID: 3979801682001629554, guid: fcd0a7e85dfbc0149a0bd906585fc1cd, type: 3}
   - {fileID: 2541210315846952221, guid: cfb379fe4ae11d3448d73ef3544e3d53, type: 3}
   - {fileID: 5521200710273314529, guid: f1b81c43b3e21dc459aefba4edeb1053, type: 3}
-  pattern: []
+  pattern:
+  - {fileID: 8823802443774298237, guid: ce856793d82e2e14ebb46cae0c3acdd9, type: 3}
+  - {fileID: 5089484347945332326, guid: a691f744eb6d0e84691d9067b8245dee, type: 3}
+  - {fileID: 6998209990458395840, guid: eef3493439f4cde4f9cbda32b2700005, type: 3}
+  - {fileID: 2051277138279370816, guid: ebac270404d6a684189d05c488a8535c, type: 3}
+  - {fileID: 2051277138279370816, guid: ebac270404d6a684189d05c488a8535c, type: 3}
+  - {fileID: 990252369073616483, guid: 0462a6858fb6a2d4fb2debd47ab39027, type: 3}
