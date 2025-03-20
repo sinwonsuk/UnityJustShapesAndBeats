@@ -13,18 +13,15 @@ public class OneStagePase1 : State<OneStage>
     {
         time += Time.deltaTime;
 
-       
-        if (time >= 4f)
-        {
-            entity.StartPattern(entity.Getpattern(EPattern.BallMovementPattern));
-        }
-        else if(time>= 8.5f && time < 8.6f )
+
+        entity.StartPattern(entity.Getpattern(EPattern.BallMovementPattern));
+        if(time>= 3.5f && time < 3.6f )
         {
 
             entity.StartPattern(entity.Getpattern(EPattern.BigBallMovementPattern));
             entity.StopPattern(entity.Getpattern(EPattern.BallMovementPattern));
         }
-        else if (time >= 19.5f)
+        else if (time >= 8.5f)
         {
             entity.ChangeState(StagePase.Pase2);
         }

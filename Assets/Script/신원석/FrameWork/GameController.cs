@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
     {
         foreach (var entity in stageEntities.Values)
         {
-            entity.gameObject.SetActive(false);
+           // entity.gameObject.SetActive(false);
         }
 
         if (stageEntities.ContainsKey(stage))
