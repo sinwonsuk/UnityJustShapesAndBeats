@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab85e2e9a269a834f9bf1ff3b54125ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testStage: 1
+  testStage: 0
   states:
   - {fileID: 4184705758344246824, guid: 49e79da09ee138f4188f88760951ee40, type: 3}
   - {fileID: 4179276096661253482, guid: fd60c217c6291ac47a2184a9e03b3ae7, type: 3}
