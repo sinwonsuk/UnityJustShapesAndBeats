@@ -15,17 +15,13 @@ public enum StagePase
 
 public enum EPattern
 {
-    Pattern1 = 0,
-    Pattern2,
-    Pattern3,
-    Pattern4,
-    Pattern5,
+    BallMovementPattern = 0,
+    BigBallMovementPattern,
+    kickmove,
+    HadoukenPattern,
+    UppercutPattern,
     Pattern6,
 }
-
-
-
-
 public class OneStage : BaseGameEntity
 {
 	public override void Setup(string name)
