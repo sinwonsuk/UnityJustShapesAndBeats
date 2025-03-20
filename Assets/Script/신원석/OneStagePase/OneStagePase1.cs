@@ -13,11 +13,22 @@ public class OneStagePase1 : State<OneStage>
     {
         time += Time.deltaTime;
 
-        if (time > 4)
+       
+        if (time >= 4f)
+        {
+            entity.StartPattern(entity.Getpattern(EPattern.BallMovementPattern));
+        }
+        else if(time>= 8.5f && time < 8.6f )
+        {
+
+            entity.StartPattern(entity.Getpattern(EPattern.BigBallMovementPattern));
+            entity.StopPattern(entity.Getpattern(EPattern.BallMovementPattern));
+        }
+        else if (time >= 19.5f)
         {
             entity.ChangeState(StagePase.Pase2);
-            return;
-        }      
+        }
+
     }
 
     public override void Exit(OneStage entity)
