@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7651986606845095284
+--- !u!1 &6630696774720646049
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8370049458446280915}
-  - component: {fileID: 3710940326229984326}
+  - component: {fileID: 52446799435767592}
+  - component: {fileID: 7654565610293019736}
   m_Layer: 0
   m_Name: OneStage
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8370049458446280915
+--- !u!4 &52446799435767592
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651986606845095284}
+  m_GameObject: {fileID: 6630696774720646049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.12915874, y: -0.09119178, z: -0.011794459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3710940326229984326
+--- !u!114 &7654565610293019736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7651986606845095284}
+  m_GameObject: {fileID: 6630696774720646049}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d557d458f08a0cd46814ff213a6c1842, type: 3}
@@ -56,8 +56,3 @@ MonoBehaviour:
   - {fileID: 6998209990458395840, guid: eef3493439f4cde4f9cbda32b2700005, type: 3}
   - {fileID: 4520098820456826409, guid: 9720aaa6f8f210243b386d6fd8aa1bc0, type: 3}
   - {fileID: 2051277138279370816, guid: ebac270404d6a684189d05c488a8535c, type: 3}
-
-  - {fileID: 2051277138279370816, guid: ebac270404d6a684189d05c488a8535c, type: 3}
-
-  - {fileID: 990252369073616483, guid: 0462a6858fb6a2d4fb2debd47ab39027, type: 3}
- 2ceecfb6f3c531616e56cbdec3adcc04d411740a

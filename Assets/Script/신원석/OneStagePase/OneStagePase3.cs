@@ -9,17 +9,10 @@ public class MyScript3 : State<OneStage>
     {
         entity.StartPattern(entity.Getpattern(EPattern.kickmove));
         entity.StartPattern(entity.Getpattern(EPattern.UppercutPattern));
-     
-
-        entity.StopTimePattern(entity.Getpattern(EPattern.kickmove),14);
-        entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern),14);
-     
 
 
-    public override void Enter(OneStage entity)
-    {
-
-
+        entity.StopTimePattern(entity.Getpattern(EPattern.kickmove), 14);
+        entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 14);
     }
 
     public override void Execute(OneStage entity)
