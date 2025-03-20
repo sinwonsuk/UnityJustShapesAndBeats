@@ -24,27 +24,32 @@ public enum EPattern
 }
 public class OneStage : BaseGameEntity
 {
-	public override void Setup(string name)
+
+
+    void Start()
+    {
+      
+    }
+
+
+	public override void Setup()
 	{
-		
-        for (int i = 0; i < pattern.Length; i++)
-		{
-            pattern[i].gameObject.SetActive(false);
+        if (stateMachine == null)
+        {
+            for (int i = 0; i < pattern.Length; i++)
+            {
+                pattern[i].gameObject.SetActive(false);
 
-            pattern[i] = Instantiate(pattern[i], transform.position, Quaternion.identity);
+                pattern[i] = Instantiate(pattern[i], transform.position, Quaternion.identity);
 
-			pattern[i].SetActive(false);
+                pattern[i].SetActive(false);
+            }
         }
+        // 상태를 관리하는 StateMachine에 메모리를 할당하고, 첫 상태를 설정
+        stateMachine = new StateMachine<OneStage>();
 
-		// 기반 클래스의 Setup 메소드 호출 (ID, 이름, 색상 설정)
-		base.Setup(name);
 
-		// 생성되는 오브젝트 이름 설정
-		gameObject.name = $"{ID:D2}_Student_{name}";
-
-		// 상태를 관리하는 StateMachine에 메모리를 할당하고, 첫 상태를 설정
-		stateMachine = new StateMachine<OneStage>();
-		stateMachine.Setup(this, states[(int)StagePase.Pase1]);	
+        stateMachine.Setup(this, states[(int)StagePase.Pase1]);	
 	}
 
 	public override void Updated()

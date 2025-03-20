@@ -5,7 +5,7 @@ public class OneStagePase1 : State<OneStage>
 {
     public override void Enter(OneStage entity)
     {
-
+        int a = 0;
 
     }
 
