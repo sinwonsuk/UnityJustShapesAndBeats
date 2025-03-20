@@ -1,27 +1,29 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class UpperCut : State<OneStage>
+public class UpperCut : MonoBehaviour
 {
-	public override void Enter(OneStage entity)
+	private void OnEnable()
 	{
 		Debug.Log("UpperCut 시작");
-		StartPattern(entity);
+		StartPattern();
 	}
 
-	public override void Execute(OneStage entity) { }
+	private void Start() { }
+	private void Update() { }
 
-	public override void Exit(OneStage entity)
+
+	private void OnDisable()
 	{
 		CleanUpPatternObjects();
 		Debug.Log("UpperCut 끝 및 오브젝트 클린 작업 완료");
 	}
 
-	private void StartPattern(OneStage entity)
+	private void StartPattern()
 	{
 		isPatternRunning = true;
 		patternCount = 0;
-		entity.StartCoroutine(RunPatternSequence(entity));
+		StartCoroutine(RunPatternSequence());
 	}
 
 	private void CleanUpPatternObjects()
@@ -43,7 +45,7 @@ public class UpperCut : State<OneStage>
 		}
 	}
 
-	private IEnumerator RunPatternSequence(OneStage entity)
+	private IEnumerator RunPatternSequence()
 	{
 		while (patternCount < maxPatterns)
 		{
@@ -63,7 +65,7 @@ public class UpperCut : State<OneStage>
 				yield break;
 			}
 
-			yield return StartCoroutine(PerformUppercut(entity, randomX));
+			yield return StartCoroutine(PerformUppercut(randomX));
 
 			CleanUpPatternObjects();
 			patternCount++;
@@ -73,9 +75,9 @@ public class UpperCut : State<OneStage>
 		isPatternRunning = false;
 	}
 
-	private IEnumerator PerformUppercut(OneStage entity, float randomX)
+	private IEnumerator PerformUppercut(float randomX)
 	{
-		// 1. Ready: 올라가며 3번 블링크 (1초) → 약간 하강 (0.1초)
+		// 1. Ready: 올라가며 3번 블링크 (0.5초) → 약간 하강 (0.1초)
 		enemyAnimator.Play("Ready", -1, 0f);
 		Debug.Log("Ready 재생 중");
 		yield return StartCoroutine(MoveUp(randomX, 0.5f));
@@ -85,7 +87,7 @@ public class UpperCut : State<OneStage>
 		// 2. UpperCut: 점프 (0.1초) → 박스 생성 (1.3초, 첫 박스 사라짐 후 하강) → 하강 (0.3초)
 		enemyAnimator.Play("UpperCut", -1, 0f);
 		Debug.Log("UpperCut 재생 중");
-		yield return StartCoroutine(JumpAndDescend(entity, randomX, 0.4f));
+		yield return StartCoroutine(JumpAndDescend(randomX, 0.4f));
 	}
 
 	private IEnumerator MoveUp(float randomX, float duration)
@@ -122,7 +124,7 @@ public class UpperCut : State<OneStage>
 		enemyInstance.transform.position = endPos;
 	}
 
-	private IEnumerator JumpAndDescend(OneStage entity, float randomX, float duration)
+	private IEnumerator JumpAndDescend(float randomX, float duration)
 	{
 		Vector3 startPos = new Vector3(randomX, -5.5f, 0);  // SlightDescend 이후 위치
 		Vector3 peakPos = new Vector3(randomX, -3.0f, 0);   // 점프 최고점
@@ -142,7 +144,7 @@ public class UpperCut : State<OneStage>
 		enemyInstance.transform.position = peakPos;
 
 		// 박스 생성 시작 (첫 박스가 사라질 때까지 대기 후 하강)
-		StartCoroutine(GenerateBoxes(entity, randomX));
+		StartCoroutine(GenerateBoxes(randomX));
 		yield return new WaitForSeconds(0.15f); // 첫 박스 사라짐 타이밍 (0.1초 성장 + 0.05초 대기)
 
 		// 하강 (0.3초)
@@ -161,7 +163,7 @@ public class UpperCut : State<OneStage>
 		yield return new WaitForSeconds(1.3f - 0.15f);
 	}
 
-	private IEnumerator GenerateBoxes(OneStage entity, float baseX)
+	private IEnumerator GenerateBoxes(float baseX)
 	{
 		boxes[3] = Instantiate(boxPrefab, new Vector3(baseX, 0, 0), Quaternion.identity);
 		boxes[3].transform.localScale = new Vector3(0.05f, screenHeight, 1f);
