@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using static UnityEditor.VersionControl.Asset;
 
 public enum StagePase 
@@ -32,6 +33,8 @@ public class OneStage : BaseGameEntity
 		
         for (int i = 0; i < pattern.Length; i++)
 		{
+            pattern[i].gameObject.SetActive(false);
+
             pattern[i] = Instantiate(pattern[i], transform.position, Quaternion.identity);
 
 			pattern[i].SetActive(false);
@@ -62,16 +65,26 @@ public class OneStage : BaseGameEntity
 		return pattern[(int)_pattern];
     }
 
-    // 몇초후에 시작하고 싶다
-    public IEnumerator StartTimePattern(GameObject pattern, float timeUpdate)
+    public IEnumerator StartTimePatternCor(GameObject pattern, float timeUpdate)
     {
         yield return new WaitForSeconds(timeUpdate);
         pattern.SetActive(true);
         yield break;
     }
 
-    // 몇초후에 종료시키고 싶다 
-    public IEnumerator FinsihTimePattern(GameObject pattern, float timeUpdate)
+    public void StartTimePattern(GameObject pattern, float timeUpdate)
+    {
+        // 몇초후에 시작하고 싶다
+        StartCoroutine(StartTimePatternCor(pattern, timeUpdate));
+    }
+
+    public void StopTimePattern(GameObject pattern, float timeUpdate)
+    {
+        // 몇초후에 종료시키고 싶다 
+        StartCoroutine(StopTimePatternCor(pattern,timeUpdate));
+    }
+
+    public IEnumerator StopTimePatternCor(GameObject pattern, float timeUpdate)
     {
         yield return new WaitForSeconds(timeUpdate);
         pattern.SetActive(false);

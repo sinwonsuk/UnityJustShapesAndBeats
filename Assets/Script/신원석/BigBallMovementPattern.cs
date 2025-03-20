@@ -4,6 +4,11 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class BigBallMovementPattern : MonoBehaviour
 {
+    private void Awake()
+    {
+        //gameObject.SetActive(false);
+    }
+
     private void OnEnable()
     {
         InvokeRepeating("SpawnBigBall", 0, 1);

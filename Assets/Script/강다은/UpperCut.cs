@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UpperCut : MonoBehaviour
@@ -6,91 +7,151 @@ public class UpperCut : MonoBehaviour
 	private void OnEnable()
 	{
 		Debug.Log("UpperCut 시작");
-		StartPattern();
+		patternTimer = 0f; // 타이머 초기화
+		enemyInstances.Clear();
+		boxesList.Clear();
 	}
 
 	private void Start() { }
-	private void Update() { }
 
+	private void Update()
+	{
+		// 0.8초마다 패턴 시작
+		patternTimer += Time.deltaTime;
+		if (patternTimer >= patternInterval)
+		{
+			patternTimer -= patternInterval; // 타이머 감소 (정확한 간격 유지)
+			StartPattern();
+		}
+	}
 
 	private void OnDisable()
 	{
-		CleanUpPatternObjects();
+		CleanUpAllPatternObjects();
 		Debug.Log("UpperCut 끝 및 오브젝트 클린 작업 완료");
 	}
 
 	private void StartPattern()
 	{
-		isPatternRunning = true;
-		patternCount = 0;
 		StartCoroutine(RunPatternSequence());
 	}
 
-	private void CleanUpPatternObjects()
+	private void CleanUpAllPatternObjects()
+	{
+		Debug.Log("CleanUpAllPatternObjects 호출됨");
+		foreach (var enemy in enemyInstances)
+		{
+			if (enemy != null)
+				Destroy(enemy);
+		}
+		enemyInstances.Clear();
+
+		foreach (var boxes in boxesList)
+		{
+			for (int i = 0; i < boxes.Length; i++)
+			{
+				if (boxes[i] != null)
+					Destroy(boxes[i]);
+			}
+		}
+		boxesList.Clear();
+	}
+
+	private void CleanUpPatternObjects(GameObject enemy, GameObject[] boxes)
 	{
 		Debug.Log("CleanUpPatternObjects 호출됨");
-		isPatternRunning = false;
-		if (enemyInstance != null)
+		if (enemy != null)
 		{
-			Destroy(enemyInstance);
-			enemyInstance = null;
+			enemyInstances.Remove(enemy);
+			Destroy(enemy);
 		}
+
 		for (int i = 0; i < boxes.Length; i++)
 		{
 			if (boxes[i] != null)
-			{
 				Destroy(boxes[i]);
-				boxes[i] = null;
+		}
+		boxesList.Remove(boxes);
+	}
+
+	private float GetRandomX()
+	{
+		float randomX;
+		int maxAttempts = 10; // 최대 시도 횟수
+		float minDistance = 2f; // 최소 거리 (겹침 방지)
+
+		for (int i = 0; i < maxAttempts; i++)
+		{
+			randomX = Random.Range(-6f, 6f);
+
+			bool isTooClose = false;
+			foreach (float prevX in previousRandomXValues)
+			{
+				if (Mathf.Abs(randomX - prevX) < minDistance)
+				{
+					isTooClose = true;
+					break;
+				}
+			}
+
+			if (!isTooClose)
+			{
+				// 이전 값 리스트에 추가 (최대 3개만 유지)
+				previousRandomXValues.Add(randomX);
+				if (previousRandomXValues.Count > 3)
+					previousRandomXValues.RemoveAt(0);
+				return randomX;
 			}
 		}
+
+		// 시도 횟수를 초과하면 기본값 반환
+		randomX = Random.Range(-6f, 6f);
+		previousRandomXValues.Add(randomX);
+		if (previousRandomXValues.Count > 3)
+			previousRandomXValues.RemoveAt(0);
+		return randomX;
 	}
 
 	private IEnumerator RunPatternSequence()
 	{
-		while (patternCount < maxPatterns)
+		float randomX = GetRandomX();
+
+		GameObject enemyInstance = Instantiate(enemyPrefab, new Vector3(randomX, -8f, 0), Quaternion.identity);
+		SpriteRenderer enemyRenderer = enemyInstance.GetComponentInChildren<SpriteRenderer>();
+		Animator enemyAnimator = enemyInstance.GetComponentInChildren<Animator>();
+		GameObject[] boxes = new GameObject[8]; // 이 패턴 전용 boxes 배열
+
+		enemyInstances.Add(enemyInstance);
+		boxesList.Add(boxes);
+
+		if (enemyRenderer == null || enemyAnimator == null)
 		{
-			if (enemyInstance != null)
-			{
-				CleanUpPatternObjects();
-			}
-
-			float randomX = Random.Range(-6f, 6f);
-
-			enemyInstance = Instantiate(enemyPrefab, new Vector3(randomX, -8f, 0), Quaternion.identity);
-			enemyRenderer = enemyInstance.GetComponentInChildren<SpriteRenderer>();
-			enemyAnimator = enemyInstance.GetComponentInChildren<Animator>();
-
-			if (enemyRenderer == null || enemyAnimator == null)
-			{
-				yield break;
-			}
-
-			yield return StartCoroutine(PerformUppercut(randomX));
-
-			CleanUpPatternObjects();
-			patternCount++;
-			yield return new WaitForSeconds(0.5f);
+			CleanUpPatternObjects(enemyInstance, boxes);
+			yield break;
 		}
 
-		isPatternRunning = false;
+		yield return StartCoroutine(PerformUppercut(enemyInstance, enemyRenderer, enemyAnimator, randomX, boxes));
+
+		// 패턴이 끝난 후 정리
+		CleanUpPatternObjects(enemyInstance, boxes);
 	}
 
-	private IEnumerator PerformUppercut(float randomX)
+	private IEnumerator PerformUppercut(GameObject enemyInstance, SpriteRenderer enemyRenderer, Animator enemyAnimator, float randomX, GameObject[] boxes)
 	{
 		// 1. Ready: 올라가며 3번 블링크 (0.5초) → 약간 하강 (0.1초)
 		enemyAnimator.Play("Ready", -1, 0f);
 		Debug.Log("Ready 재생 중");
-		yield return StartCoroutine(MoveUp(randomX, 0.5f));
+		yield return StartCoroutine(MoveUp(enemyInstance, randomX, 0.5f));
 		yield return new WaitForSeconds(0.3f);
-		yield return StartCoroutine(SlightDescend(randomX, 0.1f));
+		yield return StartCoroutine(SlightDescend(enemyInstance, randomX, 0.1f));
 
 		// 2. UpperCut: 점프 (0.1초) → 박스 생성 (1.3초, 첫 박스 사라짐 후 하강) → 하강 (0.3초)
 		enemyAnimator.Play("UpperCut", -1, 0f);
 		Debug.Log("UpperCut 재생 중");
-		yield return StartCoroutine(JumpAndDescend(randomX, 0.4f));
+		yield return StartCoroutine(JumpAndDescend(enemyInstance, randomX, 0.4f, boxes));
 	}
 
-	private IEnumerator MoveUp(float randomX, float duration)
+	private IEnumerator MoveUp(GameObject enemyInstance, float randomX, float duration)
 	{
 		Vector3 startPos = new Vector3(randomX, -6f, 0);
 		Vector3 endPos = new Vector3(randomX, -5f, 0); // Ready 위치
@@ -100,14 +161,16 @@ public class UpperCut : MonoBehaviour
 		{
 			elapsed += Time.deltaTime;
 			float t = elapsed / duration;
-			enemyInstance.transform.position = Vector3.Lerp(startPos, endPos, t);
+			if (enemyInstance != null)
+				enemyInstance.transform.position = Vector3.Lerp(startPos, endPos, t);
 			yield return null;
 		}
 
-		enemyInstance.transform.position = endPos;
+		if (enemyInstance != null)
+			enemyInstance.transform.position = endPos;
 	}
 
-	private IEnumerator SlightDescend(float randomX, float duration)
+	private IEnumerator SlightDescend(GameObject enemyInstance, float randomX, float duration)
 	{
 		Vector3 startPos = new Vector3(randomX, -5f, 0); // Ready 위치
 		Vector3 endPos = new Vector3(randomX, -5.5f, 0);   // 약간 하강
@@ -117,14 +180,16 @@ public class UpperCut : MonoBehaviour
 		{
 			elapsed += Time.deltaTime;
 			float t = elapsed / duration;
-			enemyInstance.transform.position = Vector3.Lerp(startPos, endPos, t);
+			if (enemyInstance != null)
+				enemyInstance.transform.position = Vector3.Lerp(startPos, endPos, t);
 			yield return null;
 		}
 
-		enemyInstance.transform.position = endPos;
+		if (enemyInstance != null)
+			enemyInstance.transform.position = endPos;
 	}
 
-	private IEnumerator JumpAndDescend(float randomX, float duration)
+	private IEnumerator JumpAndDescend(GameObject enemyInstance, float randomX, float duration, GameObject[] boxes)
 	{
 		Vector3 startPos = new Vector3(randomX, -5.5f, 0);  // SlightDescend 이후 위치
 		Vector3 peakPos = new Vector3(randomX, -3.0f, 0);   // 점프 최고점
@@ -138,13 +203,15 @@ public class UpperCut : MonoBehaviour
 		{
 			jumpElapsed += Time.deltaTime;
 			float t = jumpElapsed / jumpDuration;
-			enemyInstance.transform.position = Vector3.Lerp(startPos, peakPos, t);
+			if (enemyInstance != null)
+				enemyInstance.transform.position = Vector3.Lerp(startPos, peakPos, t);
 			yield return null;
 		}
-		enemyInstance.transform.position = peakPos;
+		if (enemyInstance != null)
+			enemyInstance.transform.position = peakPos;
 
 		// 박스 생성 시작 (첫 박스가 사라질 때까지 대기 후 하강)
-		StartCoroutine(GenerateBoxes(randomX));
+		StartCoroutine(GenerateBoxes(randomX, boxes));
 		yield return new WaitForSeconds(0.15f); // 첫 박스 사라짐 타이밍 (0.1초 성장 + 0.05초 대기)
 
 		// 하강 (0.3초)
@@ -153,17 +220,19 @@ public class UpperCut : MonoBehaviour
 		{
 			descendElapsed += Time.deltaTime;
 			float t = descendElapsed / descendDuration;
-			enemyInstance.transform.position = Vector3.Lerp(peakPos, endPos, t);
+			if (enemyInstance != null)
+				enemyInstance.transform.position = Vector3.Lerp(peakPos, endPos, t);
 			yield return null;
 		}
 
-		enemyInstance.transform.position = endPos;
+		if (enemyInstance != null)
+			enemyInstance.transform.position = endPos;
 
 		// 박스 생성이 끝날 때까지 대기 (나머지 1.15초)
 		yield return new WaitForSeconds(1.3f - 0.15f);
 	}
 
-	private IEnumerator GenerateBoxes(float baseX)
+	private IEnumerator GenerateBoxes(float baseX, GameObject[] boxes)
 	{
 		boxes[3] = Instantiate(boxPrefab, new Vector3(baseX, 0, 0), Quaternion.identity);
 		boxes[3].transform.localScale = new Vector3(0.05f, screenHeight, 1f);
@@ -262,7 +331,8 @@ public class UpperCut : MonoBehaviour
 		while (elapsed < duration)
 		{
 			elapsed += Time.deltaTime;
-			box.transform.localScale = Vector3.Lerp(startScale, endScale * 2.2f, elapsed / duration);
+			if (box != null)
+				box.transform.localScale = Vector3.Lerp(startScale, endScale * 2.2f, elapsed / duration);
 			yield return null;
 		}
 	}
@@ -276,20 +346,22 @@ public class UpperCut : MonoBehaviour
 		while (elapsed < duration)
 		{
 			elapsed += Time.deltaTime;
-			box.transform.localScale = Vector3.Lerp(startScale, endScale, elapsed / duration);
+			if (box != null)
+				box.transform.localScale = Vector3.Lerp(startScale, endScale, elapsed / duration);
 			yield return null;
 		}
 	}
 
 	[SerializeField] private GameObject enemyPrefab;
 	[SerializeField] private GameObject boxPrefab;
-
-	private GameObject enemyInstance;
-	private GameObject[] boxes = new GameObject[8];
-	private SpriteRenderer enemyRenderer;
-	private Animator enemyAnimator;
-	private bool isPatternRunning = false;
-	private int patternCount = 0;
-	private const int maxPatterns = 14;
 	private const float screenHeight = 10f;
+
+	private float patternTimer = 0f; // 1초 타이머
+	private const float patternInterval = 1f; // 패턴 실행 간격
+
+	// 각 패턴의 오브젝트를 관리하기 위한 리스트
+	private List<GameObject> enemyInstances = new List<GameObject>();
+	private List<GameObject[]> boxesList = new List<GameObject[]>();
+	private List<float> previousRandomXValues = new List<float>(); // 이전 randomX 값 저장
+
 }
