@@ -5,13 +5,21 @@ public class OneStagePase1 : State<OneStage>
 {
     public override void Enter(OneStage entity)
     {
-        //entity.StartPattern(entity.Getpattern(EPattern.));
+        entity.StartPattern(entity.Getpattern(EPattern.Pattern2));
+
+        entity.StopPattern(entity.Getpattern(EPattern.Pattern1));
+
+        entity.StartTimePattern(entity.Getpattern(EPattern.Pattern2),5);
+
+        entity.StopTimePattern(entity.Getpattern(EPattern.Pattern2), 5);
+
+
     }
 
     public override void Execute(OneStage entity)
     {
-        GameObject pattern2 = entity.Getpattern(EPattern.Pattern2);
-        pattern2.SetActive(true);
+        //GameObject pattern2 = entity.Getpattern(EPattern.Pattern2);
+        //pattern2.SetActive(true);
       
     }
 
