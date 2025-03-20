@@ -15,9 +15,6 @@ public class BulletLotation : MonoBehaviour
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    } 
+    
 }
 
