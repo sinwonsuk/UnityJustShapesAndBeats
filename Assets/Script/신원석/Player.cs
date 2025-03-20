@@ -48,18 +48,7 @@ public class Player : MonoBehaviour
         {
             case PlayerState.Idle:
                 {
-                    float moveX = Input.GetAxis("Horizontal"); // A, D 또는 ←, →
-                    float moveY = Input.GetAxis("Vertical");   // W, S 또는 ↑, ↓
-
-                    Vector2 moveDir = new Vector2(moveX, moveY);
-
-                    if (moveDir.sqrMagnitude > 0.01f) // 이동 중일 때만 회전
-                    {
-                        StopCoroutine(test());
-                        spawn.gameObject.SetActive(true);
-                        playerState = PlayerState.Move;
-                        return;
-                    }
+                    UpdateIdle();
                 }
                 break;
             case PlayerState.Move:
@@ -71,7 +60,21 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+   void UpdateIdle()
+   {
+        float moveX = Input.GetAxis("Horizontal"); // A, D 또는 ←, →
+        float moveY = Input.GetAxis("Vertical");   // W, S 또는 ↑, ↓
 
+        Vector2 moveDir = new Vector2(moveX, moveY);
+
+        if (moveDir.sqrMagnitude > 0.01f) 
+        {
+            StopCoroutine(IdleAni());
+            spawn.gameObject.SetActive(true);
+            playerState = PlayerState.Move;
+            return;
+        }
+   }
 
    void MovePlayer()
    {
@@ -87,7 +90,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            StartCoroutine(test());
+            StartCoroutine(IdleAni());
             spawn.gameObject.SetActive(false);
             playerState = PlayerState.Idle;
             return;
@@ -100,7 +103,7 @@ public class Player : MonoBehaviour
         }
 
         transform.position += (Vector3)moveDir.normalized * speed * Time.deltaTime;
-    }
+   }
     void ChangeScale(float targetX,float targetY)
     {
         float scaleX = Mathf.MoveTowards(transform.localScale.x, 1.8f, scaleXSpeed * Time.deltaTime);
@@ -151,7 +154,7 @@ public class Player : MonoBehaviour
             Debug.Log("탈출 완료!");     
     }
 
-    IEnumerator test()
+    IEnumerator IdleAni()
     {
 
         while (true)
