@@ -5,21 +5,6 @@ public enum Locations { SweetHome = 0, Library, LectureRoom, PCRoom, Pub };
 
 public class GameController : MonoBehaviour
 {
-	[SerializeField]
-	private	string[]	arrayStage;	// Student들의 이름 배열
-	[SerializeField]
-	private	GameObject	stagePrefab;	// Student 타입의 프리팹
-	
-	[SerializeField]
-	private	string[]	arrayUnemployeds;	// Unemployed들의 이름 배열
-	[SerializeField]
-	private	GameObject	unemployedPrefab;	// Unemployed 타입의 프리팹
-
-	// 재생 제어를 위한 모든 에이전트 리스트
-	private	List<BaseGameEntity>  entitys;
-
-	public static bool	IsGameStop { set; get; } = false;
-
 	private void Awake()
 	{
 		entitys = new List<BaseGameEntity>();
@@ -56,5 +41,20 @@ public class GameController : MonoBehaviour
 	{
 		IsGameStop = true;		
 	}
+
+    [SerializeField]
+    private string[] arrayStage;    // Student들의 이름 배열
+    [SerializeField]
+    private GameObject stagePrefab; // Student 타입의 프리팹
+
+    [SerializeField]
+    private string[] arrayUnemployeds;  // Unemployed들의 이름 배열
+    [SerializeField]
+    private GameObject unemployedPrefab;    // Unemployed 타입의 프리팹
+
+    // 재생 제어를 위한 모든 에이전트 리스트
+    private List<BaseGameEntity> entitys;
+
+    public static bool IsGameStop { set; get; } = false;
 }
 

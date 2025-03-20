@@ -17,5 +17,8 @@ public abstract class State<T> : MonoBehaviour where T : class
 	/// </summary>
 	public abstract void Exit(T entity);
 
+
+
+
 }
 

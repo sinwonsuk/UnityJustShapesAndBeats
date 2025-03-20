@@ -1,8 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
+using static UnityEngine.EventSystems.EventTrigger;
 
-public class PersonSpawner : State<OneStage>
+public class PersonSpawner : MonoBehaviour
 {
     public GameObject personPrefab;      // 사람 프리팹 연결
     public float minSpawnTime = 0.2f;      // 최소 생성 시간
@@ -11,29 +12,26 @@ public class PersonSpawner : State<OneStage>
     private bool isSpawning = false;
     private Coroutine spawnCoroutine;
 
-    public override void Enter(OneStage entity)
+    private void OnEnable()
     {
         if (!isSpawning)
         {
             isSpawning = true;
-            spawnCoroutine = entity.StartCoroutine(SpawnLoop());
+            spawnCoroutine = StartCoroutine(SpawnLoop());
         }
     }
-
-    public override void Execute(OneStage entity)
-    {
-        // 필요하면 추가
-    }
-
-    public override void Exit(OneStage entity)
+    private void OnDisable()
     {
         isSpawning = false;
         if (spawnCoroutine != null)
         {
-            entity.StopCoroutine(spawnCoroutine);
+            StopCoroutine(spawnCoroutine);
             spawnCoroutine = null;
         }
     }
+
+
+   
 
     IEnumerator SpawnLoop()
     {
