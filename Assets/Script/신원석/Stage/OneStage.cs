@@ -11,6 +11,9 @@ public enum StagePase
     Pase4,
     Pase5,
     Pase6,
+    Pase7,
+    Pase8,
+    Pase9
 }
 
 public enum EPattern
@@ -21,6 +24,10 @@ public enum EPattern
     HadoukenPattern,
     UppercutPattern,
     BulletLuncher,
+    map_first,
+    map_fastCreate,
+    map_fastCreate_shake,
+    map_shake
 }
 public class OneStage : BaseGameEntity
 {

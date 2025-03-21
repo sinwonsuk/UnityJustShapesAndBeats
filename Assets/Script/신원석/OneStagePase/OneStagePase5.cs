@@ -9,8 +9,20 @@ public class OneStagePase5 : State<OneStage>
         entity.StartPattern(entity.Getpattern(EPattern.kickMove));
         entity.StopTimePattern(entity.Getpattern(EPattern.kickMove), 15f);
 
-        entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 7f);
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_fastCreate), 6f);
+
+        entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 6f);
+
+
+        entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 4f);
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 13.9f);
+
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 15.9f);
+
+        entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate), 15.8f);
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_fastCreate), 17f);
+
+        entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 17f);
 
         entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 15f);
         entity.StartTimePattern(entity.Getpattern(EPattern.HadoukenPattern), 19f);

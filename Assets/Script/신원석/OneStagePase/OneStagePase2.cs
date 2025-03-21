@@ -6,6 +6,12 @@ public class OneStagePase2 : State<OneStage>
 	public override void Enter(OneStage entity)
 	{
         time = 0f;
+
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_fastCreate), 6f);
+
+		entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 6.5f);
+
+
     }
 
 	public override void Execute(OneStage entity)
