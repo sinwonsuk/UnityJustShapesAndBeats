@@ -15,6 +15,7 @@ public class PinkBulletRotateObj : MonoBehaviour
         transform.Rotate(0, 0, angleSpeed*Time.deltaTime);
     }
 
+
     [SerializeField]
     private float angleSpeed = 10;
 }

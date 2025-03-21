@@ -9,8 +9,8 @@ public enum StagePase
     Pase2,
     Pase3,
     Pase4,
-    Pase5,
-    Pase6,
+    Ending,
+
 }
 
 public enum EPattern
@@ -24,15 +24,25 @@ public enum EPattern
 }
 public class OneStage : BaseGameEntity
 {
-
-
     void Start()
     {
       
     }
 
+    private void OnDisable()
+    {
+       
 
-	public override void Setup()
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            if (pattern[i].gameObject == null)
+                continue;
+            pattern[i].SetActive(false);        
+        }
+    }
+
+
+    public override void Setup()
 	{
         if (stateMachine == null)
         {

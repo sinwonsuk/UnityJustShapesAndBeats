@@ -49,21 +49,16 @@ public class GameController : MonoBehaviour
     {
         if (prevstage != stage)
         {
+            stageEntities[prevstage].gameObject.SetActive(false);
             stageEntities[stage].gameObject.SetActive(true);
             stageEntities[stage].Setup();
             prevstage = stage;
         }
     }
     void UpdateStage()
-    {
-        foreach (var entity in stageEntities.Values)
-        {
-           // entity.gameObject.SetActive(false);
-        }
-
+    {      
         if (stageEntities.ContainsKey(stage))
         {
-
             stageEntities[stage].Updated();
         }
     }
@@ -71,7 +66,13 @@ public class GameController : MonoBehaviour
 	{
 		IsGameStop = true;		
 	}
-  
+
+    public void ChangeStage(Stage _stage)
+    {
+        stage = _stage;
+    }
+
+
     [SerializeField]
     private GameObject[] stagePrefab; // Student 타입의 프리팹
 
