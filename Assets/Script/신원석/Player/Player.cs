@@ -78,8 +78,8 @@ public class Player : MonoBehaviour
 
    void MovePlayer()
    {
-        float moveX = Input.GetAxis("Horizontal"); // A, D 또는 ←, →
-        float moveY = Input.GetAxis("Vertical");   // W, S 또는 ↑, ↓
+        float moveX = Input.GetAxisRaw("Horizontal"); // A, D 또는 ←, →
+        float moveY = Input.GetAxisRaw("Vertical");   // W, S 또는 ↑, ↓
 
         Vector2 moveDir = new Vector2(moveX, moveY);
 
