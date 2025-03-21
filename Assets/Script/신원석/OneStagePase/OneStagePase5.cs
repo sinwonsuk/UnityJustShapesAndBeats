@@ -4,8 +4,10 @@ public class OneStagePase5 : State<OneStage>
 {
     public override void Enter(OneStage entity)
     {
-        entity.StartPattern(entity.Getpattern(EPattern.kickmove));
-        entity.StopTimePattern(entity.Getpattern(EPattern.kickmove), 15f);
+        time = 0;
+
+        entity.StartPattern(entity.Getpattern(EPattern.kickMove));
+        entity.StopTimePattern(entity.Getpattern(EPattern.kickMove), 15f);
 
         entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 7f);
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 13.9f);

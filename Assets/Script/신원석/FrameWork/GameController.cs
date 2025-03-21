@@ -7,10 +7,6 @@ public enum Stage
 	Stage2,
 	TestStage,
 }
-
-
-
-
 public class GameController : MonoBehaviour
 {
 	private void Start()

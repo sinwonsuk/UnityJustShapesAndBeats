@@ -17,10 +17,10 @@ public enum EPattern
 {
     BallMovementPattern = 0,
     BigBallMovementPattern,
-    kickmove,
+    kickMove,
     HadoukenPattern,
     UppercutPattern,
-    Pattern6,
+    BulletLuncher,
 }
 public class OneStage : BaseGameEntity
 {

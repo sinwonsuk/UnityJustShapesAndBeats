@@ -22,8 +22,8 @@ public class BulletLuncert : MonoBehaviour
         {
             for (int i = 0; i < count; i++) // count 개수만큼 총알 생성
             {
-                float posX = Random.Range(8, 8);
-                float posY = Random.Range(-5, 5);
+                float posX = Random.Range(9.0f, 13.0f);
+                float posY = Random.Range(0.0f, 5.0f);
 
                 Instantiate(bullet, new Vector2(posX, posY), Quaternion.identity);
             }

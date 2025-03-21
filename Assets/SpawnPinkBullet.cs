@@ -19,7 +19,7 @@ public class SpawnPinkBullet : MonoBehaviour
         //공격주기
         float attackRate = 0.2f;
         //발사체 생성갯수
-        int count = 20;
+        int count = 15;
         //발사체 사이의 각도
         float intervalAngle = 360 / count;
         //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정

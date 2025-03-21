@@ -5,17 +5,17 @@ public class OneStagePase2 : State<OneStage>
 {
 	public override void Enter(OneStage entity)
 	{
-
-	}
+        time = 0f;
+    }
 
 	public override void Execute(OneStage entity)
 	{
 		time += Time.deltaTime;
-		entity.StartPattern(entity.Getpattern(EPattern.kickmove));
+		entity.StartPattern(entity.Getpattern(EPattern.kickMove));
 		if (time >= 7f && time < 7.1f)
 		{
 			entity.StartPattern(entity.Getpattern(EPattern.UppercutPattern));
-			entity.StopPattern(entity.Getpattern(EPattern.kickmove));
+			entity.StopPattern(entity.Getpattern(EPattern.kickMove));
 		}
 		else if (time >= 19f && time < 19.1f)
 		{

@@ -35,7 +35,7 @@ public class PersonSpawner : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        yield return new WaitForSeconds(0.5f); // 처음 대기
+        yield return new WaitForSeconds(0.3f); // 처음 대기
 
         while (isSpawning)
         {
