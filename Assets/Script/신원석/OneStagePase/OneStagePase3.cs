@@ -15,6 +15,7 @@ public class MyScript3 : State<OneStage>
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 14);
     }
 
+
     public override void Execute(OneStage entity)
     {
 
