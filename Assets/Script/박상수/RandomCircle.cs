@@ -13,10 +13,17 @@ public class RandomCircle : MonoBehaviour
 
     void SpawnLauncher()
     {
-        float randomX = Random.Range(randomPositionMin.x, randomPositionMax.x);
-        float randomY = Random.Range(randomPositionMin.y, randomPositionMax.y);
-        Vector3 spawnPosition = new Vector3(randomX, randomY, 0);
+        int count = 1;
+        while (count <= 6)
+        {
+            float randomX = Random.Range(randomPositionMin.x, randomPositionMax.x);
+            float randomY = Random.Range(randomPositionMin.y, randomPositionMax.y);
 
-        Instantiate(RCircle, spawnPosition, Quaternion.identity);
+
+            Vector3 spawnPosition = new Vector3(randomX, randomY, 0);
+
+
+            Instantiate(RCircle, spawnPosition, Quaternion.identity);
+        }
     }
 }
