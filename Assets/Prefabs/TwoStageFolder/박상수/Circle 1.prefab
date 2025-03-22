@@ -45,10 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbb6a4f2419fb84da028948b860f2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newObjectPrefab: {fileID: 4790282233689535181, guid: 4d1c852378fd9f346b8766650c212500, type: 3}
   targetScale: 1
-  scaleDuration: 2
-  replaceDelay: 4
+  duration: 1
 --- !u!1 &6546569360592269794
 GameObject:
   m_ObjectHideFlags: 0

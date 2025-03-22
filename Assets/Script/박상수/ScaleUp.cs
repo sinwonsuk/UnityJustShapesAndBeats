@@ -25,6 +25,6 @@ public class ScaleUp : MonoBehaviour
         }
 
         transform.localScale = endScale; // 정확한 목표 크기로 설정
-        Destroy(gameObject); // 최대 크기에 도달하면 삭제
+        Destroy(gameObject); // 자식 오브젝트가 최대 크기에 도달하면 삭제
     }
 }
