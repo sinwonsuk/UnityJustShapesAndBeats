@@ -15,7 +15,7 @@ public enum TwoStagePase
 
 public enum TwoEPattern
 {
-    BallMovementPattern = 0,
+    SnowBall_1 = 0,
     BigBallMovementPattern,
     kickmove,
     HadoukenPattern,
