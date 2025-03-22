@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritePrefab1: {fileID: 5438717990586006000, guid: c901c46c46d96814c8c54d8bf1988a25, type: 3}
-  spritePrefab2: {fileID: 5595284586157510807, guid: 58d3ef2d59e48944baeb2362c1590718, type: 3}
+  spritePrefab2: {fileID: 5595284586157510807, guid: 2adfbfe8133e6b541a433fe29116c0aa, type: 3}
   spritePrefab3: {fileID: 4635729833406196888, guid: 3e2742e6ff038ed41880ab1bfe072eef, type: 3}
-  spawnPoint1: {fileID: 0}
-  spawnPoint2: {fileID: 0}
-  spawnPoint3: {fileID: 0}
-  spawnInterval: 0.3
+  spawnPoint1: {fileID: 7001762982389891892, guid: c901c46c46d96814c8c54d8bf1988a25, type: 3}
+  spawnPoint2: {fileID: 6932030394473447890, guid: 2adfbfe8133e6b541a433fe29116c0aa, type: 3}
+  spawnPoint3: {fileID: 8858010532844100159, guid: 3e2742e6ff038ed41880ab1bfe072eef, type: 3}
+  spawnInterval: 0.09
   spawnDuration: 0.6
