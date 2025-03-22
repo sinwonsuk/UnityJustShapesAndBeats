@@ -1,4 +1,5 @@
 using System.Collections;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using static UnityEditor.VersionControl.Asset;
@@ -10,7 +11,6 @@ public enum StagePase
     Pase3,
     Pase4,
     Ending,
-
 }
 
 public enum EPattern
@@ -30,9 +30,7 @@ public class OneStage : BaseGameEntity
     }
 
     private void OnDisable()
-    {
-       
-
+    {      
         for (int i = 0; i < pattern.Length; i++)
         {
             if (pattern[i].gameObject == null)
@@ -74,6 +72,19 @@ public class OneStage : BaseGameEntity
     public GameObject Getpattern(EPattern _pattern)
     {
 		return pattern[(int)_pattern];
+    }
+
+    public GameObject GetPatternObject(EPattern _pattern,int choice)
+    {
+        pattern[(int)_pattern].SetActive(true);
+
+        PatternChoiceInterface go = pattern[(int)_pattern].GetComponent<PatternChoiceInterface>();
+       
+        if (go != null)
+        {
+            go.SetPattern(choice);
+        }
+        return pattern[(int)_pattern];
     }
 
     public IEnumerator StartTimePatternCor(GameObject pattern, float timeUpdate)

@@ -20,13 +20,13 @@ public class OneStagePase5 : State<OneStage>
 
     public override void Execute(OneStage entity)
     {
-        time += Time.deltaTime;
+        //time += Time.deltaTime;
 
-        if (time >= 25)
-        {
-            entity.ChangeState(StagePase.Pase2);
-            return;
-        }
+        //if (time >= 25)
+        //{
+        //    entity.ChangeState(StagePase.Pase2);
+        //    return;
+        //}
     }
 
     public override void Exit(OneStage entity)

@@ -7,6 +7,13 @@ public enum Stage
 	Stage2,
 	TestStage,
 }
+
+public interface PatternChoiceInterface
+{
+    void SetPattern(int value);
+}
+
+
 public class GameController : MonoBehaviour
 {
 	private void Start()
