@@ -15,18 +15,19 @@ public enum TwoStagePase
 
 public enum TwoEPattern
 {
-    SnowBall_1 = 0,
+    BallMovementPattern = 0,
     BigBallMovementPattern,
     kickmove,
     HadoukenPattern,
     UppercutPattern,
     Pattern6,
+
 }
 public class TwoStage : BaseGameEntity
 {
     void Start()
     {
-       
+
     }
 
     public override void Setup()
@@ -55,7 +56,7 @@ public class TwoStage : BaseGameEntity
     {
         stateMachine.ChangeState(states[(int)newState]);
     }
-    public GameObject Getpattern(EPattern _pattern)
+    public GameObject Getpattern(TwoEPattern _pattern)
     {
         return pattern[(int)_pattern];
     }
@@ -102,6 +103,5 @@ public class TwoStage : BaseGameEntity
 
     [SerializeField]
     private GameObject[] pattern;
-
 }
 
