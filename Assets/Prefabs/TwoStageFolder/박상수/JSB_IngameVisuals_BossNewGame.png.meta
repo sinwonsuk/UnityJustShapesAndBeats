@@ -1166,7 +1166,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_24
       rect:
         serializedVersion: 2
-        x: 0
+        x: 585
         y: 1171
         width: 585
         height: 585
@@ -1188,7 +1188,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_25
       rect:
         serializedVersion: 2
-        x: 585
+        x: 1170
         y: 1171
         width: 585
         height: 585
@@ -1210,7 +1210,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_26
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 1755
         y: 1171
         width: 585
         height: 585
@@ -1232,7 +1232,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_27
       rect:
         serializedVersion: 2
-        x: 1755
+        x: 2340
         y: 1171
         width: 585
         height: 585
@@ -1254,7 +1254,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_28
       rect:
         serializedVersion: 2
-        x: 2340
+        x: 2925
         y: 1171
         width: 585
         height: 585
@@ -1276,7 +1276,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_29
       rect:
         serializedVersion: 2
-        x: 2925
+        x: 3510
         y: 1171
         width: 585
         height: 585
@@ -1298,8 +1298,8 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_30
       rect:
         serializedVersion: 2
-        x: 3510
-        y: 1171
+        x: 1170
+        y: 586
         width: 585
         height: 585
       alignment: 0
@@ -1320,7 +1320,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_31
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1755
         y: 586
         width: 585
         height: 585
@@ -1342,7 +1342,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_32
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 2340
         y: 586
         width: 585
         height: 585
@@ -1364,7 +1364,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_33
       rect:
         serializedVersion: 2
-        x: 1755
+        x: 2925
         y: 586
         width: 585
         height: 585
@@ -1386,7 +1386,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_34
       rect:
         serializedVersion: 2
-        x: 2340
+        x: 3510
         y: 586
         width: 585
         height: 585
@@ -1408,8 +1408,8 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_35
       rect:
         serializedVersion: 2
-        x: 2925
-        y: 586
+        x: 1170
+        y: 1
         width: 585
         height: 585
       alignment: 0
@@ -1430,8 +1430,8 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_36
       rect:
         serializedVersion: 2
-        x: 3510
-        y: 586
+        x: 1755
+        y: 1
         width: 585
         height: 585
       alignment: 0
@@ -1452,7 +1452,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_37
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2925
         y: 1
         width: 585
         height: 585
@@ -1474,7 +1474,7 @@ TextureImporter:
       name: JSB_IngameVisuals_BossNewGame_38
       rect:
         serializedVersion: 2
-        x: 1170
+        x: 3510
         y: 1
         width: 585
         height: 585
@@ -1488,72 +1488,6 @@ TextureImporter:
       bones: []
       spriteID: 40d85abcd7b68b8459e785e2a67d8500
       internalID: -743112630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JSB_IngameVisuals_BossNewGame_39
-      rect:
-        serializedVersion: 2
-        x: 1755
-        y: 1
-        width: 585
-        height: 585
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2eff0ca190a3845bd7e3fdbd712cdd
-      internalID: -1416445493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JSB_IngameVisuals_BossNewGame_40
-      rect:
-        serializedVersion: 2
-        x: 2925
-        y: 1
-        width: 585
-        height: 585
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bbf7c6025ffa7f499512b9f22c968a2
-      internalID: 1895703304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: JSB_IngameVisuals_BossNewGame_41
-      rect:
-        serializedVersion: 2
-        x: 3510
-        y: 1
-        width: 585
-        height: 585
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89742a80286307644b2d320e2c10c869
-      internalID: -1649784244
       vertices: []
       indices: 
       edges: []
@@ -1605,10 +1539,7 @@ TextureImporter:
       JSB_IngameVisuals_BossNewGame_36: 12394045
       JSB_IngameVisuals_BossNewGame_37: 750001965
       JSB_IngameVisuals_BossNewGame_38: -743112630
-      JSB_IngameVisuals_BossNewGame_39: -1416445493
       JSB_IngameVisuals_BossNewGame_4: -475708873
-      JSB_IngameVisuals_BossNewGame_40: 1895703304
-      JSB_IngameVisuals_BossNewGame_41: -1649784244
       JSB_IngameVisuals_BossNewGame_5: -64721374
       JSB_IngameVisuals_BossNewGame_6: -1532463997
       JSB_IngameVisuals_BossNewGame_7: 1631628863
