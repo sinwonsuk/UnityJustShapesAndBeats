@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-
-    public float rotationSpeed = 200f; // 회전 속도 (값을 조정해보세요!)
+    [SerializeField]
+    private float rotationSpeed = 200f; // 회전 속도 (값을 조정해보세요!)
 
     void Update()
     {

@@ -5,13 +5,18 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 
-public class CircleEffect : MonoBehaviour
+public class CircleEffect : ScaleUp2
 {
-    public GameObject childPrefab;       // Inspector에 자식 프리팹 할당
-    public float delayBeforeChild = 4f;    // 부모 생성 후 자식 생성 전 딜레이 (초)
-    public float targetScale = 2f;         // 자식의 최종 스케일
-    public float scaleDuration = 2f;       // 자식의 스케일업 시간
-    public float childSpeed = 1f;          // 자식 작업 속도 조절 (1이면 기본)
+    [SerializeField]
+    private GameObject childPrefab;       // Inspector에 자식 프리팹 할당
+    [SerializeField]
+    private float delayBeforeChild = 4f;    // 부모 생성 후 자식 생성 전 딜레이 (초)
+    [SerializeField]
+    private float targetScale = 2f;         // 자식의 최종 스케일
+    [SerializeField]
+    private float scaleDuration = 2f;       // 자식의 스케일업 시간
+    [SerializeField]
+    private float childSpeed = 1f;          // 자식 작업 속도 조절 (1이면 기본)
 
     private IEnumerator Start()
     {

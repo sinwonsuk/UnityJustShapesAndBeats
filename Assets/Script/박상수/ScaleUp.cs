@@ -2,8 +2,8 @@
 using UnityEngine;
 
 public class ScaleUp : MonoBehaviour
-{
-    public float targetScale = 2f;         // 최종 크기
+{   
+    public float targetScale = 2f;         // 최종 크기 
     public float duration = 2f;            // 크기 증가에 걸리는 시간
     public float speedMultiplier = 1f;     // 속도 조절 (1이면 기본, 높을수록 더 빠름)
 

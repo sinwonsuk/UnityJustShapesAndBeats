@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ThreeCircle : MonoBehaviour
 {
-    public GameObject parentPrefab;       // Inspector에 부모 프리팹 할당
-    public Vector2 spawnAreaMin = new Vector2(-10, -10);
-    public Vector2 spawnAreaMax = new Vector2(10, 10);
-    public int totalSets = 3;             // 동시에 생성할 부모–자식 세트 수 (3세트)
+    [SerializeField]
+    private GameObject parentPrefab;       // Inspector에 부모 프리팹 할당
+    [SerializeField]
+    private Vector2 spawnAreaMin = new Vector2(-10, -10);
+    [SerializeField]
+    private Vector2 spawnAreaMax = new Vector2(10, 10);
+    [SerializeField]
+    private int totalSets = 3;             // 동시에 생성할 부모–자식 세트 수 (3세트)
 
     void Start()
     {

@@ -2,8 +2,8 @@ using System.Collections;
 using UnityEngine;
 
 public class ScaleUp2 : MonoBehaviour
-{
-    public float targetScale = 2f;
+{  
+    public float targetScale = 2f;  
     public float duration = 2f;
     public float speedMultiplier = 1f;
 

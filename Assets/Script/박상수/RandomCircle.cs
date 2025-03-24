@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class RandomCircle : MonoBehaviour
 {
-    public GameObject parentPrefab;        // 부모 오브젝트 프리팹 (Inspector에 할당)
-    public Vector2 spawnAreaMin = new Vector2(-10, -10);
-    public Vector2 spawnAreaMax = new Vector2(10, 10);
-    public int maxParents = 6;             // 총 실행할 부모 사이클 수
-    public float spawnDelay = 0.5f;        // 사이클 간 대기 시간
+    [SerializeField]
+    private GameObject parentPrefab;        // 부모 오브젝트 프리팹 (Inspector에 할당)
+    [SerializeField]
+    private Vector2 spawnAreaMin = new Vector2(-10, -10);
+    [SerializeField]
+    private Vector2 spawnAreaMax = new Vector2(10, 10);
+    [SerializeField]
+    private int maxParents = 6;             // 총 실행할 부모 사이클 수
+    [SerializeField]
+    private float spawnDelay = 0.5f;        // 사이클 간 대기 시간
 
     private int currentCycle = 0;
 

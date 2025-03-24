@@ -7,9 +7,10 @@ public class BulletRandom : MonoBehaviour
     private GameObject circle;
     [SerializeField]
     private float fireRate = 1f;
-
-    public Vector2 randomPositionMin; // 랜덤 위치 최소값
-    public Vector2 randomPositionMax; // 랜덤 위치 최대값
+    [SerializeField]
+    private Vector2 randomPositionMin; // 랜덤 위치 최소값
+    [SerializeField]
+    private Vector2 randomPositionMax; // 랜덤 위치 최대값
 
     void Start()
     {
