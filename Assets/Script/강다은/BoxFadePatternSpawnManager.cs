@@ -9,18 +9,14 @@ public enum T
 	Three
 }
 
-public abstract class Setadad : MonoBehaviour
-{
-	public abstract void ASetadad(int value);
-}
 
-public class BoxFadePatternSpawnManager : Setadad
+public class BoxFadePatternSpawnManager : MonoBehaviour, PatternChoiceInterface
 {
 	private Coroutine coroutine;
 
-	public override void ASetadad(int _test)
+	public void SetPattern(int value)
 	{
-		select = (T)_test;
+		select = (T)value;
 		if (coroutine != null)
 		{
 			StopCoroutine(coroutine);
