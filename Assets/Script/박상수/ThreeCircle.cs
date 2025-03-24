@@ -1,42 +1,39 @@
+ï»¿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ThreeCircle : MonoBehaviour
 {
-    public GameObject parentPrefab;  // ºÎ¸ğ ¿ÀºêÁ§Æ® ÇÁ¸®ÆÕ
-    public GameObject childPrefab;   // Å©±â Áõ°¡ÇÒ ÀÚ½Ä ¿ÀºêÁ§Æ® ÇÁ¸®ÆÕ
-    public Vector2 spawnAreaMin = new Vector2(-5, -5); // ÃÖ¼Ò ÁÂÇ¥
-    public Vector2 spawnAreaMax = new Vector2(5, 5);   // ÃÖ´ë ÁÂÇ¥
-    public float targetScale = 2f;   // ÀÚ½Ä ¿ÀºêÁ§Æ®ÀÇ ÃÖÁ¾ Å©±â
-    public float scaleDuration = 2f; // Å©±â Ä¿Áö´Â ½Ã°£
+    public GameObject parentPrefab;       // Inspectorì— ë¶€ëª¨ í”„ë¦¬íŒ¹ í• ë‹¹
+    public Vector2 spawnAreaMin = new Vector2(-10, -10);
+    public Vector2 spawnAreaMax = new Vector2(10, 10);
+    public int totalSets = 3;             // ë™ì‹œì— ìƒì„±í•  ë¶€ëª¨â€“ìì‹ ì„¸íŠ¸ ìˆ˜ (3ì„¸íŠ¸)
 
     void Start()
     {
-        SpawnThreeObjects(); // °ÔÀÓ ½ÃÀÛ ½Ã ÇÑ ¹ø ½ÇÇà
+        // ë™ì‹œì— ë¶€ëª¨ë¥¼ ëª¨ë‘ ìƒì„± (for ë£¨í”„ ì•ˆì— ë”œë ˆì´ ì—†ì´)
+        for (int i = 0; i < totalSets; i++)
+        {
+            SpawnNewParent(i);
+        }
+        Debug.Log("[RandomSpawner] ëª¨ë“  ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ê°€ ë™ì‹œì— ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 
-    void SpawnThreeObjects()
+    GameObject SpawnNewParent(int index)
     {
-        Vector2 randomPosition = new Vector2(
+        if (parentPrefab == null)
+        {
+            Debug.LogError("ParentPrefabì´ í• ë‹¹ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+            return null;
+        }
+
+        Vector2 pos = new Vector2(
             Random.Range(spawnAreaMin.x, spawnAreaMax.x),
             Random.Range(spawnAreaMin.y, spawnAreaMax.y)
         );
-
-        for (int i = 0; i < 3; i++)
-        {
-            Vector2 offset = new Vector2(i * 2, 0); // 3°³ÀÇ ¿ÀºêÁ§Æ®¸¦ ¿·À¸·Î ¹èÄ¡
-            Vector2 spawnPosition = randomPosition + offset;
-
-            // ºÎ¸ğ ¿ÀºêÁ§Æ® »ı¼º
-            GameObject parentObj = Instantiate(parentPrefab, spawnPosition, Quaternion.identity);
-
-            // ºÎ¸ğÀÇ ÀÚ½Ä ¿ÀºêÁ§Æ® »ı¼º
-            GameObject childObj = Instantiate(childPrefab, parentObj.transform);
-            childObj.transform.localPosition = Vector3.zero; // ºÎ¸ğÀÇ Áß½É¿¡ ¹èÄ¡
-
-            // ÀÚ½Ä ¿ÀºêÁ§Æ® Å©±â Áõ°¡ ±â´É Ãß°¡
-            ScaleUp scaleScript = childObj.AddComponent<ScaleUp>();
-            scaleScript.targetScale = targetScale;
-            scaleScript.duration = scaleDuration;
-        }
+        GameObject parentObj = Instantiate(parentPrefab, pos, Quaternion.identity);
+        parentObj.name = "Parent_" + index;
+        Debug.Log($"[RandomSpawner] ìƒì„±ë¨: {parentObj.name}");
+        return parentObj;
     }
 }

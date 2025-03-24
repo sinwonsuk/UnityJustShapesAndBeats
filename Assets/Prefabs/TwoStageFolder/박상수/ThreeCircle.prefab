@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentPrefab: {fileID: 3051330999646053730, guid: 16c378f139059bd479bc6b1327808ffd, type: 3}
   childPrefab: {fileID: 4790282233689535181, guid: 4d1c852378fd9f346b8766650c212500, type: 3}
-  spawnAreaMin: {x: -5, y: -5}
-  spawnAreaMax: {x: 5, y: 5}
+  spawnAreaMin: {x: -3, y: -3}
+  spawnAreaMax: {x: 3, y: 3}
   targetScale: 1
   scaleDuration: 1

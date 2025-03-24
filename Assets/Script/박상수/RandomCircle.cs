@@ -1,45 +1,63 @@
-using System.Collections;
+ï»¿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomCircle : MonoBehaviour
 {
-    public GameObject parentPrefab;  // ·£´ıÇÑ À§Ä¡¿¡ »ı¼ºµÉ ºÎ¸ğ ¿ÀºêÁ§Æ® ÇÁ¸®ÆÕ
-    public GameObject childPrefab;   // ºÎ¸ğ ¿ÀºêÁ§Æ®ÀÇ ÀÚ½ÄÀ¸·Î »ı¼ºµÉ ¿ÀºêÁ§Æ® ÇÁ¸®ÆÕ
-    public int spawnCount = 6;       // ÃÑ »ı¼º È½¼ö
-    public float spawnInterval = 1f; // »ı¼º °£°İ (ÃÊ)
-    public Vector2 spawnAreaMin = new Vector2(-5, -5); // ÃÖ¼Ò ÁÂÇ¥
-    public Vector2 spawnAreaMax = new Vector2(5, 5);   // ÃÖ´ë ÁÂÇ¥
-    public float targetScale = 2f;   // ÀÚ½Ä ¿ÀºêÁ§Æ®ÀÇ ÃÖÁ¾ Å©±â
-    public float scaleDuration = 2f; // Å©±â Ä¿Áö´Â ½Ã°£
+    public GameObject parentPrefab;        // ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ í”„ë¦¬íŒ¹ (Inspectorì— í• ë‹¹)
+    public Vector2 spawnAreaMin = new Vector2(-10, -10);
+    public Vector2 spawnAreaMax = new Vector2(10, 10);
+    public int maxParents = 6;             // ì´ ì‹¤í–‰í•  ë¶€ëª¨ ì‚¬ì´í´ ìˆ˜
+    public float spawnDelay = 0.5f;        // ì‚¬ì´í´ ê°„ ëŒ€ê¸° ì‹œê°„
+
+    private int currentCycle = 0;
 
     void Start()
     {
-        StartCoroutine(SpawnObjects());
+        StartCoroutine(SpawnCycle());
     }
 
-    IEnumerator SpawnObjects()
+    IEnumerator SpawnCycle()
     {
-        for (int i = 0; i < spawnCount; i++)
+        while (currentCycle < maxParents)
         {
-            // ·£´ı À§Ä¡ °è»ê
-            Vector2 randomPosition = new Vector2(
-                Random.Range(spawnAreaMin.x, spawnAreaMax.x),
-                Random.Range(spawnAreaMin.y, spawnAreaMax.y)
-            );
+            // ìƒˆ ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ ìƒì„±
+            GameObject parentObj = SpawnNewParent();
+            ParentController pc = parentObj.GetComponent<ParentController>();
 
-            // ºÎ¸ğ ¿ÀºêÁ§Æ® »ı¼º
-            GameObject parentObj = Instantiate(parentPrefab, randomPosition, Quaternion.identity);
+            if (pc != null)
+            {
+                // ë¶€ëª¨ì˜ ì‘ì—… ì™„ë£Œ(isFinished == true)ê¹Œì§€ ëŒ€ê¸°
+                yield return new WaitUntil(() => pc.isFinished);
 
-            // ºÎ¸ğÀÇ ÀÚ½Ä ¿ÀºêÁ§Æ® »ı¼º
-            GameObject childObj = Instantiate(childPrefab, parentObj.transform);
-            childObj.transform.localPosition = Vector3.zero; // ºÎ¸ğÀÇ Áß¾Ó¿¡ ¹èÄ¡
+                Debug.Log($"[RandomSpawner] ì‚­ì œ ì‹œë„: {parentObj.name}");
+                Destroy(parentObj);
 
-            // ÀÚ½Ä ¿ÀºêÁ§Æ® Å©±â Áõ°¡ ±â´É Ãß°¡
-            ScaleUp scaleScript = childObj.AddComponent<ScaleUp>();
-            scaleScript.targetScale = targetScale;
-            scaleScript.duration = scaleDuration;
+                // ë¶€ëª¨ ì‚­ì œ í›„ ì ê¹ ëŒ€ê¸°í•˜ì—¬ ì™„ì „íˆ ì‚­ì œë˜ë„ë¡ í•¨
+                yield return new WaitForSeconds(0.1f);
+            }
 
-            yield return new WaitForSeconds(spawnInterval); // ÀÏÁ¤ °£°İÀ¸·Î »ı¼º
+            currentCycle++;
+            yield return new WaitForSeconds(spawnDelay);
         }
+    }
+
+    GameObject SpawnNewParent()
+    {
+        if (parentPrefab == null)
+        {
+            Debug.LogError("ParentPrefab not assigned.");
+            return null;
+        }
+
+        Vector2 pos = new Vector2(
+            Random.Range(spawnAreaMin.x, spawnAreaMax.x),
+            Random.Range(spawnAreaMin.y, spawnAreaMax.y)
+        );
+
+        GameObject parentObj = Instantiate(parentPrefab, pos, Quaternion.identity);
+        parentObj.name = "Parent_" + currentCycle;
+        Debug.Log($"[RandomSpawner] ìƒì„±ë¨: {parentObj.name}");
+        return parentObj;
     }
 }

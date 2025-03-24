@@ -1,36 +1,41 @@
-using System.Collections;
+﻿using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
 
-public class CircleEffect : MonoBehaviour
+public class ParentController : MonoBehaviour
 {
-    public float targetScale = 2f;
-    public float duration = 2f;
+    public GameObject childPrefab;       // 자식 오브젝트 프리팹
+    public float targetScale = 2f;       // 자식 오브젝트의 최종 크기
+    public float scaleDuration = 2f;     // 크기 커지는 시간
+    public float intervalBetweenChildren = 1f; // 자식 실행 간격
+    internal bool isFinished;
 
-    void Start()
+    public void StartChildEffect()  // 🔥 여기 수정 (private → public)
     {
-        StartCoroutine(ScaleOverTime(duration));
+        StartCoroutine(SpawnAndControlChild());
     }
 
-    IEnumerator ScaleOverTime(float time)
+    IEnumerator SpawnAndControlChild()
     {
-        Vector3 startScale = transform.localScale;
-        Vector3 endScale = new Vector3(targetScale, targetScale, 1);
-        float elapsedTime = 0f;
+        // 🔥 자식 오브젝트 생성
+        GameObject childObj = Instantiate(childPrefab, transform);
+        childObj.transform.localPosition = Vector3.zero;
 
-        while (elapsedTime < time)
-        {
-            transform.localScale = Vector3.Lerp(startScale, endScale, elapsedTime / time);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+        // 🔥 자식 오브젝트의 이름 설정
+        childObj.name = $"Child_{gameObject.name}";
 
-        transform.localScale = endScale; // ��Ȯ�� ��ǥ ũ��� ����
-        Destroy(gameObject); // �ڽ� ������Ʈ�� �ִ� ũ�⿡ �����ϸ� ����
+        // 🔥 자식 오브젝트 크기 증가 기능 추가
+        ScaleUp scaleScript = childObj.AddComponent<ScaleUp>();
+        scaleScript.targetScale = targetScale;
+        scaleScript.duration = scaleDuration;
+
+        // 🔥 자식이 다 커질 때까지 대기
+        yield return new WaitForSeconds(scaleDuration + intervalBetweenChildren);
     }
 }
+
 
 
 
