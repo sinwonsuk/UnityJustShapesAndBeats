@@ -6,7 +6,12 @@ public class OneStagePase1 : State<OneStage>
     public override void Enter(OneStage entity)
     {
         entity.StartPattern(entity.Getpattern(EPattern.BallMovementPattern));
-        
+        entity.StartTimePattern(entity.Getpattern(EPattern.map_first),3.5f);
+
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_first), 13.0f);
+        entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate), 13.2f);
+
+
         time = 0;
     }
 

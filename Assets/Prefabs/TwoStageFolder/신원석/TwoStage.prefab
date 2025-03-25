@@ -50,4 +50,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pattern: []
+  pattern:
+  - {fileID: 7061371073488707482, guid: 37281a65961afea44992b761c84e7b58, type: 3}
+  - {fileID: 8045388678727389480, guid: 2dbd4152418c5494abbceafd0e220d21, type: 3}

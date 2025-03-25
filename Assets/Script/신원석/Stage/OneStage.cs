@@ -21,6 +21,10 @@ public enum EPattern
     HadoukenPattern,
     UppercutPattern,
     BulletLuncher,
+    map_first,
+    map_fastCreate,
+    map_fastCreate_shake,
+    map_shake
 }
 public class OneStage : BaseGameEntity
 {
