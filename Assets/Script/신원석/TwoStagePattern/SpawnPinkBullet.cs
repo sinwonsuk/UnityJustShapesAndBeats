@@ -10,6 +10,8 @@ public class SpawnPinkBullet : MonoBehaviour
     }
 
 
+
+
     void Update()
     {
         
@@ -28,6 +30,11 @@ public class SpawnPinkBullet : MonoBehaviour
         //원 형태로 방사하는 발사체 생성(count 갯수 만큼)
         while (true)
         {
+            if(fireCircleCheck == 6)
+            {
+               fireCircleCheck = 0;
+               yield break;
+            }
 
             for (int i = 0; i < count; ++i)
             {
@@ -47,6 +54,8 @@ public class SpawnPinkBullet : MonoBehaviour
                 //발사체 이동 방향 설정
                 clone.GetComponent<PinkBullet>().Move(new Vector2(x, y));
             }
+
+            fireCircleCheck++;
             //발사체가 생성되는 시작 각도 설정을 위한변수
             weightAngle += 1;
 
@@ -57,8 +66,11 @@ public class SpawnPinkBullet : MonoBehaviour
     }
 
     [SerializeField]
-    Transform BulletTransform;
+    private Transform BulletTransform;
 
     [SerializeField]
-    GameObject pinkBullet;
+    private GameObject pinkBullet;
+
+    int fireCircleCheck = 0;
+
 }
