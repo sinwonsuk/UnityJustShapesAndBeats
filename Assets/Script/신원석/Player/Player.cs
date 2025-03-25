@@ -212,7 +212,4 @@ public class Player : MonoBehaviour
     private BoxCollider2D collider2D;
 
     private PlayerState playerState = PlayerState.Idle;
-
-    int teamtest = 0;
-
 }
