@@ -15,13 +15,18 @@ public enum TwoStagePase
 
 public enum TwoEPattern
 {
-    BallMovementPattern = 0,
-    BigBallMovementPattern,
-    kickmove,
-    HadoukenPattern,
-    UppercutPattern,
-    Pattern6,
-
+    UglyCircle,
+    BoxFadePatternManager,
+    SnowBall_fast,
+    SnowBall_first,
+    SnowBall_slow,
+    Circle,
+    ThreeCircle,
+    miniball,
+    miniball_2,
+    triangle_spawner,
+    triangle_spawner_2,
+    ugly,
 }
 public class TwoStage : BaseGameEntity
 {
