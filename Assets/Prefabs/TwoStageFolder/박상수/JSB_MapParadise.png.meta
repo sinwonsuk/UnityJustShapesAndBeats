@@ -1,0 +1,4605 @@
+fileFormatVersion: 2
+guid: 0dac32ceb98090643b4dbf6e7fd7ee79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5324278333217131477
+    second: JSB_MapParadise_0
+  - first:
+      213: -3813253445583074115
+    second: JSB_MapParadise_1
+  - first:
+      213: -266319473705758751
+    second: JSB_MapParadise_2
+  - first:
+      213: 7991603603422523559
+    second: JSB_MapParadise_3
+  - first:
+      213: -8947849010393366264
+    second: JSB_MapParadise_4
+  - first:
+      213: -9117165101042563201
+    second: JSB_MapParadise_5
+  - first:
+      213: -8418495034611171352
+    second: JSB_MapParadise_6
+  - first:
+      213: -7426448080685694567
+    second: JSB_MapParadise_7
+  - first:
+      213: 5658803230683670156
+    second: JSB_MapParadise_8
+  - first:
+      213: -1164525468614481582
+    second: JSB_MapParadise_9
+  - first:
+      213: -3418944578283790326
+    second: JSB_MapParadise_10
+  - first:
+      213: 9128526571497665600
+    second: JSB_MapParadise_11
+  - first:
+      213: -5140086465308519429
+    second: JSB_MapParadise_12
+  - first:
+      213: 5532210161014405747
+    second: JSB_MapParadise_13
+  - first:
+      213: -4402992612780475723
+    second: JSB_MapParadise_14
+  - first:
+      213: 3485229281358757469
+    second: JSB_MapParadise_15
+  - first:
+      213: 4360771992772301609
+    second: JSB_MapParadise_16
+  - first:
+      213: 1774661130196334902
+    second: JSB_MapParadise_17
+  - first:
+      213: -8354819065559968778
+    second: JSB_MapParadise_18
+  - first:
+      213: 5456819624394645270
+    second: JSB_MapParadise_19
+  - first:
+      213: -8959413268968868089
+    second: JSB_MapParadise_20
+  - first:
+      213: -1930656699696021433
+    second: JSB_MapParadise_21
+  - first:
+      213: 3616111705852004972
+    second: JSB_MapParadise_22
+  - first:
+      213: -4389346310859619778
+    second: JSB_MapParadise_23
+  - first:
+      213: 8402857256298729058
+    second: JSB_MapParadise_24
+  - first:
+      213: -4578620493777496287
+    second: JSB_MapParadise_25
+  - first:
+      213: -8431235596703126132
+    second: JSB_MapParadise_26
+  - first:
+      213: 5096578796022474906
+    second: JSB_MapParadise_27
+  - first:
+      213: 5304591664448544161
+    second: JSB_MapParadise_28
+  - first:
+      213: -1896805626972405263
+    second: JSB_MapParadise_29
+  - first:
+      213: 638507284819652125
+    second: JSB_MapParadise_30
+  - first:
+      213: 7123050847054355370
+    second: JSB_MapParadise_31
+  - first:
+      213: -3281275610078890937
+    second: JSB_MapParadise_32
+  - first:
+      213: 4201649368972376209
+    second: JSB_MapParadise_33
+  - first:
+      213: 8359292112733209209
+    second: JSB_MapParadise_34
+  - first:
+      213: 4102813741892598356
+    second: JSB_MapParadise_35
+  - first:
+      213: 1662143075499608818
+    second: JSB_MapParadise_36
+  - first:
+      213: 2493658360089948999
+    second: JSB_MapParadise_37
+  - first:
+      213: -4901272869360026103
+    second: JSB_MapParadise_38
+  - first:
+      213: -5345145954087567793
+    second: JSB_MapParadise_39
+  - first:
+      213: -1766180624023146579
+    second: JSB_MapParadise_40
+  - first:
+      213: 3811993630649332860
+    second: JSB_MapParadise_41
+  - first:
+      213: -6901276312082902292
+    second: JSB_MapParadise_42
+  - first:
+      213: -9182594337745746432
+    second: JSB_MapParadise_43
+  - first:
+      213: -8953748329561828320
+    second: JSB_MapParadise_44
+  - first:
+      213: 5320366867668632983
+    second: JSB_MapParadise_45
+  - first:
+      213: 4312939142914943954
+    second: JSB_MapParadise_46
+  - first:
+      213: -677033461793743932
+    second: JSB_MapParadise_47
+  - first:
+      213: -1797856482318475019
+    second: JSB_MapParadise_48
+  - first:
+      213: 8903042656181097490
+    second: JSB_MapParadise_49
+  - first:
+      213: 3384410182203004462
+    second: JSB_MapParadise_50
+  - first:
+      213: 8446380218226103344
+    second: JSB_MapParadise_51
+  - first:
+      213: 5523594676730314990
+    second: JSB_MapParadise_52
+  - first:
+      213: -4250775148977019810
+    second: JSB_MapParadise_53
+  - first:
+      213: -436268818780663218
+    second: JSB_MapParadise_54
+  - first:
+      213: 7431954860507816677
+    second: JSB_MapParadise_55
+  - first:
+      213: -1268586519662465991
+    second: JSB_MapParadise_56
+  - first:
+      213: -7874092107898062546
+    second: JSB_MapParadise_57
+  - first:
+      213: 8263207790630917778
+    second: JSB_MapParadise_58
+  - first:
+      213: -7639498169017331157
+    second: JSB_MapParadise_59
+  - first:
+      213: 3808526079550961644
+    second: JSB_MapParadise_60
+  - first:
+      213: 3122393448976902646
+    second: JSB_MapParadise_61
+  - first:
+      213: -2040654954977235155
+    second: JSB_MapParadise_62
+  - first:
+      213: -6623738829049013727
+    second: JSB_MapParadise_63
+  - first:
+      213: -1059653150117130546
+    second: JSB_MapParadise_64
+  - first:
+      213: 8134819763744971959
+    second: JSB_MapParadise_65
+  - first:
+      213: -4678913893655326378
+    second: JSB_MapParadise_66
+  - first:
+      213: 7499666631011830772
+    second: JSB_MapParadise_67
+  - first:
+      213: 4795774770907267976
+    second: JSB_MapParadise_68
+  - first:
+      213: -8302386020591894210
+    second: JSB_MapParadise_69
+  - first:
+      213: -283544961059601870
+    second: JSB_MapParadise_70
+  - first:
+      213: -3221098359384760390
+    second: JSB_MapParadise_71
+  - first:
+      213: -2812319811804481238
+    second: JSB_MapParadise_72
+  - first:
+      213: -1585814150054037688
+    second: JSB_MapParadise_73
+  - first:
+      213: 1444737141330586925
+    second: JSB_MapParadise_74
+  - first:
+      213: -809617884995949024
+    second: JSB_MapParadise_75
+  - first:
+      213: 8657204077013598424
+    second: JSB_MapParadise_76
+  - first:
+      213: -3863379395226450898
+    second: JSB_MapParadise_77
+  - first:
+      213: -6184655875026974416
+    second: JSB_MapParadise_78
+  - first:
+      213: -863800387314026740
+    second: JSB_MapParadise_79
+  - first:
+      213: -4994794088720068228
+    second: JSB_MapParadise_80
+  - first:
+      213: -4120077392093688189
+    second: JSB_MapParadise_81
+  - first:
+      213: 6222218991579295
+    second: JSB_MapParadise_82
+  - first:
+      213: 8573662323171024552
+    second: JSB_MapParadise_83
+  - first:
+      213: 6459950679415887401
+    second: JSB_MapParadise_84
+  - first:
+      213: 6092505833243020475
+    second: JSB_MapParadise_85
+  - first:
+      213: -970669549786510977
+    second: JSB_MapParadise_86
+  - first:
+      213: -3246486212566105202
+    second: JSB_MapParadise_87
+  - first:
+      213: 4633119181809617
+    second: JSB_MapParadise_88
+  - first:
+      213: -3095565826231037771
+    second: JSB_MapParadise_89
+  - first:
+      213: 6907163109245430506
+    second: JSB_MapParadise_90
+  - first:
+      213: 8166509807911477161
+    second: JSB_MapParadise_91
+  - first:
+      213: -173669642985326219
+    second: JSB_MapParadise_92
+  - first:
+      213: -3338160770801315552
+    second: JSB_MapParadise_93
+  - first:
+      213: -3181161396878181083
+    second: JSB_MapParadise_94
+  - first:
+      213: 8162679079399126399
+    second: JSB_MapParadise_95
+  - first:
+      213: -2579814072716523003
+    second: JSB_MapParadise_96
+  - first:
+      213: -1887364249528739523
+    second: JSB_MapParadise_97
+  - first:
+      213: 4047273111795753851
+    second: JSB_MapParadise_98
+  - first:
+      213: 3374354633422357732
+    second: JSB_MapParadise_99
+  - first:
+      213: -526353614274076254
+    second: JSB_MapParadise_100
+  - first:
+      213: 13110316745776115
+    second: JSB_MapParadise_101
+  - first:
+      213: -8764632391897457920
+    second: JSB_MapParadise_102
+  - first:
+      213: -5543342447495903213
+    second: JSB_MapParadise_103
+  - first:
+      213: 8176566361842223574
+    second: JSB_MapParadise_104
+  - first:
+      213: 159499213214853826
+    second: JSB_MapParadise_105
+  - first:
+      213: 7402644492075747664
+    second: JSB_MapParadise_106
+  - first:
+      213: 2501927674674447869
+    second: JSB_MapParadise_107
+  - first:
+      213: 4898564682231552688
+    second: JSB_MapParadise_108
+  - first:
+      213: 2371147347582709420
+    second: JSB_MapParadise_109
+  - first:
+      213: -5979775561175886284
+    second: JSB_MapParadise_110
+  - first:
+      213: -4721101855661275017
+    second: JSB_MapParadise_111
+  - first:
+      213: -2599337229549000715
+    second: JSB_MapParadise_112
+  - first:
+      213: -5838637520961435577
+    second: JSB_MapParadise_113
+  - first:
+      213: -2273762129468079194
+    second: JSB_MapParadise_114
+  - first:
+      213: 2153873439863925200
+    second: JSB_MapParadise_115
+  - first:
+      213: 6344820120236037010
+    second: JSB_MapParadise_116
+  - first:
+      213: -8175108122640260109
+    second: JSB_MapParadise_117
+  - first:
+      213: 3045666846920734764
+    second: JSB_MapParadise_118
+  - first:
+      213: -7116479982136474140
+    second: JSB_MapParadise_119
+  - first:
+      213: 1519172914557817816
+    second: JSB_MapParadise_120
+  - first:
+      213: 1406650084422558037
+    second: JSB_MapParadise_121
+  - first:
+      213: 6706410943442284108
+    second: JSB_MapParadise_122
+  - first:
+      213: 3014739750774891711
+    second: JSB_MapParadise_123
+  - first:
+      213: 7433989994621835534
+    second: JSB_MapParadise_124
+  - first:
+      213: 1107901046643458004
+    second: JSB_MapParadise_125
+  - first:
+      213: -5307227814025623720
+    second: JSB_MapParadise_126
+  - first:
+      213: -6794217146914583736
+    second: JSB_MapParadise_127
+  - first:
+      213: -1241857796647375312
+    second: JSB_MapParadise_128
+  - first:
+      213: 6743710530904416262
+    second: JSB_MapParadise_129
+  - first:
+      213: 3254034285652808663
+    second: JSB_MapParadise_130
+  - first:
+      213: -8809670931973346872
+    second: JSB_MapParadise_131
+  - first:
+      213: 2705914353108965765
+    second: JSB_MapParadise_132
+  - first:
+      213: 4817080113794641575
+    second: JSB_MapParadise_133
+  - first:
+      213: -6881323461307094475
+    second: JSB_MapParadise_134
+  - first:
+      213: -9020455810262539746
+    second: JSB_MapParadise_135
+  - first:
+      213: 1118467848021039714
+    second: JSB_MapParadise_136
+  - first:
+      213: -74946744098086069
+    second: JSB_MapParadise_137
+  - first:
+      213: 4213793909734666578
+    second: JSB_MapParadise_138
+  - first:
+      213: 5902813117156556455
+    second: JSB_MapParadise_139
+  - first:
+      213: 3650590463910631222
+    second: JSB_MapParadise_140
+  - first:
+      213: -9150980068349194567
+    second: JSB_MapParadise_141
+  - first:
+      213: -5923382688982338870
+    second: JSB_MapParadise_142
+  - first:
+      213: 655006627222543081
+    second: JSB_MapParadise_143
+  - first:
+      213: -5615419978348731260
+    second: JSB_MapParadise_144
+  - first:
+      213: -247838977894618825
+    second: JSB_MapParadise_145
+  - first:
+      213: -7721315385534170095
+    second: JSB_MapParadise_146
+  - first:
+      213: 7420714879342978176
+    second: JSB_MapParadise_147
+  - first:
+      213: 623427324716802584
+    second: JSB_MapParadise_148
+  - first:
+      213: 6595228716719510425
+    second: JSB_MapParadise_149
+  - first:
+      213: -6684681040574254123
+    second: JSB_MapParadise_150
+  - first:
+      213: 3824087332616569895
+    second: JSB_MapParadise_151
+  - first:
+      213: -8786260809436748990
+    second: JSB_MapParadise_152
+  - first:
+      213: -2367231320740218576
+    second: JSB_MapParadise_153
+  - first:
+      213: -4476052955118575324
+    second: JSB_MapParadise_154
+  - first:
+      213: 1634473632514347921
+    second: JSB_MapParadise_155
+  - first:
+      213: -5187953904525623498
+    second: JSB_MapParadise_156
+  - first:
+      213: 5133211362879725909
+    second: JSB_MapParadise_157
+  - first:
+      213: -7319264681574333476
+    second: JSB_MapParadise_158
+  - first:
+      213: -91237200723449300
+    second: JSB_MapParadise_159
+  - first:
+      213: -3322839398927771182
+    second: JSB_MapParadise_160
+  - first:
+      213: -228045117979142162
+    second: JSB_MapParadise_161
+  - first:
+      213: -2805093473602835223
+    second: JSB_MapParadise_162
+  - first:
+      213: -4620474530689903405
+    second: JSB_MapParadise_163
+  - first:
+      213: 1917833541344314423
+    second: JSB_MapParadise_164
+  - first:
+      213: 1754890257243379432
+    second: JSB_MapParadise_165
+  - first:
+      213: -2289592263968340902
+    second: JSB_MapParadise_166
+  - first:
+      213: 7751323696227327527
+    second: JSB_MapParadise_167
+  - first:
+      213: -7525106106510309091
+    second: JSB_MapParadise_168
+  - first:
+      213: 777246558380815461
+    second: JSB_MapParadise_169
+  - first:
+      213: -1149636870671216148
+    second: JSB_MapParadise_170
+  - first:
+      213: -2205225863493435719
+    second: JSB_MapParadise_171
+  - first:
+      213: -8254878081648426111
+    second: JSB_MapParadise_172
+  - first:
+      213: 427424662661943250
+    second: JSB_MapParadise_173
+  - first:
+      213: -2159363401687645864
+    second: JSB_MapParadise_174
+  - first:
+      213: -3982548099360714919
+    second: JSB_MapParadise_175
+  - first:
+      213: -5947581748946984346
+    second: JSB_MapParadise_176
+  - first:
+      213: -6923817480422812719
+    second: JSB_MapParadise_177
+  - first:
+      213: 8084481146233261883
+    second: JSB_MapParadise_178
+  - first:
+      213: -5023067125615440171
+    second: JSB_MapParadise_179
+  - first:
+      213: -5730980123405541158
+    second: JSB_MapParadise_180
+  - first:
+      213: 3470543420773690206
+    second: JSB_MapParadise_181
+  - first:
+      213: 922654992145053449
+    second: JSB_MapParadise_182
+  - first:
+      213: -6583754984893307990
+    second: JSB_MapParadise_183
+  - first:
+      213: 5232863461699281980
+    second: JSB_MapParadise_184
+  - first:
+      213: -162140597054642769
+    second: JSB_MapParadise_185
+  - first:
+      213: -4789008390017766910
+    second: JSB_MapParadise_186
+  - first:
+      213: -2889337661008365735
+    second: JSB_MapParadise_187
+  - first:
+      213: 7965250877340735405
+    second: JSB_MapParadise_188
+  - first:
+      213: -7317147655028768777
+    second: JSB_MapParadise_189
+  - first:
+      213: -246970962688769520
+    second: JSB_MapParadise_190
+  - first:
+      213: 764160390820450630
+    second: JSB_MapParadise_191
+  - first:
+      213: -1400294805149581697
+    second: JSB_MapParadise_192
+  - first:
+      213: 4065811758266800040
+    second: JSB_MapParadise_193
+  - first:
+      213: -4613522898577975288
+    second: JSB_MapParadise_194
+  - first:
+      213: -2973215863164377895
+    second: JSB_MapParadise_195
+  - first:
+      213: 9040819581476599108
+    second: JSB_MapParadise_196
+  - first:
+      213: 7967927205243935236
+    second: JSB_MapParadise_197
+  - first:
+      213: 7631849525352328084
+    second: JSB_MapParadise_198
+  - first:
+      213: 3451625543576511312
+    second: JSB_MapParadise_199
+  - first:
+      213: -4590470695238479276
+    second: JSB_MapParadise_200
+  - first:
+      213: 3340857764076203476
+    second: JSB_MapParadise_201
+  - first:
+      213: -2841720715449283682
+    second: JSB_MapParadise_202
+  - first:
+      213: 1073481467457883825
+    second: JSB_MapParadise_203
+  - first:
+      213: -7183438989270683988
+    second: JSB_MapParadise_204
+  - first:
+      213: -7226546097920768306
+    second: JSB_MapParadise_205
+  - first:
+      213: -3445812899440626688
+    second: JSB_MapParadise_206
+  - first:
+      213: -8718340922272932656
+    second: JSB_MapParadise_207
+  - first:
+      213: 6265588574056213790
+    second: JSB_MapParadise_208
+  - first:
+      213: 4500520469226667415
+    second: JSB_MapParadise_209
+  - first:
+      213: -3739408162420961293
+    second: JSB_MapParadise_210
+  - first:
+      213: -4073099468484397672
+    second: JSB_MapParadise_211
+  - first:
+      213: 5714429415256394764
+    second: JSB_MapParadise_212
+  - first:
+      213: 2503097694598714716
+    second: JSB_MapParadise_213
+  - first:
+      213: -3716269537655375614
+    second: JSB_MapParadise_214
+  - first:
+      213: 3100220785637619810
+    second: JSB_MapParadise_215
+  - first:
+      213: -8576523696751284212
+    second: JSB_MapParadise_216
+  - first:
+      213: 6656641246230882759
+    second: JSB_MapParadise_217
+  - first:
+      213: 837544929374942523
+    second: JSB_MapParadise_218
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JSB_MapParadise_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24b84fa01d5c16b0800000000000000
+      internalID: -5324278333217131477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc8c79d13a941bc0800000000000000
+      internalID: -3813253445583074115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_2
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efcff489d7dd4cf0800000000000000
+      internalID: -266319473705758751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_3
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a03bbfc221e7ee60800000000000000
+      internalID: 7991603603422523559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_4
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8014ca79bbad2d380800000000000000
+      internalID: -8947849010393366264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_5
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7705c935a2597180800000000000000
+      internalID: -9117165101042563201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_6
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef7c9e7e5f7b2b80800000000000000
+      internalID: -8418495034611171352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_7
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99109df41d4ffe890800000000000000
+      internalID: -7426448080685694567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_8
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86abb28e8b188e40800000000000000
+      internalID: 5658803230683670156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_9
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 3823
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259a6579146c6dfe0800000000000000
+      internalID: -1164525468614481582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00a5a835087d80d0800000000000000
+      internalID: -3418944578283790326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04435d04d8a0fae70800000000000000
+      internalID: 9128526571497665600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_12
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf31e78d79ebaa8b0800000000000000
+      internalID: -5140086465308519429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_13
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37af11e94db56cc40800000000000000
+      internalID: 5532210161014405747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_14
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bafc86fb8d65e2c0800000000000000
+      internalID: -4402992612780475723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_15
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ebd2cd0950e5030800000000000000
+      internalID: 3485229281358757469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_16
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9235aa7e503948c30800000000000000
+      internalID: 4360771992772301609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_17
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639bb0635ecd0a810800000000000000
+      internalID: 1774661130196334902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_18
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f313aa5358bd0c80800000000000000
+      internalID: -8354819065559968778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_19
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 3550
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f5c6379848abb40800000000000000
+      internalID: 5456819624394645270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7077033d915c9a380800000000000000
+      internalID: -8959413268968868089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_21
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740046fe5fde435e0800000000000000
+      internalID: -1930656699696021433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_22
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ac07fff620f2230800000000000000
+      internalID: 3616111705852004972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_23
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e328a0939c8e513c0800000000000000
+      internalID: -4389346310859619778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_24
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ecff38722fc9470800000000000000
+      internalID: 8402857256298729058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_25
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12791136be87570c0800000000000000
+      internalID: -4578620493777496287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_26
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8da1e835eb3efa80800000000000000
+      internalID: -8431235596703126132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_27
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9825b2896faab640800000000000000
+      internalID: 5096578796022474906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_28
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad14fd8302bd9940800000000000000
+      internalID: 5304591664448544161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_29
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1095cf4513da5e0800000000000000
+      internalID: -1896805626972405263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_30
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1eac2a1efe6cd800800000000000000
+      internalID: 638507284819652125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_31
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab58bf71092ad260800000000000000
+      internalID: 7123050847054355370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_32
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 3277
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7443813b7319672d0800000000000000
+      internalID: -3281275610078890937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198b75cf6d14f4a30800000000000000
+      internalID: 4201649368972376209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_34
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972003913eb220470800000000000000
+      internalID: 8359292112733209209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_35
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a79115c5f10f830800000000000000
+      internalID: 4102813741892598356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_36
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa870d125e111710800000000000000
+      internalID: 1662143075499608818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_37
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743385801114b9220800000000000000
+      internalID: 2493658360089948999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_38
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e398a1b4e2bfbb0800000000000000
+      internalID: -4901272869360026103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_39
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e7ef5131a32d5b0800000000000000
+      internalID: -5345145954087567793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_40
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf2cef74144d77e0800000000000000
+      internalID: -1766180624023146579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_41
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74b7e0a20ce6e430800000000000000
+      internalID: 3811993630649332860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_42
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce21b7932cdb930a0800000000000000
+      internalID: -6901276312082902292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_43
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006c62ee91fd09080800000000000000
+      internalID: -9182594337745746432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_44
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02458305555edb380800000000000000
+      internalID: -8953748329561828320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_45
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79585264a7db5d940800000000000000
+      internalID: 5320366867668632983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_46
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 3004
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dba25fac43aadb30800000000000000
+      internalID: 4312939142914943954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb1bb057a1ba96f0800000000000000
+      internalID: -677033461793743932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_48
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f026460e0bbc07e0800000000000000
+      internalID: -1797856482318475019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_49
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21413dd1026fd8b70800000000000000
+      internalID: 8903042656181097490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_50
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26dc6c1127d7fe20800000000000000
+      internalID: 3384410182203004462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_51
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034d041ce02973570800000000000000
+      internalID: 8446380218226103344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_52
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0cfbdd710c7ac40800000000000000
+      internalID: 5523594676730314990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_53
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54aa2906863205c0800000000000000
+      internalID: -4250775148977019810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_54
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42dffd12df02f9f0800000000000000
+      internalID: -436268818780663218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_55
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e26e47c19b932760800000000000000
+      internalID: 7431954860507816677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_56
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c6ba81843156ee0800000000000000
+      internalID: -1268586519662465991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_57
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29770452fa99b290800000000000000
+      internalID: -7874092107898062546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_58
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296dbc984bfcca270800000000000000
+      internalID: 8263207790630917778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_59
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22997d14ec0bf590800000000000000
+      internalID: -7639498169017331157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_60
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 2731
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce732797a4a9ad430800000000000000
+      internalID: 3808526079550961644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f966477c48f45b20800000000000000
+      internalID: 3122393448976902646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_62
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fe07b51232ea3e0800000000000000
+      internalID: -2040654954977235155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_63
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a529901a0c314a0800000000000000
+      internalID: -6623738829049013727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_64
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece0522031b5b41f0800000000000000
+      internalID: -1059653150117130546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_65
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc98d9997fa4e070800000000000000
+      internalID: 8134819763744971959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_66
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651d80a8a98211fb0800000000000000
+      internalID: -4678913893655326378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_67
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb8f43e01b241860800000000000000
+      internalID: 7499666631011830772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_68
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88345babeb30e8240800000000000000
+      internalID: 4795774770907267976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_69
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e318376f6eff7cc80800000000000000
+      internalID: -8302386020591894210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_70
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232c0363c55a01cf0800000000000000
+      internalID: -283544961059601870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_71
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf1746bb1c5c43d0800000000000000
+      internalID: -3221098359384760390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_72
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29b99e0802a8f8d0800000000000000
+      internalID: -2812319811804481238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_73
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847bd3abe6e0ef9e0800000000000000
+      internalID: -1585814150054037688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_74
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2da2d686ccbc0410800000000000000
+      internalID: 1444737141330586925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_75
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 2458
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e6309b2d8a3c4f0800000000000000
+      internalID: -809617884995949024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_76
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0857e7d31942870800000000000000
+      internalID: 8657204077013598424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_77
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24c6fab8e4826ac0800000000000000
+      internalID: -3863379395226450898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_78
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0390cf6df30bb2aa0800000000000000
+      internalID: -6184655875026974416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_79
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c077d45df1a2304f0800000000000000
+      internalID: -863800387314026740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_80
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c719e976d3deeaab0800000000000000
+      internalID: -4994794088720068228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_81
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e4325e07b82d6c0800000000000000
+      internalID: -4120077392093688189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_82
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9035b0431b161000800000000000000
+      internalID: 6222218991579295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_83
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae52cc2574cbf670800000000000000
+      internalID: 8573662323171024552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_84
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9269029aaea56a950800000000000000
+      internalID: 6459950679415887401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_85
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc027e96cdec8450800000000000000
+      internalID: 6092505833243020475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_86
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79cfa2ff2d7782f0800000000000000
+      internalID: -970669549786510977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_87
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e834bc38df922f2d0800000000000000
+      internalID: -3246486212566105202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_88
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7a80f1cc5701000800000000000000
+      internalID: 4633119181809617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_89
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 2185
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b019a438475a05d0800000000000000
+      internalID: -3095565826231037771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_90
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeaa14c804c2bdf50800000000000000
+      internalID: 6907163109245430506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_91
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af9e4bf665455170800000000000000
+      internalID: 8166509807911477161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_92
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579379d3160079df0800000000000000
+      internalID: -173669642985326219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_93
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0215e3d17787ca1d0800000000000000
+      internalID: -3338160770801315552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_94
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52df3e5609e3ad3d0800000000000000
+      internalID: -3181161396878181083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_95
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75f81fff59a74170800000000000000
+      internalID: 8162679079399126399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_96
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a8d21f4c8a23cd0800000000000000
+      internalID: -2579814072716523003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_97
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d395119f63cbec5e0800000000000000
+      internalID: -1887364249528739523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_98
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b736399a37dca2830800000000000000
+      internalID: 4047273111795753851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_99
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4455739ad14de20800000000000000
+      internalID: 3374354633422357732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_100
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a163f23d2402b8f0800000000000000
+      internalID: -526353614274076254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_101
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb568c73c39e2000800000000000000
+      internalID: 13110316745776115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_102
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bd11ec645cd5680800000000000000
+      internalID: -8764632391897457920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_103
+      rect:
+        serializedVersion: 2
+        x: 3822
+        y: 1912
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31889a4f9671213b0800000000000000
+      internalID: -5543342447495903213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d98308e8cff87170800000000000000
+      internalID: 8176566361842223574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_105
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca20a970b7a63200800000000000000
+      internalID: 159499213214853826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_106
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0594da4d1f97bb660800000000000000
+      internalID: 7402644492075747664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_107
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df580bed6f1a8b220800000000000000
+      internalID: 2501927674674447869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_108
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba9fa1ff923bf340800000000000000
+      internalID: 4898564682231552688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_109
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caee6c223f108e020800000000000000
+      internalID: 2371147347582709420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_110
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4369c8f2fc1930da0800000000000000
+      internalID: -5979775561175886284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_111
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7784fd030e64b7eb0800000000000000
+      internalID: -4721101855661275017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_112
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7a845cf8c4debd0800000000000000
+      internalID: -2599337229549000715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_113
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74883deeb1ef8fea0800000000000000
+      internalID: -5838637520961435577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_114
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3c151e369f170e0800000000000000
+      internalID: -2273762129468079194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_115
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 1639
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9ec3a5b7814ed10800000000000000
+      internalID: 2153873439863925200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_116
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2939b6678445d0850800000000000000
+      internalID: 6344820120236037010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_117
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3ed9dd97e2c8e80800000000000000
+      internalID: -8175108122640260109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_118
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28f4e25cd1644a20800000000000000
+      internalID: 3045666846920734764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_119
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5c395392f2d3d90800000000000000
+      internalID: -7116479982136474140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_120
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d31d9487bf251510800000000000000
+      internalID: 1519172914557817816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_121
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551a74d8ccc658310800000000000000
+      internalID: 1406650084422558037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_122
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e6ba19835f11d50800000000000000
+      internalID: 6706410943442284108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_123
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1366
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4ef2f94d186d920800000000000000
+      internalID: 3014739750774891711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e091e3d5386da2760800000000000000
+      internalID: 7433989994621835534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_125
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df777bc12e006f00800000000000000
+      internalID: 1107901046643458004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_126
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8570eea0c60f856b0800000000000000
+      internalID: -5307227814025623720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_127
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84bc94f808716b1a0800000000000000
+      internalID: -6794217146914583736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_128
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ea841e9e804cee0800000000000000
+      internalID: -1241857796647375312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_129
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6006e968ff8769d50800000000000000
+      internalID: 6743710530904416262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_130
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3174331f6a82d20800000000000000
+      internalID: 3254034285652808663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_131
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9e4a786f2cdb580800000000000000
+      internalID: -8809670931973346872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_132
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1093
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589d0b184c65d8520800000000000000
+      internalID: 2705914353108965765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aee35d67d4b9d240800000000000000
+      internalID: 4817080113794641575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_134
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53aaa3055c0a080a0800000000000000
+      internalID: -6881323461307094475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_135
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e126135ab37e0d280800000000000000
+      internalID: -9020455810262539746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_136
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a5df5f498958f00800000000000000
+      internalID: 1118467848021039714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_137
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4326f4555cb5fef0800000000000000
+      internalID: -74946744098086069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_138
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251707a3c376a7a30800000000000000
+      internalID: 4213793909734666578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_139
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aef1af61410be150800000000000000
+      internalID: 5902813117156556455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_140
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 820
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63752dd6fa089a230800000000000000
+      internalID: 3650590463910631222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_141
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9becd5f9c10310180800000000000000
+      internalID: -9150980068349194567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_142
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2728ae3daebcda0800000000000000
+      internalID: -5923382688982338870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_143
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea502d9e0d071900800000000000000
+      internalID: 655006627222543081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_144
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48464ed08450212b0800000000000000
+      internalID: -5615419978348731260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_145
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 739681143cf7f8cf0800000000000000
+      internalID: -247838977894618825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_146
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c3a7ee09068d490800000000000000
+      internalID: -7721315385534170095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_147
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084a1babddcabf660800000000000000
+      internalID: 7420714879342978176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_148
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 547
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812640949dbd6a800800000000000000
+      internalID: 623427324716802584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_149
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99395882395f68b50800000000000000
+      internalID: 6595228716719510425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d378c3b20e3b33a0800000000000000
+      internalID: -6684681040574254123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_151
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7248eaa0b23e11530800000000000000
+      internalID: 3824087332616569895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_152
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243269d685ee01680800000000000000
+      internalID: -8786260809436748990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_153
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039b91ae7a7e52fd0800000000000000
+      internalID: -2367231320740218576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_154
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421e15e6d8dd1e1c0800000000000000
+      internalID: -4476052955118575324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_155
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19392c4eb11dea610800000000000000
+      internalID: 1634473632514347921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_156
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 274
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f36a9296fa008b0800000000000000
+      internalID: -5187953904525623498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_157
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551e171a984dc3740800000000000000
+      internalID: 5133211362879725909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_158
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd303bd1d8fbc6a90800000000000000
+      internalID: -7319264681574333476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_159
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ae394df3cdbbef0800000000000000
+      internalID: -91237200723449300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_160
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9dc3dfb27e2e1d0800000000000000
+      internalID: -3322839398927771182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_161
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee757166c22d5dcf0800000000000000
+      internalID: -228045117979142162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_162
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ece228095e4219d0800000000000000
+      internalID: -2805093473602835223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_163
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d41d7805e6c0efb0800000000000000
+      internalID: -4620474530689903405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_164
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734482ad1738d9a10800000000000000
+      internalID: 1917833541344314423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JSB_MapParadise_165
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1
+        width: 273
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e619c2246f9a5810800000000000000
+      internalID: 1754890257243379432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ea35034c27b3f6944900f9d9333e6bb3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JSB_MapParadise_0: -5324278333217131477
+      JSB_MapParadise_1: -3813253445583074115
+      JSB_MapParadise_10: -3418944578283790326
+      JSB_MapParadise_100: -526353614274076254
+      JSB_MapParadise_101: 13110316745776115
+      JSB_MapParadise_102: -8764632391897457920
+      JSB_MapParadise_103: -5543342447495903213
+      JSB_MapParadise_104: 8176566361842223574
+      JSB_MapParadise_105: 159499213214853826
+      JSB_MapParadise_106: 7402644492075747664
+      JSB_MapParadise_107: 2501927674674447869
+      JSB_MapParadise_108: 4898564682231552688
+      JSB_MapParadise_109: 2371147347582709420
+      JSB_MapParadise_11: 9128526571497665600
+      JSB_MapParadise_110: -5979775561175886284
+      JSB_MapParadise_111: -4721101855661275017
+      JSB_MapParadise_112: -2599337229549000715
+      JSB_MapParadise_113: -5838637520961435577
+      JSB_MapParadise_114: -2273762129468079194
+      JSB_MapParadise_115: 2153873439863925200
+      JSB_MapParadise_116: 6344820120236037010
+      JSB_MapParadise_117: -8175108122640260109
+      JSB_MapParadise_118: 3045666846920734764
+      JSB_MapParadise_119: -7116479982136474140
+      JSB_MapParadise_12: -5140086465308519429
+      JSB_MapParadise_120: 1519172914557817816
+      JSB_MapParadise_121: 1406650084422558037
+      JSB_MapParadise_122: 6706410943442284108
+      JSB_MapParadise_123: 3014739750774891711
+      JSB_MapParadise_124: 7433989994621835534
+      JSB_MapParadise_125: 1107901046643458004
+      JSB_MapParadise_126: -5307227814025623720
+      JSB_MapParadise_127: -6794217146914583736
+      JSB_MapParadise_128: -1241857796647375312
+      JSB_MapParadise_129: 6743710530904416262
+      JSB_MapParadise_13: 5532210161014405747
+      JSB_MapParadise_130: 3254034285652808663
+      JSB_MapParadise_131: -8809670931973346872
+      JSB_MapParadise_132: 2705914353108965765
+      JSB_MapParadise_133: 4817080113794641575
+      JSB_MapParadise_134: -6881323461307094475
+      JSB_MapParadise_135: -9020455810262539746
+      JSB_MapParadise_136: 1118467848021039714
+      JSB_MapParadise_137: -74946744098086069
+      JSB_MapParadise_138: 4213793909734666578
+      JSB_MapParadise_139: 5902813117156556455
+      JSB_MapParadise_14: -4402992612780475723
+      JSB_MapParadise_140: 3650590463910631222
+      JSB_MapParadise_141: -9150980068349194567
+      JSB_MapParadise_142: -5923382688982338870
+      JSB_MapParadise_143: 655006627222543081
+      JSB_MapParadise_144: -5615419978348731260
+      JSB_MapParadise_145: -247838977894618825
+      JSB_MapParadise_146: -7721315385534170095
+      JSB_MapParadise_147: 7420714879342978176
+      JSB_MapParadise_148: 623427324716802584
+      JSB_MapParadise_149: 6595228716719510425
+      JSB_MapParadise_15: 3485229281358757469
+      JSB_MapParadise_150: -6684681040574254123
+      JSB_MapParadise_151: 3824087332616569895
+      JSB_MapParadise_152: -8786260809436748990
+      JSB_MapParadise_153: -2367231320740218576
+      JSB_MapParadise_154: -4476052955118575324
+      JSB_MapParadise_155: 1634473632514347921
+      JSB_MapParadise_156: -5187953904525623498
+      JSB_MapParadise_157: 5133211362879725909
+      JSB_MapParadise_158: -7319264681574333476
+      JSB_MapParadise_159: -91237200723449300
+      JSB_MapParadise_16: 4360771992772301609
+      JSB_MapParadise_160: -3322839398927771182
+      JSB_MapParadise_161: -228045117979142162
+      JSB_MapParadise_162: -2805093473602835223
+      JSB_MapParadise_163: -4620474530689903405
+      JSB_MapParadise_164: 1917833541344314423
+      JSB_MapParadise_165: 1754890257243379432
+      JSB_MapParadise_17: 1774661130196334902
+      JSB_MapParadise_18: -8354819065559968778
+      JSB_MapParadise_19: 5456819624394645270
+      JSB_MapParadise_2: -266319473705758751
+      JSB_MapParadise_20: -8959413268968868089
+      JSB_MapParadise_21: -1930656699696021433
+      JSB_MapParadise_22: 3616111705852004972
+      JSB_MapParadise_23: -4389346310859619778
+      JSB_MapParadise_24: 8402857256298729058
+      JSB_MapParadise_25: -4578620493777496287
+      JSB_MapParadise_26: -8431235596703126132
+      JSB_MapParadise_27: 5096578796022474906
+      JSB_MapParadise_28: 5304591664448544161
+      JSB_MapParadise_29: -1896805626972405263
+      JSB_MapParadise_3: 7991603603422523559
+      JSB_MapParadise_30: 638507284819652125
+      JSB_MapParadise_31: 7123050847054355370
+      JSB_MapParadise_32: -3281275610078890937
+      JSB_MapParadise_33: 4201649368972376209
+      JSB_MapParadise_34: 8359292112733209209
+      JSB_MapParadise_35: 4102813741892598356
+      JSB_MapParadise_36: 1662143075499608818
+      JSB_MapParadise_37: 2493658360089948999
+      JSB_MapParadise_38: -4901272869360026103
+      JSB_MapParadise_39: -5345145954087567793
+      JSB_MapParadise_4: -8947849010393366264
+      JSB_MapParadise_40: -1766180624023146579
+      JSB_MapParadise_41: 3811993630649332860
+      JSB_MapParadise_42: -6901276312082902292
+      JSB_MapParadise_43: -9182594337745746432
+      JSB_MapParadise_44: -8953748329561828320
+      JSB_MapParadise_45: 5320366867668632983
+      JSB_MapParadise_46: 4312939142914943954
+      JSB_MapParadise_47: -677033461793743932
+      JSB_MapParadise_48: -1797856482318475019
+      JSB_MapParadise_49: 8903042656181097490
+      JSB_MapParadise_5: -9117165101042563201
+      JSB_MapParadise_50: 3384410182203004462
+      JSB_MapParadise_51: 8446380218226103344
+      JSB_MapParadise_52: 5523594676730314990
+      JSB_MapParadise_53: -4250775148977019810
+      JSB_MapParadise_54: -436268818780663218
+      JSB_MapParadise_55: 7431954860507816677
+      JSB_MapParadise_56: -1268586519662465991
+      JSB_MapParadise_57: -7874092107898062546
+      JSB_MapParadise_58: 8263207790630917778
+      JSB_MapParadise_59: -7639498169017331157
+      JSB_MapParadise_6: -8418495034611171352
+      JSB_MapParadise_60: 3808526079550961644
+      JSB_MapParadise_61: 3122393448976902646
+      JSB_MapParadise_62: -2040654954977235155
+      JSB_MapParadise_63: -6623738829049013727
+      JSB_MapParadise_64: -1059653150117130546
+      JSB_MapParadise_65: 8134819763744971959
+      JSB_MapParadise_66: -4678913893655326378
+      JSB_MapParadise_67: 7499666631011830772
+      JSB_MapParadise_68: 4795774770907267976
+      JSB_MapParadise_69: -8302386020591894210
+      JSB_MapParadise_7: -7426448080685694567
+      JSB_MapParadise_70: -283544961059601870
+      JSB_MapParadise_71: -3221098359384760390
+      JSB_MapParadise_72: -2812319811804481238
+      JSB_MapParadise_73: -1585814150054037688
+      JSB_MapParadise_74: 1444737141330586925
+      JSB_MapParadise_75: -809617884995949024
+      JSB_MapParadise_76: 8657204077013598424
+      JSB_MapParadise_77: -3863379395226450898
+      JSB_MapParadise_78: -6184655875026974416
+      JSB_MapParadise_79: -863800387314026740
+      JSB_MapParadise_8: 5658803230683670156
+      JSB_MapParadise_80: -4994794088720068228
+      JSB_MapParadise_81: -4120077392093688189
+      JSB_MapParadise_82: 6222218991579295
+      JSB_MapParadise_83: 8573662323171024552
+      JSB_MapParadise_84: 6459950679415887401
+      JSB_MapParadise_85: 6092505833243020475
+      JSB_MapParadise_86: -970669549786510977
+      JSB_MapParadise_87: -3246486212566105202
+      JSB_MapParadise_88: 4633119181809617
+      JSB_MapParadise_89: -3095565826231037771
+      JSB_MapParadise_9: -1164525468614481582
+      JSB_MapParadise_90: 6907163109245430506
+      JSB_MapParadise_91: 8166509807911477161
+      JSB_MapParadise_92: -173669642985326219
+      JSB_MapParadise_93: -3338160770801315552
+      JSB_MapParadise_94: -3181161396878181083
+      JSB_MapParadise_95: 8162679079399126399
+      JSB_MapParadise_96: -2579814072716523003
+      JSB_MapParadise_97: -1887364249528739523
+      JSB_MapParadise_98: 4047273111795753851
+      JSB_MapParadise_99: 3374354633422357732
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
