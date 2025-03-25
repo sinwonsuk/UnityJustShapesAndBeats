@@ -19,7 +19,10 @@ public class BigPinkBallMovement : MonoBehaviour
     //    Destroy(gameObject);
     //}
 
-
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
     [SerializeField]
     private float speed = 5.0f;

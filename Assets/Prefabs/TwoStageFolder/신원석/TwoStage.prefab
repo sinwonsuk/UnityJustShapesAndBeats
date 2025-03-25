@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - {fileID: 4059337997232914658, guid: 496f12bc37f727f47811c149adbbbfdd, type: 3}
+  - {fileID: 4059337997232914658, guid: 496f12bc37f727f47811c149adbbbfdd, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
