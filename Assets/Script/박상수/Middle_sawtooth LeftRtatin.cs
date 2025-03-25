@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Middle_sawtoothLeftRtatin : MonoBehaviour
 {
     [SerializeField]
     private float rotationSpeed = 200f; // 회전 속도 (값을 조정해보세요!)
