@@ -3,24 +3,20 @@ using System.Collections;
 
 public enum T
 {
-	// 빠르게 가로줄 생성
-	One,
-	Two,
-	Three
+	One,    // 빠르게 가로줄 생성 (왼쪽 -> 오른쪽)
+	Two,    // 빠르게 가로 + 세로줄 생성 (상하좌우)
+	Three,  // 빠르게 두꺼운 가로 세로줄 생성 (상하좌우)
+	Four,   // 가로 한 줄씩 생성 (왼쪽 -> 오른쪽)
+	Five,   // 천천히 가로 + 세로 한 줄씩 생성
 }
 
-public abstract class Setadad : MonoBehaviour
-{
-	public abstract void ASetadad(int value);
-}
-
-public class BoxFadePatternSpawnManager : Setadad
+public class BoxFadePatternSpawnManager : MonoBehaviour, PatternChoiceInterface
 {
 	private Coroutine coroutine;
 
-	public override void ASetadad(int _test)
+	public void SetPattern(int value)
 	{
-		select = (T)_test;
+		select = (T)value;
 		if (coroutine != null)
 		{
 			StopCoroutine(coroutine);
@@ -61,6 +57,12 @@ public class BoxFadePatternSpawnManager : Setadad
 			case T.Three:
 				coroutine = StartCoroutine(SpawnPattern3());
 				break;
+			case T.Four:
+				coroutine = StartCoroutine(SpawnPattern4());
+				break;
+			case T.Five:
+				coroutine = StartCoroutine(SpawnPattern5());
+				break;
 		}
 	}
 
@@ -73,6 +75,7 @@ public class BoxFadePatternSpawnManager : Setadad
 			yield return new WaitForSeconds(spawnInterval);
 		}
 	}
+
 	private IEnumerator SpawnPattern2()
 	{
 		spawnInterval = 0.9f; // 패턴 간 간격
@@ -82,20 +85,13 @@ public class BoxFadePatternSpawnManager : Setadad
 		while (true)
 		{
 			GameObject patternObj = SpawnPattern(pattern2Prefab);
-
-			// 패턴이 끝나기 직전까지 대기
 			yield return new WaitForSeconds(patternDuration - timeBeforeEnd);
-
-			// 다음 패턴 스폰
 			patternObj = SpawnPattern(pattern2Prefab);
-
-			// 패턴이 완전히 끝날 때까지 대기
 			yield return new WaitForSeconds(timeBeforeEnd);
-
-			// 패턴 간 간격 대기
 			yield return new WaitForSeconds(spawnInterval);
 		}
 	}
+
 	private IEnumerator SpawnPattern3()
 	{
 		spawnInterval = 1f; // 패턴 간 간격
@@ -105,20 +101,39 @@ public class BoxFadePatternSpawnManager : Setadad
 		while (true)
 		{
 			GameObject patternObj = SpawnPattern(pattern3Prefab);
-
-			// 패턴이 끝나기 직전까지 대기
 			yield return new WaitForSeconds(patternDuration - timeBeforeEnd);
-
-			// 다음 패턴 스폰
 			patternObj = SpawnPattern(pattern3Prefab);
-
-			// 패턴이 완전히 끝날 때까지 대기
 			yield return new WaitForSeconds(timeBeforeEnd);
-
-			// 패턴 간 간격 대기
 			yield return new WaitForSeconds(spawnInterval);
 		}
 	}
+
+	private IEnumerator SpawnPattern4()
+	{
+		spawnInterval = 2f;
+		while (true)
+		{
+			SpawnPattern(pattern1Prefab);
+			yield return new WaitForSeconds(spawnInterval);
+		}
+	}
+
+	private IEnumerator SpawnPattern5()
+	{
+		spawnInterval = 2.8f; // 패턴 간 간격
+		float patternDuration = 3f;
+		float timeBeforeEnd = 0.1f; // 패턴이 끝나기 0.1초 전
+
+		while (true)
+		{
+			GameObject patternObj = SpawnPattern(pattern4Prefab);
+			yield return new WaitForSeconds(patternDuration - timeBeforeEnd);
+			patternObj = SpawnPattern(pattern4Prefab);
+			yield return new WaitForSeconds(timeBeforeEnd);
+			yield return new WaitForSeconds(spawnInterval);
+		}
+	}
+
 
 	// 패턴 스폰 메서드
 	private GameObject SpawnPattern(GameObject prefab)
@@ -132,6 +147,7 @@ public class BoxFadePatternSpawnManager : Setadad
 	[SerializeField] private GameObject pattern1Prefab;
 	[SerializeField] private GameObject pattern2Prefab;
 	[SerializeField] private GameObject pattern3Prefab;
+	[SerializeField] private GameObject pattern4Prefab;
 
 	private float spawnInterval;
 }
