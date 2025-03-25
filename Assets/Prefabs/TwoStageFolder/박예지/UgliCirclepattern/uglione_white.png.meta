@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      uglione_white_0: 8273655794736370120
+      uglione_white_1: 7971140359618854693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

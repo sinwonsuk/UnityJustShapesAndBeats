@@ -12,7 +12,7 @@ public class CircleEffect : ScaleUp2
     [SerializeField]
     private float delayBeforeChild = 4f;    // 부모 생성 후 자식 생성 전 딜레이 (초)
     [SerializeField]
-    private float targetScale = 2f;         // 자식의 최종 스케일
+    private float target_Scale = 2f;         // 자식의 최종 스케일
     [SerializeField]
     private float scaleDuration = 2f;       // 자식의 스케일업 시간
     [SerializeField]
@@ -37,7 +37,7 @@ public class CircleEffect : ScaleUp2
 
         // ScaleUp 스크립트 추가하여 자식 작업 실행
         ScaleUp scaleScript = childObj.AddComponent<ScaleUp>();
-        scaleScript.targetScale = targetScale;
+        scaleScript.targetScale = target_Scale;
         scaleScript.duration = scaleDuration;
         scaleScript.speedMultiplier = childSpeed;
 
