@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7158572428641047018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6475215644811627962}
+  - component: {fileID: 5695793397691651567}
+  m_Layer: 0
+  m_Name: miniball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6475215644811627962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158572428641047018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.790182, y: 0.09368217, z: -9.951546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5695793397691651567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158572428641047018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72de6527fd4fa674a83feacb3c6cf5cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritePrefab1: {fileID: 5438717990586006000, guid: c901c46c46d96814c8c54d8bf1988a25, type: 3}
+  spritePrefab2: {fileID: 5595284586157510807, guid: 2adfbfe8133e6b541a433fe29116c0aa, type: 3}
+  spritePrefab3: {fileID: 4635729833406196888, guid: 3e2742e6ff038ed41880ab1bfe072eef, type: 3}
+  spawnPoint1: {fileID: 7001762982389891892, guid: c901c46c46d96814c8c54d8bf1988a25, type: 3}
+  spawnPoint2: {fileID: 6932030394473447890, guid: 2adfbfe8133e6b541a433fe29116c0aa, type: 3}
+  spawnPoint3: {fileID: 8858010532844100159, guid: 3e2742e6ff038ed41880ab1bfe072eef, type: 3}
+  spawnInterval: 0.09
+  spawnDuration: 0.6

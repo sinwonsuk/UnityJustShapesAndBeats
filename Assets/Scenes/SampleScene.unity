@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 1166425615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2997551, y: 0.2, z: 0.008797536}
+  m_LocalPosition: {x: 0.21, y: 0.09, z: 0.008797536}
   m_LocalScale: {x: 163.18, y: 125.19, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -719,7 +719,7 @@ MonoBehaviour:
   stagePrefab:
   - {fileID: 1392886950003031170, guid: 3e91d18abd506474f81273713568a03b, type: 3}
   - {fileID: 3221423774192467718, guid: 89ac3776989f3ee4b9856880d74bdf00, type: 3}
-  stage: 0
+  stage: 1
 --- !u!4 &1232646710
 Transform:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 788132751165732308, guid: f1c08f24a40405743b0ee61d743b1397, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -956,6 +956,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.49, y: 0.5}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &1811692341
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +991,8 @@ Transform:
   - {fileID: 698194378}
   m_Father: {fileID: 130616167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> yeji
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -999,4 +1002,10 @@ SceneRoots:
   - {fileID: 752955898}
   - {fileID: 880804001}
   - {fileID: 518717138}
+<<<<<<< HEAD
   - {fileID: 130616167}
+=======
+  - {fileID: 698194378}
+  - {fileID: 1200405143}
+  - {fileID: 1515257131}
+>>>>>>> yeji
