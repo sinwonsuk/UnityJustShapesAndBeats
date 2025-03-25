@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7991875057419456869
 Transform:
   m_ObjectHideFlags: 0
@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff2eb5609af41c41b470cdd868679ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BulletTransform: {fileID: 0}
   pinkBullet: {fileID: 5448261941355912345, guid: ab529354f81c6ad438b3e44773e995ae, type: 3}
