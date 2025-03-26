@@ -1,23 +1,41 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Splines.ExtrusionShapes;
 
-public class SlayerBoss : MonoBehaviour
+public class AppearScythe : MonoBehaviour
 {
     [SerializeField] private Vector3 originalScale = Vector3.one;
     [SerializeField] private Vector3 firstScale = new Vector3(1.1f, 1.1f, 1.1f);
-    [SerializeField] private Vector3 maxScale = new Vector3(1.1f, 1.1f, 1.1f); 
+    [SerializeField] private Vector3 maxScale = new Vector3(1.1f, 1.1f, 1.1f);
     [SerializeField] private float growTime = 0.1f;
     [SerializeField] private float shrinkTime = 0.5f;
+
+    [Header("이동 + 회전")]
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float rotationSpeed = 360f;
+
+    private Vector2 moveDir;
+    private bool canMove = false;
 
     private void OnEnable()
     {
         transform.localScale = Vector3.zero;
+
+        moveDir = Random.insideUnitCircle.normalized;
+
         StartCoroutine(AppearSlayer());
 
     }
+    private void Update()
+    {
+        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
 
- 
+        if (canMove)
+        {
+            transform.Translate(moveDir * moveSpeed * Time.deltaTime, Space.World);
+        }
+    }
+
+
     private IEnumerator AppearSlayer()
     {
 
@@ -41,5 +59,7 @@ public class SlayerBoss : MonoBehaviour
         }
 
         transform.localScale = originalScale;
+
+        canMove = true;
     }
 }

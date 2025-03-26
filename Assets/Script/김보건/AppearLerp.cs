@@ -1,35 +1,34 @@
+using System.Collections;
 using UnityEngine;
 
 public class AppearLerp : MonoBehaviour
 {
     [SerializeField] private GameObject appearCircle;
-    [SerializeField] private Color targetColor = Color.white; // 원래 색 (흰색과 왔다갔다)
-    [SerializeField] private float speed = 1f; // 색 전환 속도
+    [SerializeField] private Color targetColor = Color.white; // 바뀔 색 (흰색)
+    [SerializeField] private float speed = 1f; // 깜빡이는 속도
 
     private Color originalColor;
     private SpriteRenderer movingRenderer;
 
-
     private void Start()
     {
         movingRenderer = appearCircle.GetComponent<SpriteRenderer>();
-        originalColor = movingRenderer.color;
+        originalColor = movingRenderer.color; //원래 색상 저장
     }
 
     private void Update()
     {
-        if (movingRenderer != null)
-        {
-            AppearCircleLerp();
-        }
+        StartCoroutine(AppearCircleLerp());
     }
-
-    void AppearCircleLerp()
+   
+    private IEnumerator AppearCircleLerp()
     {
-        // PingPong으로 0~1 반복
         float t = Mathf.PingPong(Time.time * speed, 1f);
 
-        // 색상 보간
+        // 색상 보간: 원래 색 → targetColor (흰색)
         movingRenderer.color = Color.Lerp(originalColor, targetColor, t);
+
+        yield return new WaitForSeconds(1.7f);
+        Destroy(gameObject);
     }
 }
