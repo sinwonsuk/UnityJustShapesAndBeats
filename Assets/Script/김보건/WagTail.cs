@@ -57,8 +57,8 @@ public class WagTail : MonoBehaviour
     }
 
     [SerializeField] private Transform centerPoint;
-    [SerializeField] private float minRadius = 1.7f;
-    [SerializeField] private float maxRadius = 2f;
+    [SerializeField] private float minRadius = 1.2f;
+    [SerializeField] private float maxRadius = 1.6f;
     [SerializeField] private float radiusChangeSpeed = 1.5f;
     [SerializeField] private float speed = 12f;
     [SerializeField] private float angleRange = 20f;

@@ -9,6 +9,9 @@ public class SlayerBoss : MonoBehaviour
     [SerializeField] private Vector3 maxScale = new Vector3(1.1f, 1.1f, 1.1f); 
     [SerializeField] private float growTime = 0.1f;
     [SerializeField] private float shrinkTime = 0.5f;
+    [SerializeField] private float deleteTime = 0.1f;
+
+    [SerializeField] private float deleteDelayTime = 0.8f;
 
     private void OnEnable()
     {
@@ -41,5 +44,25 @@ public class SlayerBoss : MonoBehaviour
         }
 
         transform.localScale = originalScale;
+
+        yield return new WaitForSeconds(deleteDelayTime);
+
+        current = 0f;
+
+        while (current < growTime)
+        {
+            current += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(originalScale, maxScale, current / growTime);
+            yield return null;
+        }
+
+        current = 0f;
+        while (current < shrinkTime)
+        {
+            current += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(maxScale, Vector3.zero, current / deleteTime);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }
