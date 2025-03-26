@@ -5,15 +5,13 @@ using UnityEngine;
 public class RandomCircle : MonoBehaviour
 {
     [SerializeField]
-    private GameObject parentPrefab;        // 부모 오브젝트 프리팹 (Inspector에 할당)
+    private GameObject parentPrefab;        // 부모 프리팹 (Inspector에 할당)
     [SerializeField]
     private Vector2 spawnAreaMin = new Vector2(-10, -10);
     [SerializeField]
     private Vector2 spawnAreaMax = new Vector2(10, 10);
     [SerializeField]
-    private int maxParents = 6;             // 총 실행할 부모 사이클 수
-    [SerializeField]
-    private float spawnDelay = 0.5f;        // 사이클 간 대기 시간
+    private int maxParents = 6;             // 총 생성할 부모 수
 
     private int currentCycle = 0;
 
@@ -28,22 +26,12 @@ public class RandomCircle : MonoBehaviour
         {
             // 새 부모 오브젝트 생성
             GameObject parentObj = SpawnNewParent();
-            ParentController pc = parentObj.GetComponent<ParentController>();
 
-            if (pc != null)
-            {
-                // 부모의 작업 완료(isFinished == true)까지 대기
-                yield return new WaitUntil(() => pc.isFinished);
-
-                Debug.Log($"[RandomSpawner] 삭제 시도: {parentObj.name}");
-                Destroy(parentObj);
-
-                // 부모 삭제 후 잠깐 대기하여 완전히 삭제되도록 함
-                yield return new WaitForSeconds(0.1f);
-            }
+            // 부모 오브젝트가 삭제될 때까지 대기
+            yield return new WaitUntil(() => parentObj == null);
 
             currentCycle++;
-            yield return new WaitForSeconds(spawnDelay);
+            // 다음 부모를 즉시 생성 (spawnDelay 제거)
         }
     }
 
