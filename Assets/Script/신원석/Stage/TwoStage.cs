@@ -74,7 +74,7 @@ public class TwoStage : BaseGameEntity
         return pattern[(int)_pattern];
     }
 
-    public GameObject GetPatternObject(EPattern _pattern, int choice)
+    public GameObject GetPatternObject(TwoEPattern _pattern, int choice)
     {
         pattern[(int)_pattern].SetActive(true);
 
@@ -86,12 +86,12 @@ public class TwoStage : BaseGameEntity
         }
         return pattern[(int)_pattern];
     }
-    public void GetPatternTimeObject(EPattern _pattern, int choice,int time)
+    public void GetPatternTimeObject(TwoEPattern _pattern, int choice,int time)
     {
         StartCoroutine(GetPatternTimeObjectCor(_pattern, choice, time));
     }
 
-    public IEnumerator GetPatternTimeObjectCor(EPattern _pattern, int choice, int time)
+    public IEnumerator GetPatternTimeObjectCor(TwoEPattern _pattern, int choice, int time)
     {
         yield return new WaitForSeconds(time);
 
@@ -105,11 +105,6 @@ public class TwoStage : BaseGameEntity
         }
         yield break;
     }
-
-
-
-
-
 
     public void GetPatternTimeInstantiate(TwoEPattern _pattern, Vector2 position, float timeUpdate)
     {
@@ -137,7 +132,6 @@ public class TwoStage : BaseGameEntity
         // 몇초후에 시작하고 싶다
         StartCoroutine(StartTimePatternCor(pattern, timeUpdate));
     }
-
     public void StopTimePattern(GameObject pattern, float timeUpdate)
     {
         // 몇초후에 종료시키고 싶다 
