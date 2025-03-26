@@ -421,6 +421,38 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: maxSpawnRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: maxSpawnRange.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: minSpawnRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: minSpawnRange.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: maxTargetRange.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: maxTargetRange.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: minTargetRange.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
+      propertyPath: minTargetRange.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462186904009901542, guid: 2691b0ef13a7a714baab234ffcffeff0, type: 3}
       propertyPath: targetPosition.x
       value: 2.8
       objectReference: {fileID: 0}
