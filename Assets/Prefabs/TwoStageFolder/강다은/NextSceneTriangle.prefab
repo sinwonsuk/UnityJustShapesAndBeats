@@ -151,8 +151,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.008452058, y: -0.05704981}
-  m_Radius: 0.47199804
+  m_Offset: {x: -0.0066055357, y: -0.016905636}
+  m_Radius: 0.32746908
 --- !u!114 &1094253987872962664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,21 +169,3 @@ MonoBehaviour:
   expandingCirclePrefab: {fileID: 1810531943497333046, guid: 70ada39e4ecb7ae41907ef6041d68440, type: 3}
   notePrefab: {fileID: 5782874200918789599, guid: 22860f7835f4b124ead9653c992c4e50, type: 3}
   fadeoutImage: {fileID: 2925155340803989222, guid: a624bb52c095ab8478b232812f56da75, type: 3}
-  jumpHeight: 2
-  jumpDuration: 0.5
-  rotationSpeed: 360
-  circleCount: 3
-  circleScaleSpeed: 1
-  circleFadeDuration: 1
-  expandDuration: 0.8
-  expandMaxScale: 3
-  noteSpawnInterval: 0.1
-  noteLifetime: 2.5
-  noteShrinkSpeed: 1
-  moveRotationSpeed: 180
-  useScaleAnimation: 1
-  scaleMin: 0.5
-  scaleMax: 1.5
-  scaleFrequency: 2
-  circleWaveDelay: 0.2
-  noteScaleVariation: 0.2
