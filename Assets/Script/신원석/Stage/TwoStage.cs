@@ -79,7 +79,7 @@ public class TwoStage : BaseGameEntity
 
     public void GetPatternTimeInstantiate(TwoEPattern _pattern, Vector2 position, float timeUpdate)
     {
-        StartCoroutine(GetPatternTimeInstantiateCor(_pattern, position, timeUpdate));
+        
     }
     public IEnumerator GetPatternTimeInstantiateCor(TwoEPattern _pattern, Vector2 position, float timeUpdate)
     {
@@ -114,31 +114,6 @@ public class TwoStage : BaseGameEntity
     {
         yield return new WaitForSeconds(timeUpdate);
         pattern.SetActive(false);
-        yield break;
-    }
-
-
-    public GameObject GetPatternInstantiate(TwoEPattern _pattern, Vector2 position)
-    {
-
-        GameObject go = Instantiate(pattern[(int)_pattern], position, Quaternion.identity);
-
-        go.SetActive(true);
-
-        return pattern[(int)_pattern];
-    }
-
-    public void GetPatternTimeInstantiate(TwoEPattern _pattern, Vector2 position, float timeUpdate)
-    {
-        StartCoroutine(GetPatternTimeInstantiateCor(_pattern, position, timeUpdate));
-    }
-    public IEnumerator GetPatternTimeInstantiateCor(TwoEPattern _pattern, Vector2 position, float timeUpdate)
-    {
-        yield return new WaitForSeconds(timeUpdate);
-        GameObject go = Instantiate(pattern[(int)_pattern], position, Quaternion.identity);
-
-        go.SetActive(true);
-
         yield break;
     }
 
