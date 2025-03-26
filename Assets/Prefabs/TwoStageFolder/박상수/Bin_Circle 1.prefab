@@ -105,7 +105,7 @@ MonoBehaviour:
   delayBeforeChild: 4
   targetScale: 1
   scaleDuration: 2
-  childSpeed: 1
+  childSpeed: 0.5
 --- !u!114 &6791727604271722606
 MonoBehaviour:
   m_ObjectHideFlags: 0
