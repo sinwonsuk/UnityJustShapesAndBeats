@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a890875cc6439994aaeeecbb10960c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  select: 4
+  select: 3
   pattern1Prefab: {fileID: 540466139252649825, guid: 2840ffad883f8b5449b2725d52fda60f, type: 3}
   pattern2Prefab: {fileID: 6113222258456550856, guid: f810e11121c2c0441b6a022d01cbd642, type: 3}
   pattern3Prefab: {fileID: 1353169209639470909, guid: 3507f0639b2458f459fc416e8ced6ef8, type: 3}
