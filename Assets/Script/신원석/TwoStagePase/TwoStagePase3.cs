@@ -7,6 +7,20 @@ public class TwoStagePase3 : State<TwoStage>
     public override void Enter(TwoStage entity)
     {
         entity.GetPatternInstantiate(TwoEPattern.ugly, new Vector2(0, 0));
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 1);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 2);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 3);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 4);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 5);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 6);
+
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 13);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 13);
+
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 13.2f);
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 13.2f);
+
+        entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 13.3f);
 
         GameObject boxPattern = entity.Getpattern(TwoEPattern.BoxFadePatternManager);
         BoxFadePatternSpawnManager manager = boxPattern.GetComponent<BoxFadePatternSpawnManager>();
