@@ -28,6 +28,7 @@ public enum TwoEPattern
     triangle_spawner,
     triangle_spawner_2,
     ugly,
+    TwoNextSceneAnimation,
 }
 public class TwoStage : BaseGameEntity
 {
