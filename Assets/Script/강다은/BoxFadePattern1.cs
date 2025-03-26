@@ -174,7 +174,6 @@ public class BoxFadePattern1 : MonoBehaviour
 	{
 		const float minY = -4f; // Y축 범위 설정 (BoxFadePattern3과 동일)
 		const float maxY = 4f;
-		const float minDistance = 2.5f; // 최소 거리
 
 		float yPos;
 		int attempts = 0;
