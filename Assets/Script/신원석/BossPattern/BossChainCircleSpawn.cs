@@ -25,15 +25,17 @@ public class BossChainCircleSpawn : MonoBehaviour
     {
         pos = new Vector2(circle.transform.position.x, circle.transform.position.y);
 
-        while (true)
+
+        for (int i = 0; i < 30; i++)
         {
             GameObject go = Instantiate(circle, pos, Quaternion.identity);
 
-            pos = new Vector2(go.transform.position.x+offsetX,go.transform.position.y);
+            pos = new Vector2(go.transform.position.x + offsetX, go.transform.position.y);
 
             yield return new WaitForSeconds(spawnTime);
-
         }
+
+        yield break;
     }
 
     [SerializeField]

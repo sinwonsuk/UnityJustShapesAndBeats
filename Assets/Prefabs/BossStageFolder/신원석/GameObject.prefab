@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54094b3e14877ca4380087569508c8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 0.7
-  spawnTime: 0.1
+  offsetX: 0.6
+  spawnTime: 0.05
   circle: {fileID: 673304632116869899, guid: 16d72f9f21a2dd747803def55c635644, type: 3}

@@ -19,7 +19,7 @@ public class BossBulletSpawn : MonoBehaviour
     {
 
         //발사체 생성갯수
-        int count = 15;
+        int count = 10;
         //발사체 사이의 각도
         float intervalAngle = 360 / count;
         //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정
@@ -45,26 +45,17 @@ public class BossBulletSpawn : MonoBehaviour
                 clone.GetComponent<PinkBullet>().Move(new Vector2(x, y));
             }
 
-            if(test == false)
-            {
-                weightAngle = 0;
-            }
-            else
-            {
-                weightAngle = 45;
-                test = true;
-            }
+            weightAngle = (weightAngle == 0f) ? 60f : 0f;
 
-            fireCircleCheck++;
+            // fireCircleCheck++;
             //발사체가 생성되는 시작 각도 설정을 위한변수
-           
-            //3초마다 미사일 발사
+
             yield return new WaitForSeconds(attackRate);
 
         }
     }
 
-    float fireCircleCheck = 0;
+    //float fireCircleCheck = 0;
 
 
     //공격주기
