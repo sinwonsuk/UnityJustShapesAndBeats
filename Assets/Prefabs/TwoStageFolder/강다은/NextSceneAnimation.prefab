@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2124840777359907308
+--- !u!1 &2202319279817963383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7039591710333541338}
-  - component: {fileID: 47983143509578666}
+  - component: {fileID: 9043286600129087338}
+  - component: {fileID: 8700611654714116228}
   m_Layer: 0
-  m_Name: triangle_spawner
+  m_Name: NextSceneAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7039591710333541338
+  m_IsActive: 1
+--- !u!4 &9043286600129087338
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124840777359907308}
+  m_GameObject: {fileID: 2202319279817963383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1131958, y: 0.49342588, z: 0.025510108}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &47983143509578666
+--- !u!114 &8700611654714116228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124840777359907308}
+  m_GameObject: {fileID: 2202319279817963383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fedf0b35432b3f748ac81fbd4ef75de7, type: 3}
+  m_Script: {fileID: 11500000, guid: be396b0fdc4a0b14a8c90635a2bc043a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trianglePrefab: {fileID: 6510320619685131479, guid: b3bcb6f103946f74789aba2a15e5c8d3, type: 3}
-  spawnPosition: {x: 10, y: -1, z: 0}
+  trianglePrefab: {fileID: 7311535213179034351, guid: b274c57c85a5121439584cb0cc7187e5, type: 3}
+  spawnInterval: 2
+  moveDuration: 5
+  screenAreaMin: {x: -8, y: -3}
+  screenAreaMax: {x: 8, y: 4}
