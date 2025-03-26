@@ -76,13 +76,13 @@ public class TwoStage : BaseGameEntity
 
 	public GameObject GetPatternObject(TwoEPattern _pattern, int choice)
 	{
-		pattern[(int)_pattern].SetActive(true);
 
 		PatternChoiceInterface go = pattern[(int)_pattern].GetComponent<PatternChoiceInterface>();
 
 		if (go != null)
 		{
 			go.SetPattern(choice);
+			pattern[(int)_pattern].SetActive(true);
 		}
 		return pattern[(int)_pattern];
 	}
