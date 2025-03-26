@@ -11,8 +11,8 @@ public class TwoStagePase3 : State<TwoStage>
         GameObject boxPattern = entity.Getpattern(TwoEPattern.BoxFadePatternManager);
         BoxFadePatternSpawnManager manager = boxPattern.GetComponent<BoxFadePatternSpawnManager>();
         manager.SetPattern((int)T.Three);
-        entity.StartTimePattern((boxPattern), 9f);
 
+        entity.StartTimePattern((boxPattern), 9f);
         entity.StartTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 15.5f);
         entity.StopTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 30f);
     }
