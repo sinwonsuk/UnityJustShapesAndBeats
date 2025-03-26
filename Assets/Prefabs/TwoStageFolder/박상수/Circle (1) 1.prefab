@@ -184,7 +184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5274192116709839314}
   - component: {fileID: 146369907127345225}
-  - component: {fileID: -8765805040669124213}
   - component: {fileID: 8778380875456178450}
   - component: {fileID: 989948749185791623}
   - component: {fileID: 9021115637529618109}
@@ -224,21 +223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d192e08acd2f53c4ebc5340991e2a238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: 1
-  duration: 2
-  speedMultiplier: 1
---- !u!114 &-8765805040669124213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4790282233689535181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8606c21454e9f3c44908f3fdcb1ed821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  scaleTarget: 1
+  scaleUpDuration: 2
+  scaleDownDuration: 0.5
 --- !u!50 &8778380875456178450
 Rigidbody2D:
   serializedVersion: 5
@@ -347,7 +334,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7681201850867341242, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.12482198, b: 0.4392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
