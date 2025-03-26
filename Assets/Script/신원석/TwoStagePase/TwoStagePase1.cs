@@ -13,20 +13,12 @@ public class TwoStagePase1 : State<TwoStage>
         entity.StartTimePattern(entity.Getpattern(TwoEPattern.miniball), 5.5f);
         entity.StartTimePattern(entity.Getpattern(TwoEPattern.miniball_2), 6);
 
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.BoxFadePatternManager), 15);
+        entity.GetPatternTimeObject(TwoEPattern.BoxFadePatternManager, 0, 16);
         entity.StopTimePattern(entity.Getpattern(TwoEPattern.BoxFadePatternManager), 27);
 
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.ugly), 20);
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.ugly), 21);
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.ugly), 22);
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.ugly), 23);
-
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.UglyCircle), 23);
-        time = 0;
-
-        entity.GetPatternTimeObject(TwoEPattern.BoxFadePatternManager,0,16);
+      
         //entity.StopTimePattern(entity.GetPatternObject(TwoEPattern.BoxFadePatternManager, 0), 26);
-        
+
 
         entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 20);
         entity.GetPatternTimeInstantiate(TwoEPattern.ugly, new Vector2(0, 0), 21);
