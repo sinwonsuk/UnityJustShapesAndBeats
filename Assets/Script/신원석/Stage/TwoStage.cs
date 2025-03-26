@@ -93,6 +93,7 @@ public class TwoStage : BaseGameEntity
         yield break;
     }
 
+
     public GameObject GetPatternInstantiate(TwoEPattern _pattern, Vector2 position)
     {
 
