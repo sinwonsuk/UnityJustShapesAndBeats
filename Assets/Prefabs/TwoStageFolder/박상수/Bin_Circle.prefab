@@ -101,12 +101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbb6a4f2419fb84da028948b860f2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: 1.2
+  targetScale: 0.5
   duration: 4
   speedMultiplier: 1
   childPrefab: {fileID: 1347606616952712692, guid: b23af7167e87fc540bb7cecd26ac2f13, type: 3}
   delayBeforeChild: 4
-  target_Scale: 1.2
+  target_Scale: 0.5
   scaleUpDuration: 2
   scaleDownDuration: 0.5
 --- !u!114 &6046091849433891413
