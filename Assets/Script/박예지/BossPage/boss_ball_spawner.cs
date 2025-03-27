@@ -12,7 +12,7 @@ public class boss_ball_spawner : MonoBehaviour
 
     IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(2f); // 2초 대기 후 실행
+        yield return new WaitForSeconds(0.1f); // 2초 대기 후 실행
 
         // 12개의 탄을 한 번에 발사
         ShootBullets();

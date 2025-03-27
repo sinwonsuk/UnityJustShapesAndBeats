@@ -39,7 +39,7 @@ public class idle_BossSlayer : MonoBehaviour
             yield return null;
         }
 
-        // 크기 키운 후 12개의 총알을 2초 간격으로 9번 발사
+        // 보스가 출현하자마자 총알을 9번 발사하기 시작
         for (int i = 0; i < 9; i++)
         {
             for (int j = 0; j < 12; j++)
