@@ -11,7 +11,7 @@ public class Invisible : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime * 5);
+        transform.Translate(Vector2.left * Time.deltaTime * 10);
     }
 
 
