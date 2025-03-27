@@ -10,7 +10,7 @@ public class ssoajigi : MonoBehaviour
 
     IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(2f); // 2초 대기
+        yield return new WaitForSeconds(3f); // 2초 대기
 
         while (true) // 2초 후에 무한 루프로 이동 시작
         {
