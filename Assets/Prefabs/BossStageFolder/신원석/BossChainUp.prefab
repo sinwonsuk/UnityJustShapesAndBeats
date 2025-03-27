@@ -46,4 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: -0.6
   spawnTime: 0.05
+  DeleteTime: 0.15
+  reduceScaleTime: 1
   circle: {fileID: 673304632116869899, guid: 16d72f9f21a2dd747803def55c635644, type: 3}

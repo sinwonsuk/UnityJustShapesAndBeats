@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines.ExtrusionShapes;
 using static UnityEditor.PlayerSettings;
@@ -32,11 +34,50 @@ public class BossChainCircleSpawn : MonoBehaviour
 
             pos = new Vector2(go.transform.position.x + offsetX, go.transform.position.y);
 
+            circleList.Add(go);
+
             yield return new WaitForSeconds(spawnTime);
         }
 
         yield break;
     }
+
+    public void StartReduceCircle()
+    {
+        if (coroutine == null)
+        {
+            coroutine = StartCoroutine(ReduceCircleProcess());
+        }
+    }
+
+    IEnumerator ReduceCircleProcess()
+    {
+        for (int i = 0; i < circleList.Count; i++)
+        {
+            StartCoroutine(ReduceCircle(circleList[i]));
+            yield return new WaitForSeconds(DeleteTime);
+        }
+    }
+
+    IEnumerator ReduceCircle(GameObject circle)
+    {
+        while (true)
+        {
+            if (circle.transform.localScale.x <= 0.0f)
+            {
+                Destroy(circle);
+                yield break;
+            }
+
+            circle.transform.localScale -= Vector3.one * reduceScaleTime*Time.deltaTime;
+
+            yield return null;
+       
+        }
+
+    }
+
+    List<GameObject> circleList = new List<GameObject>();
 
     [SerializeField]
     private float offsetX = 1.0f;
@@ -47,9 +88,15 @@ public class BossChainCircleSpawn : MonoBehaviour
     private float spawnTime = 1.0f;
 
     [SerializeField]
+    private float DeleteTime = 0.5f;
+
+    [SerializeField]
+    private float reduceScaleTime = 1.0f;
+
+    [SerializeField]
     private GameObject circle;
 
-
+    Coroutine coroutine;
 
 
 }

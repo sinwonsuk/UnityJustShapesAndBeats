@@ -8,27 +8,46 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Player : MonoBehaviour
 {
-
     enum PlayerState
     {
         Idle,
         Move,
     }
-
   
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        collider2D = gameObject.GetComponent<BoxCollider2D>();
+        collider2D = GetComponent<BoxCollider2D>();
+
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         limitPlayerMove();
         UpdatePlayerState();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Vector2 Targetpos = transform.position - collision.transform.position;
+
+        StartCoroutine(ApplyHitEffectCoroutine());
+        StartCoroutine(ApplyForceCoroutine(Targetpos.normalized));
+    }
+
+    private IEnumerator ApplyForceCoroutine(Vector2 Targetpos)
+    {
+        rigidbody2D.AddForce(Targetpos * 20.0f, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.1f); // 0.1초 동안 힘을 가합니다.
+        rigidbody2D.linearVelocity = Vector2.zero; // 속도를 0으로 설정하여 힘을 멈춥니다.
+    }
+    private IEnumerator ApplyHitEffectCoroutine()
+    {
+        hitEffect.SetActive(true);
+        hitEffect.GetComponent<PlayerHitEffect>().HitPlayerEffect(new Vector2(-2.0f,2.0f),new Vector2(-2.0f,2.0f));
+        yield return new WaitForSeconds(0.1f); // 0.1초 동안 힘을 가합니다.
+        hitEffect.SetActive(false);
+    }
     void limitPlayerMove()
     {
         // 중심 좌표를 뷰포트 좌표로 변환
@@ -156,7 +175,6 @@ public class Player : MonoBehaviour
 
     IEnumerator IdleAni()
     {
-
         while (true)
         {         
             yield return MoveStopAni(stopAniScaleY, stopAniScaleX);
@@ -169,7 +187,6 @@ public class Player : MonoBehaviour
 
     IEnumerator DashCoroutine()
     {
-
         while (true)
         {
             yield return MoveStopAni(0.6f, transform.localScale.y);
@@ -181,6 +198,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerParticleSpawn spawn;
+
+
 
     [SerializeField]
     private float speed = 5.0f;
@@ -207,11 +226,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject dash;
     [SerializeField]
+    private GameObject hitEffect;
+
+    [SerializeField]
     private Transform dashTansform;
 
     private BoxCollider2D collider2D;
 
-    private PlayerState playerState = PlayerState.Idle;
+    private Rigidbody2D rigidbody2D;
 
-    int ad = 0;
+    float hp = 0;
+
+    private PlayerState playerState = PlayerState.Idle;
 }

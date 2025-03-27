@@ -1,30 +1,28 @@
+using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossSquareRotation : MonoBehaviour
+public class GhostParent : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
+
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, speed*Time.deltaTime);  
     }
+
     public void ReduceScaleChild()
     {
-        for (int i = 0; i < bossSquares.Count; i++)
+        for (int i = 0; i < ghosts.Count; i++)
         {
-            bossSquares[i].ReduceAlpha();
+            ghosts[i].ReduceAlpha();
         }
     }
 
     [SerializeField]
-    private float speed = 5.0f;
-
-    [SerializeField]
-    List<BossSquare> bossSquares = new List<BossSquare>();
-
+    List<Ghost> ghosts = new List<Ghost>();
 }

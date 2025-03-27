@@ -1,30 +1,17 @@
-using System.Collections;
 using UnityEngine;
 
-public class PlayerParticleSpawn : MonoBehaviour
+public class PlayerHitEffect : MonoBehaviour
 {
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        CreatePlayerParticle();
-    }
-
-    void CreatePlayerParticle()
-    {
-        time += Time.deltaTime;
-
-        if (time > 0.02f)
-        {
-            float posX = Random.Range(-0.1f, 0.1f);
-            float posY = Random.Range(-0.2f, 0.2f);
-            Instantiate(playerParticle, new Vector2(childPlayerTransform.position.x + posX, childPlayerTransform.position.y + posY), Quaternion.identity);
-            time = 0;
-        }
+        
     }
 
     public void HitPlayerEffect(Vector2 posXRange, Vector2 posYRange)
@@ -34,7 +21,7 @@ public class PlayerParticleSpawn : MonoBehaviour
             float posX = Random.Range(posXRange.x, posXRange.y);
             float posY = Random.Range(posYRange.x, posYRange.y);
             Instantiate(playerParticle, new Vector2(childPlayerTransform.position.x + posX, childPlayerTransform.position.y + posY), Quaternion.identity);
-        }     
+        }
     }
 
 

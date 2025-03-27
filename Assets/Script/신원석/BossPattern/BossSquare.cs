@@ -24,33 +24,27 @@ public class BossSquare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-
-        if (color.a <= 1)
+        if (!isFading)
         {
-            color.a += Time.deltaTime * speed;
-            spriteRenderer.color = color;
+            if (color.a <= 1)
+            {
+                color.a += Time.deltaTime * speed;
+                spriteRenderer.color = color;
 
 
-            Vector3 scale = transform.localScale;
-            scale.x += Time.deltaTime * scaleSpeed;
-            transform.localScale = scale;
+                Vector3 scale = transform.localScale;
+                scale.x += Time.deltaTime * scaleSpeed;
+                transform.localScale = scale;
 
+            }
+            else
+            {
+                if (coroutine == null)
+                {
+                    coroutine = StartCoroutine(ProcessCorutine());
+                }
+            }
         }
-        else
-        {
-           if(coroutine == null)
-           {
-                coroutine = StartCoroutine(ProcessCorutine());
-           }
-        }
-      
-       
-
-
-
-          
     }
 
     IEnumerator ProcessCorutine()
@@ -68,7 +62,7 @@ public class BossSquare : MonoBehaviour
     IEnumerator ScaleUp()
     {
         Vector3 scale = transform.localScale;
-        scale.x = 10.0f; 
+        scale.x = 25.0f; 
         transform.localScale = scale;
         yield break;
     }
@@ -85,6 +79,19 @@ public class BossSquare : MonoBehaviour
         yield break;
     }
 
+    public void ReduceAlpha()
+    {
+        isFading = true;
+
+        if (spriteRenderer.color.a <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+
+        color.a -= Time.deltaTime * reduceScaleSpeed;
+        spriteRenderer.color = color;
+
+    }
 
     [SerializeField]
     private float speed = 0;
@@ -103,4 +110,8 @@ public class BossSquare : MonoBehaviour
     Color color;
     Color pinkColor;
 
+    [SerializeField]
+    private float reduceScaleSpeed = 3.0f;
+
+    private bool isFading = false;
 }

@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.45, y: 0.12030574, z: 0.63318795}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2.2, y: 0.33, z: 0.96069896}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9154436181951568116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -103,6 +103,7 @@ MonoBehaviour:
   speed: 1
   scaleSpeed: 0.5
   colorWaitTime: 0.2
+  reduceScaleSpeed: 0.5
 --- !u!1 &7519184396284450339
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,8 +132,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.45, y: 0.12030574, z: 0.63318795}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2.2, y: 0.33, z: 0.6315788}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9154436181951568116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
@@ -206,6 +207,7 @@ MonoBehaviour:
   speed: 1
   scaleSpeed: 0.5
   colorWaitTime: 0.2
+  reduceScaleSpeed: 0.5
 --- !u!1 &8284614221372837857
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cebc634ac969e3440922fb2d9ec917ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
+  bossSquares:
+  - {fileID: 7987243480454883834}
+  - {fileID: 975885814574435866}
+  - {fileID: 1767173692365767792}
 --- !u!1 &8356012918416054495
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +288,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.45, y: 0.12030574, z: 0.63318795}
+  m_LocalScale: {x: 2.2, y: 0.33, z: 0.63318795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9154436181951568116}
@@ -357,3 +363,4 @@ MonoBehaviour:
   speed: 1
   scaleSpeed: 0.5
   colorWaitTime: 0.2
+  reduceScaleSpeed: 0.5
