@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScale: 0.5
-  duration: 4
+  duration: 2
   speedMultiplier: 1
-  childPrefab: {fileID: 1347606616952712692, guid: b23af7167e87fc540bb7cecd26ac2f13, type: 3}
+  childPrefab: {fileID: 805320057977650488, guid: 868bada32d62c8f4db5adff3cd7a5ea9, type: 3}
   delayBeforeChild: 4
   target_Scale: 0.5
   scaleUpDuration: 2

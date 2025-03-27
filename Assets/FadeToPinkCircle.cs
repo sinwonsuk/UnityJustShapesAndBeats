@@ -5,9 +5,16 @@ using Color = UnityEngine.Color;
 public class FadeToPinkCircle : MonoBehaviour
 {
 
+    private void OnDisable()
+    {
+        spriteRenderer.color = firstColor;
+        transform.localScale = Vector3.one;
+    }
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        firstColor = spriteRenderer.color;
 
         targetColor = new Color(1f, 0.125f, 0.439f);
     }
@@ -22,7 +29,7 @@ public class FadeToPinkCircle : MonoBehaviour
             spriteRenderer.color = Color.Lerp(spriteRenderer.color, targetColor, lerpSpeed * Time.deltaTime);
         }
 
-        if (Vector4.Distance(spriteRenderer.color, targetColor) < 0.01f)
+        if (transform.localScale.x < 0.01f)
         {
             spriteRenderer.color = targetColor;
             gameObject.SetActive(false);
@@ -43,4 +50,5 @@ public class FadeToPinkCircle : MonoBehaviour
 
     private Color targetColor;
 
+    private Color firstColor;
 }

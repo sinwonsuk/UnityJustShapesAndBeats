@@ -1,17 +1,19 @@
+using System.Drawing;
 using UnityEngine;
+using Color = UnityEngine.Color;
 
 public class Ghost : MonoBehaviour
 {
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
+        color = spriteRenderer.color;
     }
  
     void Update()
     {
-
-
         if(transform.localScale.x > 0.8)
         {
             transform.localScale -= new Vector3(localScale, localScale, localScale) * Time.deltaTime;
@@ -24,6 +26,19 @@ public class Ghost : MonoBehaviour
         transform.position = new Vector3(x,y, transform.position.z);
     }
 
+    public void ReduceAlpha()
+    {
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (var spriteRenderer in spriteRenderers)
+        {
+            Color color = spriteRenderer.color;
+            color.a -= Time.deltaTime * reduceScaleSpeed;
+            spriteRenderer.color = color;          
+        }
+    }
+
+
     public float radius = 5f; // ¹ÝÁö¸§  
   
     [SerializeField]
@@ -33,5 +48,13 @@ public class Ghost : MonoBehaviour
     private float angle = 0f;
 
     [SerializeField]
-    float speed = -1.0f; 
+    float speed = -1.0f;
+
+    private SpriteRenderer spriteRenderer;
+
+    Color color;
+
+    [SerializeField]
+    private float reduceScaleSpeed = 3.0f;
+
 }

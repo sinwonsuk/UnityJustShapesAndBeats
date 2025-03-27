@@ -8,25 +8,39 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Player : MonoBehaviour
 {
-
     enum PlayerState
     {
         Idle,
         Move,
     }
-
   
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        collider2D = gameObject.GetComponent<BoxCollider2D>();
+        collider2D = GetComponent<BoxCollider2D>();
+
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         limitPlayerMove();
         UpdatePlayerState();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Vector3 Targetpos = transform.position - collision.transform.position;
+
+        Instantiate(hitEffect, collision.transform.position, quaternion.Euler(Targetpos));
+
+        StartCoroutine(ApplyForceCoroutine(Targetpos.normalized));
+    }
+
+    private IEnumerator ApplyForceCoroutine(Vector3 Targetpos)
+    {
+        rigidbody2D.AddForce(Targetpos * 20.0f, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.1f); // 0.1초 동안 힘을 가합니다.
+        rigidbody2D.linearVelocity = Vector3.zero; // 속도를 0으로 설정하여 힘을 멈춥니다.
     }
 
     void limitPlayerMove()
@@ -156,7 +170,6 @@ public class Player : MonoBehaviour
 
     IEnumerator IdleAni()
     {
-
         while (true)
         {         
             yield return MoveStopAni(stopAniScaleY, stopAniScaleX);
@@ -169,7 +182,6 @@ public class Player : MonoBehaviour
 
     IEnumerator DashCoroutine()
     {
-
         while (true)
         {
             yield return MoveStopAni(0.6f, transform.localScale.y);
@@ -181,6 +193,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerParticleSpawn spawn;
+
+
 
     [SerializeField]
     private float speed = 5.0f;
@@ -207,9 +221,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject dash;
     [SerializeField]
+    private GameObject hitEffect;
+
+    [SerializeField]
     private Transform dashTansform;
 
     private BoxCollider2D collider2D;
+
+    private Rigidbody2D rigidbody2D;
+
+    float hp = 0;
 
     private PlayerState playerState = PlayerState.Idle;
 }

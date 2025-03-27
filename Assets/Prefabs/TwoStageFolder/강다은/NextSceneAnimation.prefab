@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trianglePrefab: {fileID: 7311535213179034351, guid: b274c57c85a5121439584cb0cc7187e5, type: 3}
-  spawnInterval: 2
   moveDuration: 5
-  screenAreaMin: {x: -8, y: -3}
-  screenAreaMax: {x: 8, y: 4}
+  screenAreaMin: {x: -5, y: -2}
+  screenAreaMax: {x: 5, y: 3}

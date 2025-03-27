@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossSquareRotation : MonoBehaviour
@@ -12,8 +13,18 @@ public class BossSquareRotation : MonoBehaviour
     {
         transform.Rotate(0, 0, speed*Time.deltaTime);  
     }
+    public void ReduceScaleChild()
+    {
+        for (int i = 0; i < bossSquares.Count; i++)
+        {
+            bossSquares[i].ReduceAlpha();
+        }
+    }
 
     [SerializeField]
     private float speed = 5.0f;
+
+    [SerializeField]
+    List<BossSquare> bossSquares = new List<BossSquare>();
 
 }

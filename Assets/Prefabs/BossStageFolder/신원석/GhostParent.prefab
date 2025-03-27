@@ -105,6 +105,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 240
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &614351369852767894
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +431,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 0
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &3380862407206512052
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +647,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 300
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &4052255191537002857
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +973,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 120
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &8425784803596158067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1079,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 180
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &8492521823626902153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1295,7 @@ MonoBehaviour:
   localScale: 1.5
   angle: 60
   speed: -50
+  reduceScaleSpeed: 0.5
 --- !u!1 &8989003911727747183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8810006346892912617}
+  - component: {fileID: 3460724500911831710}
   m_Layer: 0
   m_Name: GhostParent
   m_TagString: Untagged
@@ -1327,3 +1334,22 @@ Transform:
   - {fileID: 3783848955254420534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3460724500911831710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989003911727747183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35df4c6ccbee9e44801c6a324bfbaa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghosts:
+  - {fileID: 465762676891172328}
+  - {fileID: 4360519392065021915}
+  - {fileID: 5840088231484459106}
+  - {fileID: 9187695878718510840}
+  - {fileID: 4246406174326072866}
+  - {fileID: 8142630234535975830}

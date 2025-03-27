@@ -27,6 +27,17 @@ public class PlayerParticleSpawn : MonoBehaviour
         }
     }
 
+    public void HitPlayerEffect(Vector2 posXRange, Vector2 posYRange)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            float posX = Random.Range(posXRange.x, posXRange.y);
+            float posY = Random.Range(posYRange.x, posYRange.y);
+            Instantiate(playerParticle, new Vector2(childPlayerTransform.position.x + posX, childPlayerTransform.position.y + posY), Quaternion.identity);
+        }     
+    }
+
+
     [SerializeField]
     GameObject playerParticle;
 
