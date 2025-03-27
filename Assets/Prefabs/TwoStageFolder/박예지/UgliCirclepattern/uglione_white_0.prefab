@@ -45,11 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4737ac2748d4df64591460f5732b6547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bbullet: {fileID: 1755676251603540105, guid: c07e579833794c94c9cb7161e8e256ff, type: 3}
-  minSpawnRange: {x: 0, y: 0}
-  maxSpawnRange: {x: 0, y: 0}
-  minTargetRange: {x: 0, y: 0}
-  maxTargetRange: {x: 0, y: 0}
+  startPosition: {x: 10, y: 4}
+  targetPosition: {x: 4, y: 2}
   speed: 5
   rotationSpeed: 100
   growthSpeed: 1

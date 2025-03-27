@@ -56,6 +56,7 @@ public class NextSceneTriangleSpawner : MonoBehaviour
 	}
 
 	[SerializeField] private GameObject trianglePrefab;
+	[SerializeField] private float spawnInterval = 2f;
 	[SerializeField] private float moveDuration = 1f; // 화면 밖에서 안으로 이동하는 시간
 	[SerializeField] private Vector2 screenAreaMin;   // 화면 안 목표 영역 최소 좌표
 	[SerializeField] private Vector2 screenAreaMax;   // 화면 안 목표 영역 최대 좌표
