@@ -48,7 +48,7 @@ public class idle_BossSlayer : MonoBehaviour
                 Instantiate(Bbullet, transform.position, rotation);  // 총알 발사
             }
 
-            yield return new WaitForSeconds(2f);  // 2초 간격으로 다음 발사
+            yield return new WaitForSeconds(1.5f);  // 2초 간격으로 다음 발사
         }
 
         // 보스 크기 키우기 애니메이션

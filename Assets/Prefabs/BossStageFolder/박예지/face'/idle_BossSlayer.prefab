@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8875981795063175392}
-  - component: {fileID: 775698409983688438}
+  - component: {fileID: 6041033459074764574}
   m_Layer: 0
   m_Name: idle_BossSlayer
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Transform:
   - {fileID: 6264289850924624417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &775698409983688438
+--- !u!114 &6041033459074764574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,16 +151,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2260328136303976815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1037b8a0cd5d8c143808bce00b5456f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a536e1eb2a3a924184b96697e86818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   originalScale: {x: 1, y: 1, z: 1}
-  firstScale: {x: 1, y: 1, z: 1}
-  maxScale: {x: 1.2, y: 1.2, z: 1.2}
-  growTime: 0.06
+  firstScale: {x: 1.1, y: 1.1, z: 1.1}
+  maxScale: {x: 1.1, y: 1.1, z: 1.1}
+  growTime: 0.1
   shrinkTime: 0.5
   deleteTime: 0.1
-  deleteDelayTime: 5
+  Bbullet: {fileID: 671656131455859651, guid: dd1efdc565d963442b6d409958eab3df, type: 3}
+  deleteDelayTime: 10
+  appearDelayTime: 19
 --- !u!1 &7403674271844523798
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,11 +326,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1873523109436744468, guid: 3c5ba4879be67c84ab646869de2163b5, type: 3}
       propertyPath: center.x
-      value: 0.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1873523109436744468, guid: 3c5ba4879be67c84ab646869de2163b5, type: 3}
       propertyPath: center.y
-      value: -1.7
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2246510547384890352, guid: 3c5ba4879be67c84ab646869de2163b5, type: 3}
       propertyPath: m_Name

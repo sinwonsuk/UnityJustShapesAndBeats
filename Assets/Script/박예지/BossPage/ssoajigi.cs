@@ -10,9 +10,10 @@ public class ssoajigi : MonoBehaviour
 
     IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(3f); // 2초 대기
+        yield return new WaitForSeconds(2f); // 2초 대기
 
-        while (true) // 2초 후에 무한 루프로 이동 시작
+        // 2초 뒤에 바로 이동 시작
+        while (true) // 무한 루프
         {
             transform.Translate(Vector2.left * Time.deltaTime * 5);
             yield return null; // 다음 프레임까지 대기
@@ -21,6 +22,6 @@ public class ssoajigi : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); // 화면 밖으로 나가면 객체 삭제
     }
 }
