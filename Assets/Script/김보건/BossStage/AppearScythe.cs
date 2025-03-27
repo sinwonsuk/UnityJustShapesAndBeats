@@ -151,8 +151,6 @@ public class AppearScythe : MonoBehaviour
     }
 
     [SerializeField] private Vector3 originalScale = Vector3.one;
-    [SerializeField] private Vector3 firstScale = new Vector3(1.1f, 1.1f, 1.1f);
-    [SerializeField] private Vector3 maxScale = new Vector3(1.1f, 1.1f, 1.1f);
     [SerializeField] private float growTime = 0.1f;
     [SerializeField] private float shrinkTime = 0.5f;
 
