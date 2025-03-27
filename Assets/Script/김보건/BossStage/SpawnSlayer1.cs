@@ -13,15 +13,27 @@ public class SpawnSlayer1 : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            GameObject slayer = Instantiate(slayerPrefab, spawnPositions[i], Quaternion.identity);
+            if (i == 0)
+            {
+                GameObject slayer = Instantiate(singleSlayerPrefab, spawnPositions[i], Quaternion.identity);
+                Transform scytheTransform = slayer.transform.Find("Scythe_0");
+                AppearScythe scytheScript = scytheTransform.GetComponent<AppearScythe>();
+                scythes.Add(scytheScript);
+                yield return new WaitForSeconds(delay);
+            }
+            else
+            {
+                GameObject slayer = Instantiate(slayerPrefab, spawnPositions[i], Quaternion.identity);
+                Transform scytheTransform = slayer.transform.Find("Scythe_0");
+                AppearScythe scytheScript = scytheTransform.GetComponent<AppearScythe>();
+                scythes.Add(scytheScript);
+                yield return new WaitForSeconds(delay);
 
-            Transform scytheTransform = slayer.transform.Find("Scythe_0");
-            AppearScythe scytheScript = scytheTransform.GetComponent<AppearScythe>();
-            scythes.Add(scytheScript);
-            yield return new WaitForSeconds(delay);
+            }
         }
 
         yield return new WaitForSeconds(3f);
+
         for (int i = 3; i < spawnPositions.Length; i++)
         {
             GameObject slayer = Instantiate(slayerPrefab, spawnPositions[i], Quaternion.identity);
@@ -32,7 +44,8 @@ public class SpawnSlayer1 : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
+
         foreach (var scythe in scythes)
         {
             scythe.Stop();
@@ -41,7 +54,9 @@ public class SpawnSlayer1 : MonoBehaviour
     private List<AppearScythe> scythes = new List<AppearScythe>();
 
     [SerializeField] private GameObject slayerPrefab;
-    [SerializeField] private float delay = 0.5f;
+    [SerializeField] private GameObject singleSlayerPrefab;
+
+    [SerializeField] private float delay = 22f;
 
     private Vector3[] spawnPositions = new Vector3[]
     {

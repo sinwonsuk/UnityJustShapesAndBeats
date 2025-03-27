@@ -28,7 +28,7 @@ public class AppearLerp : MonoBehaviour
         // 색상 보간: 원래 색 → targetColor (흰색)
         movingRenderer.color = Color.Lerp(originalColor, targetColor, t);
 
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1.4f);
         Destroy(gameObject);
     }
 }

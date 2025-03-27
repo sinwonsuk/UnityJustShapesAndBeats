@@ -24,7 +24,7 @@ public class SlayerBoss : MonoBehaviour
     private IEnumerator AppearSlayer()
     {
 
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1.4f);
 
         float current = 0f;
 

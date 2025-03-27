@@ -17,34 +17,19 @@ public class AppearScythe : MonoBehaviour
     private IEnumerator AppearScy()
     {
 
-        yield return new WaitForSeconds(1.7f);
-
-        float current = 0f;
-
-        while (current < growTime)
-        {
-            current += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(firstScale, maxScale, current / growTime);
-            yield return null;
-        }
-
-        current = 0f;
-        while (current < shrinkTime)
-        {
-            current += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(maxScale, originalScale, current / shrinkTime);
-            yield return null;
-        }
+        yield return new WaitForSeconds(1.4f);
 
         transform.localScale = originalScale;
 
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(ShakeRotation()); 
+
+        yield return new WaitForSeconds(0.8f);
         StartCoroutine(MoveScythe());
     }
 
     private IEnumerator RotateScythe()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.2f);
         while (true)
         {
             if (!isRotating) yield break;
@@ -83,6 +68,30 @@ public class AppearScythe : MonoBehaviour
             yield return null;
 
         }
+    }
+
+    private IEnumerator ShakeRotation()
+    {
+        float duration = 0.3f;   // 진동 지속 시간
+        float time = 0f;
+        float angle = 10f;       // 회전 각도
+        float frequency = 30f;   // 진동 속도
+
+        Quaternion originalRotation = transform.rotation;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+
+            float damper = Mathf.Lerp(1f, 0f, time / duration); 
+            float zRotation = Mathf.Sin(time * frequency) * angle * damper;
+
+            transform.rotation = Quaternion.Euler(0f, 0f, zRotation); 
+            yield return null;
+
+        }
+
+        transform.rotation = originalRotation; 
     }
 
 
