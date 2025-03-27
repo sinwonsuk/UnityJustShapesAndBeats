@@ -54,26 +54,6 @@ public class SpawnSlayer3 : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
-
-            //GameObject slayer2 = Instantiate(slayerSidePrefab, spawnPositions_two[i], Quaternion.identity);
-            //Transform scytheTransform = slayer2.transform.Find("Scythe_0");
-            //if (scytheTransform != null)
-            //{
-            //    AppearScythe scytheScript = scytheTransform.GetComponent<AppearScythe>();
-            //    if (scytheScript != null)
-            //    {
-            //        scythes_two.Add(scytheScript);
-            //    }
-            //    else
-            //    {
-            //        Debug.LogWarning("AppearScythe 스크립트가 Scythe_0에 없음!");
-            //    }
-            //}
-            //else
-            //{
-            //    Debug.LogWarning("Scythe_0 오브젝트를 찾을 수 없음!");
-            //}
-
             if (i == 0)
             {
                 GameObject slayer2 = Instantiate(slayerSideBigPrefab, spawnPositions_two[i], Quaternion.identity);
