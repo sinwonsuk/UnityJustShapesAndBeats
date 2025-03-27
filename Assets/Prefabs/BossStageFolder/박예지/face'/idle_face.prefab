@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394e862a04efd2d49ae28c9ba3000a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyePrefab: {fileID: 416231012505827044, guid: bd5caafd303282240ad56fe08516a219, type: 3}
-  mouthPrefab: {fileID: 2246510547384890352, guid: 7aa21c5f60b2dc24f8622a03a6281b6c, type: 3}
+  eyePrefab: {fileID: 416231012505827044, guid: 856b5ab9bceb27e47834f012f2e6dc56, type: 3}
+  mouthPrefab: {fileID: 2246510547384890352, guid: 3c5ba4879be67c84ab646869de2163b5, type: 3}
   eyeOffset: {x: 2.5, y: 0.5}
   mouthOffset: {x: 2.5, y: -0.5}

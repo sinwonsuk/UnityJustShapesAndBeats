@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 1e080ca4a8d33c743a9380d07a166699
+guid: 2ec9c09dfbc2bfb44a38ffe91f87b9f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -316819093631455264
-    second: eye_collabo_0
-  - first:
-      213: -7596621714080678987
-    second: eye_collabo_1
+      213: 5315182787451049295
+    second: Rec_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eye_collabo_0
+      name: Rec_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 306
-        height: 195
+        width: 280
+        height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a1eefd43e3989854287d6b86f84a2287
-      internalID: -474296727
+      spriteID: f455a4a859253c940800000000000000
+      internalID: 5315182787451049295
       vertices: []
       indices: 
       edges: []
@@ -154,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 67249462289e8804f9b3dd3b76def67c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -164,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      eye_collabo_0: -474296727
+      Rec_0: 5315182787451049295
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
