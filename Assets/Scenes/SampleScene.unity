@@ -871,7 +871,7 @@ MonoBehaviour:
   stopAniScaleX: 1.5
   stopAniScaleY: 0.5
   dash: {fileID: 7898097390886010865, guid: 38bcc9009ec98944daebe2a742643f05, type: 3}
-  hitEffect: {fileID: 4823518202205099639, guid: cdc919a43bba95b4a8b6916b6aa5321d, type: 3}
+  hitEffect: {fileID: 2186635313526590576, guid: 5f007063a17b54343b3b42e715f0ef6d, type: 3}
   dashTansform: {fileID: 1216613238}
 --- !u!4 &1804911572
 Transform:
