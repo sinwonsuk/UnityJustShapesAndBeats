@@ -233,4 +233,6 @@ public class Player : MonoBehaviour
     float hp = 0;
 
     private PlayerState playerState = PlayerState.Idle;
+
+    int ad = 0;
 }
