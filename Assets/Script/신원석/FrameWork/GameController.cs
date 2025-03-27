@@ -5,7 +5,7 @@ public enum Stage
 {
 	Stage1,
 	Stage2,
-	TestStage,
+	BossStage,
 }
 
 public interface PatternChoiceInterface

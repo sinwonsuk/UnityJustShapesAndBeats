@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4670518510748754736}
   - component: {fileID: 380198863065812591}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BossChainDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4670518510748754736
 Transform:
   m_ObjectHideFlags: 0

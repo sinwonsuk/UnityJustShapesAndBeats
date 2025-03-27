@@ -12,7 +12,7 @@ public class Ghost : MonoBehaviour
     {
 
 
-        if(transform.localScale.x > 0.3)
+        if(transform.localScale.x > 0.8)
         {
             transform.localScale -= new Vector3(localScale, localScale, localScale) * Time.deltaTime;
         }
