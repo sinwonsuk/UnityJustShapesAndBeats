@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pink_Won_Completely_Cleaned_0: 7307388767031469993
+      Pink_Won_Completely_Cleaned_1: -7233789883327997822
+      Pink_Won_Completely_Cleaned_2: 299595285213902863
+      Pink_Won_Completely_Cleaned_3: -7808678110803963311
+      Pink_Won_Completely_Cleaned_4: -3128329111584743976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

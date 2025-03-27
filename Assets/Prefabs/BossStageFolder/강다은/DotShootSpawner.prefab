@@ -47,4 +47,3 @@ MonoBehaviour:
   dottedCirclePrefabs: {fileID: 5070363671376115731, guid: bb9b903fb554fa84c98313ad2ea5351a, type: 3}
   bigCirclePrefabs: {fileID: 5721748155195254833, guid: f6d1c50e241d80049bf8fb24dd2c8184, type: 3}
   bulletPrefabs: {fileID: 6839118294738979042, guid: 6af8247f6390c134fb4b7b85cf978feb, type: 3}
-  bulletSpeed: 5

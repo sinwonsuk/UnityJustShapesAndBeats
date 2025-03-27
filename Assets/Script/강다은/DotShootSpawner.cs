@@ -10,77 +10,107 @@ public class DotShootSpawner : MonoBehaviour
 
 	private IEnumerator StartShootRoutine()
 	{
-		yield return StartCoroutine(SpawnSequence(pos1, true));
+		Coroutine outer1 = StartCoroutine(SpawnOuterCircles(pos1));
+		Coroutine outer2 = StartCoroutine(SpawnOuterCircles(pos2));
+
+		// 두 위치의 바깥 원 생성이 끝날 때까지 대기
+		yield return outer1;
+		yield return outer2;
+
+		// pos1 시퀀스 (안쪽 원부터)
+		yield return StartCoroutine(InnerSequence(pos1, true));
+
+		// 0.5초 대기 후 pos2 시퀀스
 		yield return new WaitForSeconds(0.5f);
-		yield return StartCoroutine(SpawnSequence(pos2, false));
+		yield return StartCoroutine(InnerSequence(pos2, false));
 	}
 
-	IEnumerator SpawnSequence(Vector3 position, bool isFirst)
+	// 바깥 원 3개 순차 생성 (작은 원 → 중간 원 → 큰 원)
+	IEnumerator SpawnOuterCircles(Vector3 pos)
 	{
-		// 바깥 원 3개 생성
 		GameObject[] outerCircles = new GameObject[3];
+		float[] scales = { 1f, 1.5f, 2f }; // 작은 원, 중간 원, 큰 원 크기
+
 		for (int i = 0; i < 3; i++)
 		{
-			outerCircles[i] = Instantiate(dottedCirclePrefabs, position, Quaternion.identity);
-			float scale = 1.0f + (i * 0.5f); // 크기 다르게 설정
-			outerCircles[i].transform.localScale = Vector3.one * scale;
+			outerCircles[i] = Instantiate(dottedCirclePrefabs, pos, Quaternion.identity);
+			outerCircles[i].transform.localScale = Vector3.one * scales[i];
+			yield return new WaitForSeconds(0.2f); // 각 원 생성 간격
 		}
 
-		// 안쪽 원 생성 및 애니메이션
-		GameObject innerCircle = Instantiate(bigCirclePrefabs, position, Quaternion.identity);
-		SpriteRenderer innerRenderer = innerCircle.GetComponent<SpriteRenderer>();
-		Color startColor = new Color(255 / 255f, 32 / 255f, 112 / 255f, 0.4f);
-		float timer = 0f;
+		// 바깥 원 배열을 다음 시퀀스로 전달하기 위해 저장
+		OuterCircleStorage[pos] = outerCircles;
+	}
+
+	// 안쪽 원 애니메이션 및 나머지 시퀀스
+	IEnumerator InnerSequence(Vector3 pos, bool isFirst)
+	{
+		GameObject[] outerCircles = OuterCircleStorage[pos];
+
+		// 안쪽 원 애니메이션 (초기 커짐)
+		GameObject inner = Instantiate(bigCirclePrefabs, pos, Quaternion.identity);
+		SpriteRenderer innerRenderer = inner.GetComponent<SpriteRenderer>();
+		float time = 0f;
 		float duration = 1.5f;
 
-		while (timer < duration)
+		while (time < duration)
 		{
-			timer += Time.deltaTime;
-			float t = timer / duration;
+			time += Time.deltaTime;
+			float t = time / duration;
 			float smoothT = Mathf.SmoothStep(0f, 1f, t);
-
-			// 크기 변화
-			float scale = Mathf.Lerp(0.5f, 2f, smoothT);
-			innerCircle.transform.localScale = Vector3.one * scale;
-
-			// 색상 변화
-			innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT);
-
+			inner.transform.localScale = Vector3.one * Mathf.Lerp(0.5f, 2f, smoothT);
+			innerRenderer.color = Color.Lerp(Color.white, Color.red, smoothT);
 			yield return null;
 		}
 
-		// 바깥 원 순차적 삭제
-		for (int i = 0; i < outerCircles.Length; i++)
+		// 바깥 원 순차 삭제
+		foreach (GameObject outer in outerCircles)
 		{
-			if (outerCircles[i] != null)
+			if (outer != null)
 			{
-				Destroy(outerCircles[i]);
+				Destroy(outer);
 				yield return new WaitForSeconds(0.2f);
 			}
 		}
 
-		timer = 0f;
+		// 안쪽 원 마지막 애니메이션
+		time = 0f;
 		duration = 1f;
-		Vector3 initialScale = innerCircle.transform.localScale;
 
-		while (timer < duration)
+		if (isFirst)
 		{
-			timer += Time.deltaTime;
-			float t = timer / duration;
-			float smoothT = Mathf.SmoothStep(0f, 1f, t);
-
-			if (isFirst)
+			// 첫 번째 원: 커지기만 함
+			while (time < duration)
 			{
-				float scale = Mathf.Lerp(2f, 4f, smoothT);
-				innerCircle.transform.localScale = Vector3.one * scale;
+				time += Time.deltaTime;
+				float t = time / duration;
+				float smoothT = Mathf.SmoothStep(0f, 1f, t);
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(2f, 4f, smoothT);
+				yield return null;
 			}
-			else
+		}
+		else
+		{
+			// 두 번째 원: 커졌다가 작아짐
+			time = 0f;
+			while (time < 0.5f) // 커짐
 			{
-				float scale = Mathf.Lerp(2f, t < 0.5f ? 4f : 0.5f, smoothT);
-				innerCircle.transform.localScale = Vector3.one * scale;
+				time += Time.deltaTime;
+				float t = time / 0.5f;
+				float smoothT = Mathf.SmoothStep(0f, 1f, t);
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(2f, 4f, smoothT);
+				yield return null;
 			}
 
-			yield return null;
+			time = 0f;
+			while (time < 0.5f) // 작아짐
+			{
+				time += Time.deltaTime;
+				float t = time / 0.5f;
+				float smoothT = Mathf.SmoothStep(0f, 1f, t);
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(4f, 0.5f, smoothT);
+				yield return null;
+			}
 		}
 
 		// 불렛 12개 원형 발사
@@ -89,17 +119,18 @@ public class DotShootSpawner : MonoBehaviour
 			float angle = i * 30f; // 360/12 = 30도 간격
 			Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
 			Vector3 direction = rotation * Vector3.up;
-			GameObject bullet = Instantiate(bulletPrefabs, position, rotation);
+			GameObject bullet = Instantiate(bulletPrefabs, pos, rotation);
 		}
 
 		// 안쪽 원 삭제
-		Destroy(innerCircle);
+		Destroy(inner);
 	}
 
 	[SerializeField] GameObject dottedCirclePrefabs;  // 도트 원 프리팹
 	[SerializeField] GameObject bigCirclePrefabs;     // 큰 원 프리팹
 	[SerializeField] GameObject bulletPrefabs;        // 총알 프리팹
-	[SerializeField] float bulletSpeed = 5f;
+	private static readonly System.Collections.Generic.Dictionary<Vector3, GameObject[]> OuterCircleStorage =
+		new System.Collections.Generic.Dictionary<Vector3, GameObject[]>();
 
 	private Vector3 pos1 = new Vector3(5.18f, 2.17f, 0f);
 	private Vector3 pos2 = new Vector3(-4.66f, -2.08f, 0f);
