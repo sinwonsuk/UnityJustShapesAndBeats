@@ -1,7 +1,10 @@
 using UnityEngine;
 
+
+
 public class SpriteAppear : MonoBehaviour
 {
+    public GameObject Bbullet;
     [Header("스폰 범위 설정")]
     public Vector2 minSpawnRange;   // 스폰 최소 범위
     public Vector2 maxSpawnRange;   // 스폰 최대 범위
@@ -26,7 +29,17 @@ public class SpriteAppear : MonoBehaviour
     private Color originalColor;
     private bool isBlinkOn = false;
 
-    void Awake()
+    void Start()
+    {
+        if (Bbullet == null)
+        {
+            Debug.LogError("Bbullet이 null입니다! Inspector에서 총알 프리팹을 할당해야 합니다.");
+            return;
+        }
+
+        // 나머지 코드
+    }
+        void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
@@ -60,6 +73,12 @@ public class SpriteAppear : MonoBehaviour
         Debug.Log($"Spawned at: {randomSpawnPos}, Target: {targetPosition}");
     }
 
+    
+    
+
+
+
+
     void Update()
     {
         // 회전
@@ -80,6 +99,11 @@ public class SpriteAppear : MonoBehaviour
 
                 CancelInvoke(nameof(Blink)); // 깜박이기 멈추기
                 gameObject.SetActive(false); // 사라지기
+                for (int i = 0; i < 8; i++)
+                {
+                    GameObject go = Instantiate(Bbullet, transform.position, Quaternion.Euler(0, 0, 45 * i));
+                }
+                
             }
         }
     }
@@ -92,4 +116,6 @@ public class SpriteAppear : MonoBehaviour
         isBlinkOn = !isBlinkOn;
         spriteRenderer.color = isBlinkOn ? blinkColor : originalColor;
     }
+
+
 }
