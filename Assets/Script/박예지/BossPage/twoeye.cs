@@ -14,12 +14,12 @@ public class TwoEye : MonoBehaviour
     void Start()
     {
         if (center == Vector2.zero)
-            center = transform.position; // 기본적으로 현재 위치를 중심으로 설정
+            center = transform.localPosition; // 기본적으로 현재 위치를 중심으로 설정
     }
 
     void Update()
     {
-        // 타원 경로를 따라 움직이기
+        //// 타원 경로를 따라 움직이기
         angle += Time.deltaTime * speed;
 
         // 타원 경로에서 X, Y 계산
@@ -30,12 +30,6 @@ public class TwoEye : MonoBehaviour
         y += Mathf.Sin(Time.time * bobbingSpeed) * bobbingAmount;
 
         // 위치 업데이트
-        transform.position = new Vector2(x, y);
-    }
-
-    // 중심 위치를 변경하는 함수
-    public void SetCenter(Vector2 newCenter)
-    {
-        center = newCenter;
+        transform.localPosition = new Vector2(x, y);
     }
 }
