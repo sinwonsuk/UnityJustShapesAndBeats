@@ -40,11 +40,10 @@ public class DotShootSpawner : MonoBehaviour
 	IEnumerator InnerSequence(Vector3 pos, bool isFirst)
 	{
 		GameObject[] outerCircles = OuterCircleStorage[pos];
-		float[] outerScales = { 2f, 2.5f, 3f }; // 바깥 원 크기 참조
-		Color startColor = new Color(255 / 255f, 80 / 255f, 159 / 255f, 1f); // 핑크
-		Color targetColor = new Color(1f, 1f, 1f, 1f); // 흰색
+		float[] outerScales = { 2f, 2.5f, 3f }; 
+		Color startColor = new Color(255 / 255f, 80 / 255f, 159 / 255f, 1f); 
+		Color targetColor = new Color(1f, 1f, 1f, 1f);
 
-		// 안쪽 원 생성 및 초기 커짐 (첫 번째 바깥 원 크기까지)
 		GameObject inner = Instantiate(bigCirclePrefabs, pos, Quaternion.identity);
 		SpriteRenderer innerRenderer = inner.GetComponent<SpriteRenderer>();
 		float time = 0f;
@@ -52,7 +51,7 @@ public class DotShootSpawner : MonoBehaviour
 
 		if (outerCircles[0] != null)
 		{
-			Destroy(outerCircles[0]); // 첫 번째 바깥 원 앞서 삭제
+			Destroy(outerCircles[0]);
 		}
 
 		while (time < duration)
@@ -61,11 +60,10 @@ public class DotShootSpawner : MonoBehaviour
 			float t = time / duration;
 			float smoothT = Mathf.SmoothStep(0f, 1f, t);
 			inner.transform.localScale = Vector3.one * Mathf.Lerp(0.5f, outerScales[0], smoothT);
-			innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT); // 핑크 → 흰색
+			innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT); 
 			yield return null;
 		}
 
-		// 작아짐 및 두 번째 바깥 원 삭제 후 커짐 (두 번째 바깥 원 크기까지)
 		time = 0f;
 		duration = 0.2f;
 
@@ -75,25 +73,25 @@ public class DotShootSpawner : MonoBehaviour
 			float t = time / duration;
 			float smoothT = Mathf.SmoothStep(0f, 1f, t);
 			inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[0], 0.5f, smoothT);
-			innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); // 흰색 → 핑크
+			innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); 
 			yield return null;
 		}
 
 		if (outerCircles[1] != null)
 		{
-			Destroy(outerCircles[1]); // 두 번째 바깥 원 삭제
+			Destroy(outerCircles[1]);
 		}
 
 		time = 0f;
 		duration = 0.2f;
 
-		while (time < duration) // 다시 커짐 (두 번째 바깥 원 크기)
+		while (time < duration) 
 		{
 			time += Time.deltaTime;
 			float t = time / duration;
 			float smoothT = Mathf.SmoothStep(0f, 1f, t);
 			inner.transform.localScale = Vector3.one * Mathf.Lerp(0.5f, outerScales[1], smoothT);
-			innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT); // 핑크 → 흰색
+			innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT);
 			yield return null;
 		}
 
@@ -105,19 +103,19 @@ public class DotShootSpawner : MonoBehaviour
 
 			if (outerCircles[2] != null)
 			{
-				Destroy(outerCircles[2]); // 마지막 바깥 원 삭제
+				Destroy(outerCircles[2]); 
 			}
 
 			time = 0f;
 			duration = 0.2f;
 
-			while (time < duration) // 새 innerCircle 커짐
+			while (time < duration) 
 			{
 				time += Time.deltaTime;
 				float t = time / duration;
 				float smoothT = Mathf.SmoothStep(0f, 1f, t);
-				newInner.transform.localScale = Vector3.one * Mathf.Lerp(0.5f, outerScales[2], smoothT); // 0.5 → 1.7
-				newInnerRenderer.color = Color.Lerp(startColor, targetColor, smoothT); // 핑크 → 흰색
+				newInner.transform.localScale = Vector3.one * Mathf.Lerp(0.5f, outerScales[2], smoothT); 
+				newInnerRenderer.color = Color.Lerp(startColor, targetColor, smoothT);
 				yield return null;
 			}
 
@@ -138,10 +136,10 @@ public class DotShootSpawner : MonoBehaviour
 				time += Time.deltaTime;
 				float t = time / duration;
 				float smoothT = Mathf.SmoothStep(0f, 1f, t);
-				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[1], 0.5f, smoothT); // 1.4 → 0.5
-				innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); // 흰색 → 핑크
-				newInner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[2], 0.5f, smoothT); // 1.7 → 0.5
-				newInnerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); // 흰색 → 핑크
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[1], 0.5f, smoothT);
+				innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT);
+				newInner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[2], 0.5f, smoothT);
+				newInnerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); 
 				yield return null;
 			}
 
@@ -152,31 +150,31 @@ public class DotShootSpawner : MonoBehaviour
 		{
 			if (outerCircles[2] != null)
 			{
-				Destroy(outerCircles[2]); // 마지막 바깥 원 삭제
+				Destroy(outerCircles[2]); 
 			}
 			time = 0f;
 			duration = 0.1f;
 
-			while (time < duration) // 커짐
+			while (time < duration) 
 			{
 				time += Time.deltaTime;
 				float t = time / duration;
 				float smoothT = Mathf.SmoothStep(0f, 1f, t);
-				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[1], outerScales[2], smoothT); // 1.4 → 1.7
-				innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT); // 핑크 → 흰색
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[1], outerScales[2], smoothT);
+				innerRenderer.color = Color.Lerp(startColor, targetColor, smoothT);
 				yield return null;
 			}
 
 			time = 0f;
 			duration = 0.1f;
 
-			while (time < duration) // 작아짐
+			while (time < duration)
 			{
 				time += Time.deltaTime;
 				float t = time / duration;
 				float smoothT = Mathf.SmoothStep(0f, 1f, t);
-				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[2], 0.5f, smoothT); // 1.7 → 0.5
-				innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); // 흰색 → 핑크
+				inner.transform.localScale = Vector3.one * Mathf.Lerp(outerScales[2], 0.5f, smoothT); 
+				innerRenderer.color = Color.Lerp(targetColor, startColor, smoothT); 
 				yield return null;
 			}
 
@@ -195,9 +193,9 @@ public class DotShootSpawner : MonoBehaviour
 		
 	}
 
-	[SerializeField] GameObject dottedCirclePrefabs;  // 도트 원 프리팹
-	[SerializeField] GameObject bigCirclePrefabs;     // 큰 원 프리팹
-	[SerializeField] GameObject bulletPrefabs;        // 총알 프리팹
+	[SerializeField] GameObject dottedCirclePrefabs; 
+	[SerializeField] GameObject bigCirclePrefabs;    
+	[SerializeField] GameObject bulletPrefabs;        
 	private static readonly System.Collections.Generic.Dictionary<Vector3, GameObject[]> OuterCircleStorage =
 		new System.Collections.Generic.Dictionary<Vector3, GameObject[]>();
 
