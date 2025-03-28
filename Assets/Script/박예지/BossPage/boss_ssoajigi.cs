@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using System.Collections;
 
@@ -10,7 +11,7 @@ public class boss_ssoajigi : MonoBehaviour
 
     IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(0.1f); // 2초 대기
+
 
         while (true) // 2초 후에 무한 루프로 이동 시작
         {

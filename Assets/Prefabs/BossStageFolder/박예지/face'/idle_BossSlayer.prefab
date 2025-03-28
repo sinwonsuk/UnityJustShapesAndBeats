@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8875981795063175392
 Transform:
   m_ObjectHideFlags: 0
@@ -161,8 +161,8 @@ MonoBehaviour:
   shrinkTime: 0.5
   deleteTime: 0.1
   Bbullet: {fileID: 671656131455859651, guid: dd1efdc565d963442b6d409958eab3df, type: 3}
-  deleteDelayTime: 10
-  appearDelayTime: 19
+  deleteDelayTime: 1
+  appearDelayTime: 18
 --- !u!1 &7403674271844523798
 GameObject:
   m_ObjectHideFlags: 0

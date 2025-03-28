@@ -46,6 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f7fbdd09f97b845a3c61803afa2f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  horizontalRadius: 3
+  verticalRadius: 5
+  bobbingSpeed: 1
+  bobbingAmount: 0.5
+  center: {x: 0, y: 0}
   Bbullet: {fileID: 671656131455859651, guid: febc244c167f43f43892e5dd023193e8, type: 3}
 --- !u!114 &9124903709456474121
 MonoBehaviour:
