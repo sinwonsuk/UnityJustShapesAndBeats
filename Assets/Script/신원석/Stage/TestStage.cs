@@ -30,6 +30,18 @@ public class TestStage : BaseGameEntity
        
     }
 
+    public override void OffActive()
+    {
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            if (pattern[i].gameObject == null)
+                continue;
+            pattern[i].SetActive(false);
+        }
+
+        gameObject.SetActive(false);
+    }
+
     public override void Setup()
     {
         if (stateMachine == null)

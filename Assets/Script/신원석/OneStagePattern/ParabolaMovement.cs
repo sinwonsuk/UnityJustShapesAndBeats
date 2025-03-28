@@ -12,12 +12,10 @@ public class ParabolaMovement : MonoBehaviour
 {
     void Start()
     {
-      
+        Destroy(gameObject, 10.0f);
     }
     void Update()
     {
-        transform.Rotate(0, 0, Time.deltaTime* rotateSpeed);
-
         switch (dir)
         {
             case Dir.ParabolaMiddle:

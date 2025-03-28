@@ -22,9 +22,6 @@ public class Player : MonoBehaviour
         Hp2,
         Hp1,
     }
-
-
-
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -42,9 +39,12 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3"))
+        {
+            return;
+        }
+      
         Vector2 Targetpos = transform.position - collision.transform.position;
-
-        
 
         if (isInvincible ==false)
         {
@@ -56,6 +56,26 @@ public class Player : MonoBehaviour
                    
         }    
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Stage1") && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.ChangeScene(SceneStage.Play);
+        }
+        else if (collision.CompareTag("Stage2") && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.ChangeScene(SceneStage.Play);
+        }
+        else if (collision.CompareTag("Stage3") && Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.ChangeScene(SceneStage.Play);
+        }
+    }
+
+
+
+
 
     private IEnumerator ApplyForceCoroutine(Vector2 Targetpos)
     {

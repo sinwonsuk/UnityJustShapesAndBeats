@@ -72,11 +72,14 @@ public class GameController : MonoBehaviour
 		IsGameStop = true;		
 	}
 
-    public void ChangeStage(Stage _stage)
+    static public void ChangeStage(Stage _stage)
     {
         stage = _stage;
     }
-
+    static public void PluseStage()
+    {
+        stage++;
+    }
 
     [SerializeField]
     private GameObject[] stagePrefab; // Student 타입의 프리팹
@@ -85,7 +88,7 @@ public class GameController : MonoBehaviour
     private Dictionary<Stage, BaseGameEntity> stageEntities = new Dictionary<Stage, BaseGameEntity>();
 
     [SerializeField]
-    private Stage stage = Stage.Stage1;
+    static private Stage stage = Stage.Stage1;
 
     Stage prevstage = Stage.Stage1;
 

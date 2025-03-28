@@ -25,7 +25,11 @@ public class NextSceneTriangleSpawner : MonoBehaviour
 		);
 
 		GameObject triangle = Instantiate(trianglePrefab, startPos, Quaternion.identity);
-		NextSceneAnimation controller = triangle.GetComponent<NextSceneAnimation>();
+
+		triangle.GetComponent<NextSceneAnimation>().entity = entity;
+
+
+        NextSceneAnimation controller = triangle.GetComponent<NextSceneAnimation>();
 		if (controller != null)
 		{
 			controller.StartMoveAnimation(startPos, targetPos, moveDuration);
@@ -60,4 +64,6 @@ public class NextSceneTriangleSpawner : MonoBehaviour
 	[SerializeField] private float moveDuration = 1f; // 화면 밖에서 안으로 이동하는 시간
 	[SerializeField] private Vector2 screenAreaMin;   // 화면 안 목표 영역 최소 좌표
 	[SerializeField] private Vector2 screenAreaMax;   // 화면 안 목표 영역 최대 좌표
+
+	public BaseGameEntity entity;
 }

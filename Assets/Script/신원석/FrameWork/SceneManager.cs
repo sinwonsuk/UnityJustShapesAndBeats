@@ -25,6 +25,15 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("1"))
+        {
+            ChangeScene(SceneStage.Lobby);
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            ChangeScene(SceneStage.Play);
+        }
+
         UpdateScene();
     }
 
@@ -44,12 +53,21 @@ public class SceneManager : MonoBehaviour
         }
     }
     public static void ChangeScene(SceneStage _sceneStage)
-    {
+    {      
         sceneStage = _sceneStage;
     }
-    private static SceneStage sceneStage = SceneStage.Play;
+
+
+    private static SceneStage sceneStage = SceneStage.Lobby;
     private SceneStage prevSceneStage = SceneStage.Ending;
     private Dictionary<SceneStage, GameObject> SceneDictinary = new Dictionary<SceneStage, GameObject>();
+
+    static public bool IsLife { get; set; } = true;
+
+    public void Off()
+    {
+
+    }
 
     [SerializeField]
     private List<GameObject> scences;

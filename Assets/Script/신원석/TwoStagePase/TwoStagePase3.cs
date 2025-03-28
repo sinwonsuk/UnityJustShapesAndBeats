@@ -27,15 +27,19 @@ public class TwoStagePase3 : State<TwoStage>
         manager.SetPattern((int)T.Three);
 
         entity.StartTimePattern((boxPattern), 9f);
+
+        entity.StopTimePattern((boxPattern), 35f);
         entity.StartTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 15.5f);
         entity.StopTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 30f);
 
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.TwoNextSceneAnimation),32);
+        entity.StartTimePattern(entity.Getpattern(TwoEPattern.TwoNextSceneAnimation),38);
+
+        entity.Getpattern(TwoEPattern.TwoNextSceneAnimation).GetComponent<NextSceneTriangleSpawner>().entity = entity;
     }
 
     public override void Execute(TwoStage entity)
     {
-       
+        
     }
 
     public override void Exit(TwoStage entity)

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class NextSceneAnimation : MonoBehaviour
 {
@@ -25,7 +26,13 @@ public class NextSceneAnimation : MonoBehaviour
 			}
 		}
 	}
-	private IEnumerator MoveFromOutside(Vector2 startPos, Vector2 targetPos, float duration)
+
+    private void Update()
+    {
+        SoundManager.GetInstance().ReduceSoundBgm();
+    }
+
+    private IEnumerator MoveFromOutside(Vector2 startPos, Vector2 targetPos, float duration)
 	{
 		isMoving = true;
 		float elapsedTime = 0f;
@@ -180,9 +187,12 @@ public class NextSceneAnimation : MonoBehaviour
 			fadeSpriteRender.color = Color.Lerp(startColor, endColor, t);
 			yield return null;
 		}
-		//씬 전환 로직
-		Debug.Log("Fade Out 완료!");
-
+		stage++;
+        //씬 전환 로직
+        SceneManager.ChangeScene(SceneStage.Lobby);
+		GameController.PluseStage();
+		entity.OffActive();
+		gameObject.SetActive(false);
 	}
 	private Vector2 BezierCurve(Vector2 startPos, Vector2 controlPoint, Vector2 targetPos, float t)
 	{
@@ -220,4 +230,6 @@ public class NextSceneAnimation : MonoBehaviour
 
 	private bool isTriggered = false;
 	private bool isMoving = false;
+	Stage stage = Stage.Stage1;
+    public BaseGameEntity entity;
 }

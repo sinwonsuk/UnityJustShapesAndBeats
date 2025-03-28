@@ -100,7 +100,7 @@ public class SoundManager : MonoBehaviour
 
     public void ReduceSoundBgm()
     {
-        if(bgmPlayer.volume <= 0)
+        if(bgmPlayer.volume >= 0)
         {
             bgmPlayer.volume -= Time.deltaTime * reduceSoundSpeed;
         }     

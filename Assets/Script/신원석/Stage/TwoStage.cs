@@ -55,6 +55,18 @@ public class TwoStage : BaseGameEntity
         stateMachine.Setup(this, states[(int)TwoStagePase.Pase1]);
     }
 
+    public override void OffActive()
+    {
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            if (pattern[i].gameObject == null)
+                continue;
+            pattern[i].SetActive(false);
+        }
+
+        gameObject.SetActive(false);
+    }
+
     public override void Updated()
     {
         stateMachine.Execute();
