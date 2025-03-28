@@ -160,7 +160,7 @@ MonoBehaviour:
   growTime: 0.1
   shrinkTime: 0.5
   deleteTime: 0.1
-  Bbullet: {fileID: 671656131455859651, guid: dd1efdc565d963442b6d409958eab3df, type: 3}
+  Bbullet: {fileID: 9200533100302997411, guid: b26499fde88681d4c94dd45400549bb1, type: 3}
   deleteDelayTime: 1
   appearDelayTime: 18
 --- !u!1 &7403674271844523798

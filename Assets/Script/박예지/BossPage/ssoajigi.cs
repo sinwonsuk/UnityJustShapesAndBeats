@@ -14,7 +14,7 @@ public class ssoajigi : MonoBehaviour
 
         while (true) // 무한 루프
         {
-            transform.Translate(Vector2.left * Time.deltaTime * 3);
+            transform.Translate(Vector2.left * Time.deltaTime * 1.8f);
             yield return null; // 다음 프레임까지 대기
         }
     }

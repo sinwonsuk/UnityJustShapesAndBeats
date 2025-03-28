@@ -26,7 +26,7 @@ public enum BossEPattern
     BossBulletSpawn,
     idle_BossSlayer,
     big_white_one_0,
-    boss,
+    Boss_BossBulletSpawn,
     fire,one_0,
     white_one_0
 
