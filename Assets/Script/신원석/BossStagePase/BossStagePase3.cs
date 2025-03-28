@@ -22,5 +22,7 @@ public class BossStagePase3 : State<BossStage>
     public override void Exit(BossStage entity)
     {
         
-    }  
+    }
+
+    private float time = 0;
 }
