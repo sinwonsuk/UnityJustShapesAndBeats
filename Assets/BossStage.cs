@@ -24,6 +24,20 @@ public enum BossEPattern
     BossChainDown,
     BossChainUp,
     BossBulletSpawn,
+    idle_BossSlayer,
+    big_white_one_0,
+    boss_fire,
+    fire,
+    one_0,
+    white_one_0,
+    SpawnSlayerPattern1,
+    SpawnSlayerPattern2,
+    BossSlayer_finish,
+    BossBbababam,
+    BigSnailSpawner,
+    DotShootSpawner,
+    MiniBossSpawner,
+    SmileBossSpawner,
 }
 public class BossStage : BaseGameEntity
 {
