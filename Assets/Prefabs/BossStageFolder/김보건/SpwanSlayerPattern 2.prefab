@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vortexPrefab: {fileID: 6793613534358899991, guid: 15f5af961eddf194183423eb9cb21cb9, type: 3}
-  bigBossPrefab: {fileID: 2260328136303976815, guid: e7c1737795e36494fb27c2be3b01d17e, type: 3}
-  slayerDownPrefab: {fileID: 719474597448491207, guid: 7df730c7900f79b43ba46c90e151764f, type: 3}
-  slayerSideBigPrefab: {fileID: 3270962116469240025, guid: 1fa817f2e94552d4d8fd732b86618d9c, type: 3}
-  slayerSidePrefab: {fileID: 99846322169445074, guid: 4ecc57641c6e0624db929c91c11958e2, type: 3}
-  singleSlayerPrefab: {fileID: 2114838451969125217, guid: bc3b5c2ec34e39e4298550033b4eea6e, type: 3}
+  bigBossPrefab: {fileID: 8223047024502394455, guid: 3623f2232b4b4b149be065903db84f73, type: 3}
+  slayerDownPrefab: {fileID: 6484833006862555694, guid: a67db561b79cf4445aa8e3a44bc64afe, type: 3}
+  slayerSideBigPrefab: {fileID: 5922685986539470863, guid: 6367a84b05db0e34586748301b31e03a, type: 3}
+  slayerSidePrefab: {fileID: 4502670389800946126, guid: 2bc4feda7cd676940b62ec0fd93d2030, type: 3}
+  singleSlayerPrefab: {fileID: 5266769354764564843, guid: 1f2c90f80ea9ee441b76b58cf8699b47, type: 3}
   SpawnSlayers_oneDelay: 0.2
   SpawnSlayers_twoDelay: 2.5

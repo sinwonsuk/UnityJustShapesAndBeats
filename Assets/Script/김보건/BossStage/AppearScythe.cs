@@ -32,7 +32,10 @@ public class AppearScythe : MonoBehaviour
         yield return new WaitForSeconds(2.2f);
         while (true)
         {
-            if (!isRotating) yield break;
+            if (!isRotating)
+            {
+                yield break;
+            }
 
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
             yield return null;
