@@ -42,6 +42,8 @@ public class BossSmile : MonoBehaviour
 			yield return null;
 		}
 		SetScale(Vector3.one * maxScale);
+		yield return new WaitForSeconds(2f); // 2초 후 사라짐
+		StartCoroutine(DisappearBoss());
 	}
 
 
@@ -58,8 +60,7 @@ public class BossSmile : MonoBehaviour
 			transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, t);
 			yield return null;
 		}
-
-		Destroy(gameObject); // 보스 삭제
+		Destroy(gameObject);
 	}
 
 
