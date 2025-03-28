@@ -17,19 +17,19 @@ public class AppearScytheDown : MonoBehaviour
     private IEnumerator AppearScy()
     {
 
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.16f);
 
         transform.localScale = originalScale;
 
         StartCoroutine(ShakeRotation());
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(MoveScythe());
     }
 
     private IEnumerator RotateScythe()
     {
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(0.5f);
         while (true)
         {
             if (!isRotating) yield break;

@@ -10,7 +10,7 @@ public class SlayerBoss : MonoBehaviour
     [SerializeField] private float growTime = 0.06f;
     [SerializeField] private float shrinkTime = 0.5f;
     [SerializeField] private float deleteTime = 0.1f;
-
+    [SerializeField] private float startTime = 0f;
     [SerializeField] private float deleteDelayTime = 0.15f;
 
     private void OnEnable()
@@ -32,11 +32,12 @@ public class SlayerBoss : MonoBehaviour
 
     private IEnumerator AppearSlayer()
     {
+
+        yield return new WaitForSeconds(startTime);
+
         Color pinkColor = new Color(255 / 255f, 32 / 255f, 112 / 255f, 1f);
         Color whiteColor = Color.white;
 
-
-        yield return new WaitForSeconds(1.4f);
 
         float current = 0f;
         ChangeColor(whiteColor);

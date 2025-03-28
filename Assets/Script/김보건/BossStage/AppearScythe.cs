@@ -17,19 +17,19 @@ public class AppearScythe : MonoBehaviour
     private IEnumerator AppearScy()
     {
 
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(startTime);
 
         transform.localScale = originalScale;
 
         StartCoroutine(ShakeRotation()); 
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(moveTime);
         StartCoroutine(MoveScythe());
     }
 
     private IEnumerator RotateScythe()
     {
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(rotationTime);
         while (true)
         {
             if (!isRotating)
@@ -154,8 +154,10 @@ public class AppearScythe : MonoBehaviour
     }
 
     [SerializeField] private Vector3 originalScale = Vector3.one;
-    [SerializeField] private float growTime = 0.1f;
-    [SerializeField] private float shrinkTime = 0.5f;
+    [SerializeField] private float startTime = 0.16f;
+    [SerializeField] private float rotationTime = 1f;
+    [SerializeField] private float moveTime = 1f;
+
 
     [SerializeField] private float minX = -5f;
     [SerializeField] private float maxX = 5f;

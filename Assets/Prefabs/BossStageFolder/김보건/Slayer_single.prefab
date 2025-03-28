@@ -102,8 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalScale: {x: 0.49, y: 0.49, z: 0.49}
-  growTime: 0.1
-  shrinkTime: 0.5
+  startTime: 0.05
+  rotationTime: 0.6
+  moveTime: 0.6
   minX: -9.5
   maxX: 9.5
   moveSpeed: 6
@@ -743,8 +744,9 @@ MonoBehaviour:
   firstScale: {x: 0.6, y: 0.6, z: 0.6}
   maxScale: {x: 0.7, y: 0.7, z: 0.7}
   growTime: 0.06
-  shrinkTime: 0.5
+  shrinkTime: 0.1
   deleteTime: 0.1
+  startTime: 0
   deleteDelayTime: 0.15
 --- !u!58 &116756941510803192
 CircleCollider2D:

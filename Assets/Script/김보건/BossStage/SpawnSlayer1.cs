@@ -32,7 +32,7 @@ public class SpawnSlayer1 : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         for (int i = 3; i < spawnPositions.Length; i++)
         {
@@ -44,7 +44,7 @@ public class SpawnSlayer1 : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
 
         foreach (var scythe in scythes)
         {
@@ -57,6 +57,7 @@ public class SpawnSlayer1 : MonoBehaviour
     [SerializeField] private GameObject singleSlayerPrefab;
 
     [SerializeField] private float delay = 22f;
+    [SerializeField] private float betweenDelay = 2f;
 
     private Vector3[] spawnPositions = new Vector3[]
     {

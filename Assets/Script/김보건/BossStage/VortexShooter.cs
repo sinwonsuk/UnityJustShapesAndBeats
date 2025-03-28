@@ -48,6 +48,7 @@ public class VortexShooter : MonoBehaviour
     [SerializeField] private float fireInterval = 1f;
     [SerializeField] private Transform firePoint;
     [SerializeField] private float fireDuration = 2f;
+    [SerializeField] private float startTime = 0.1f;
 
     [SerializeField] private float rotationSpeed = 360f;
 

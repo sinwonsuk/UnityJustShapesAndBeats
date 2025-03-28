@@ -141,7 +141,7 @@ MonoBehaviour:
   firstScale: {x: 1, y: 1, z: 1}
   maxScale: {x: 1.4, y: 1.4, z: 1.4}
   growTime: 0.06
-  shrinkTime: 0.2
+  shrinkTime: 0.1
   deleteTime: 0.1
   deleteDelayTime: 0.4
 --- !u!58 &684326407117790300
@@ -283,6 +283,7 @@ MonoBehaviour:
   appearCircle: {fileID: 2911172269136999505}
   targetColor: {r: 1, g: 0.1254902, b: 0.43921572, a: 0.19215687}
   speed: 10
+  DeleteTime: 0.06
 --- !u!1 &3172283706454064385
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,8 +560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalScale: {x: 0.7, y: 0.7, z: 0.7}
-  growTime: 0.1
-  shrinkTime: 0.5
+  startTime: 0.16
+  rotationTime: 1
+  moveTime: 1
   minX: -9.5
   maxX: 9.5
   moveSpeed: 6

@@ -48,7 +48,8 @@ MonoBehaviour:
   missilePrefab: {fileID: 8442163506296589905, guid: 01a3337b77ec2ca44be51bd9f7e272a8, type: 3}
   fireInterval: 0.1
   firePoint: {fileID: 6035847866802381967}
-  fireDuration: 3.7
+  fireDuration: 2.7
+  startTime: 0.1
   rotationSpeed: -270
 --- !u!1 &8016540532252736615
 GameObject:

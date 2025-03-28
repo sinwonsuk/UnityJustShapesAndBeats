@@ -29,7 +29,7 @@ public class AppearLerp : MonoBehaviour
      
         movingRenderer.color = Color.Lerp(originalColor, targetColor, t);
 
-        yield return new WaitForSeconds(1.4f);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(DeleteTime);
+        gameObject.SetActive(false);
     }
 }

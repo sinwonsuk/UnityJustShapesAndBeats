@@ -51,4 +51,4 @@ MonoBehaviour:
   slayerSidePrefab: {fileID: 4502670389800946126, guid: 2bc4feda7cd676940b62ec0fd93d2030, type: 3}
   singleSlayerPrefab: {fileID: 5266769354764564843, guid: 1f2c90f80ea9ee441b76b58cf8699b47, type: 3}
   SpawnSlayers_oneDelay: 0.2
-  SpawnSlayers_twoDelay: 2.5
+  SpawnSlayers_twoDelay: 1.5

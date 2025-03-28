@@ -454,6 +454,7 @@ MonoBehaviour:
   growTime: 0.06
   shrinkTime: 0.2
   deleteTime: 0.1
+  startTime: 2
   deleteDelayTime: 4
 --- !u!58 &6929239448164918048
 CircleCollider2D:

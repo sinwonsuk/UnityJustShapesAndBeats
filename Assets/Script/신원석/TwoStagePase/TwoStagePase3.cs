@@ -30,17 +30,18 @@ public class TwoStagePase3 : State<TwoStage>
         entity.StartTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 15.5f);
         entity.StopTimePattern(entity.Getpattern(TwoEPattern.SnowBall_slow), 30f);
 
-        entity.StartTimePattern(entity.Getpattern(TwoEPattern.TwoNextSceneAnimation),32);
+        entity.StartTimePattern(entity.Getpattern(TwoEPattern.TwoNextSceneAnimation),36f);
     }
 
     public override void Execute(TwoStage entity)
     {
-       
+
     }
 
     public override void Exit(TwoStage entity)
     {
-
+        time = 0;
     }
 
+    private float time = 0;
 }

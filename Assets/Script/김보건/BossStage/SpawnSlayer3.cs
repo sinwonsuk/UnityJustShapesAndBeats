@@ -21,13 +21,13 @@ public class SpawnSlayer3 : MonoBehaviour
 
     private IEnumerator SpawnVortex()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.1f);
         GameObject vortex = Instantiate(vortexPrefab, spawnPositions_one[0], Quaternion.identity);
     }
 
     private IEnumerator SpawnSlayers_one()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3.9f);
         for (int i = 0; i < 7; i++)
         {
             if (i == 0)
@@ -36,7 +36,7 @@ public class SpawnSlayer3 : MonoBehaviour
                 Transform scytheTransform = slayer1.transform.Find("Scythe_0");
                 AppearScythe scytheScript = scytheTransform.GetComponent<AppearScythe>();
                 scythes_one.Add(scytheScript);
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(1.8f);
             }
             else
             {
@@ -50,7 +50,7 @@ public class SpawnSlayer3 : MonoBehaviour
 
     private IEnumerator SpawnSlayers_two()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(8f);
 
         for (int i = 0; i < 6; i++)
         {
@@ -74,7 +74,7 @@ public class SpawnSlayer3 : MonoBehaviour
 
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         foreach (var scythe in scythes_two)
         {
