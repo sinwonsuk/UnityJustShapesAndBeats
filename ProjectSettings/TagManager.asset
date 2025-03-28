@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Outline
+  - Stage1
+  - Stage2
+  - Stage3
   layers:
   - Default
   - TransparentFX

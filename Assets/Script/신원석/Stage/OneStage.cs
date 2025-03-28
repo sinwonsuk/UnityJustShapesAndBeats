@@ -24,13 +24,15 @@ public enum EPattern
     map_first,
     map_fastCreate,
     map_fastCreate_shake,
-    map_shake
+    map_shake,
+    NextSceneAnimation,
 }
 public class OneStage : BaseGameEntity
 {
     void Start()
     {
-      
+        SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage1);
+        SoundManager.GetInstance().SetSoundBgm(0.1f);
     }
 
     private void OnDisable()
@@ -42,8 +44,16 @@ public class OneStage : BaseGameEntity
             pattern[i].SetActive(false);        
         }
     }
-
-
+    public override void OffActive()
+    {
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            if (pattern[i].gameObject == null)
+                continue;
+            pattern[i].SetActive(false);
+        }
+        gameObject.SetActive(false);
+    }
     public override void Setup()
 	{
         if (stateMachine == null)
@@ -51,16 +61,12 @@ public class OneStage : BaseGameEntity
             for (int i = 0; i < pattern.Length; i++)
             {
                 pattern[i].gameObject.SetActive(false);
-
                 pattern[i] = Instantiate(pattern[i], transform.position, Quaternion.identity);
-
                 pattern[i].SetActive(false);
             }
         }
         // 상태를 관리하는 StateMachine에 메모리를 할당하고, 첫 상태를 설정
         stateMachine = new StateMachine<OneStage>();
-
-
         stateMachine.Setup(this, states[(int)StagePase.Pase1]);	
 	}
 

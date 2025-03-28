@@ -4,9 +4,14 @@ using UnityEngine;
 public class BossBulletSpawn : MonoBehaviour
 {
 
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(CircleFire());
+    }
+
+    void Start()
+    {
+       
     }
 
     void Update()
@@ -14,6 +19,10 @@ public class BossBulletSpawn : MonoBehaviour
         
     }
 
+    private void OnDisable()
+    {
+        StopCoroutine(CircleFire());
+    }
 
     IEnumerator CircleFire()
     {

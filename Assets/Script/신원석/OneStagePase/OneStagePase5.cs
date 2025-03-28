@@ -27,18 +27,15 @@ public class OneStagePase5 : State<OneStage>
         entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 15f);
         entity.StartTimePattern(entity.Getpattern(EPattern.HadoukenPattern), 19f);
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 23f);
+        entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 23f);
 
+        entity.StartTimePattern(entity.Getpattern(EPattern.NextSceneAnimation), 27.0f);
+        entity.Getpattern(EPattern.NextSceneAnimation).GetComponent<NextSceneTriangleSpawner>().entity = entity;
     }
 
     public override void Execute(OneStage entity)
     {
-        //time += Time.deltaTime;
 
-        //if (time >= 25)
-        //{
-        //    entity.ChangeState(StagePase.Pase2);
-        //    return;
-        //}
     }
 
     public override void Exit(OneStage entity)

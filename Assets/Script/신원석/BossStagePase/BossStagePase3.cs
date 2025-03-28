@@ -17,13 +17,10 @@ public class BossStagePase3 : State<BossStage>
             entity.ChangeState(BossStagePase.Pase2);
             return;
         }
-
     }
 
     public override void Exit(BossStage entity)
     {
         
-    }
-
-    float time = 0;
+    }  
 }
