@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,9 +14,21 @@ public class Player : MonoBehaviour
         Idle,
         Move,
     }
-  
+
+    enum PlayerRenderState
+    {
+        Hp4,
+        Hp3,
+        Hp2,
+        Hp1,
+    }
+
+
+
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         collider2D = GetComponent<BoxCollider2D>();
 
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -31,8 +44,17 @@ public class Player : MonoBehaviour
     {
         Vector2 Targetpos = transform.position - collision.transform.position;
 
-        StartCoroutine(ApplyHitEffectCoroutine());
-        StartCoroutine(ApplyForceCoroutine(Targetpos.normalized));
+        
+
+        if (isInvincible ==false)
+        {
+            ChangePlayerRender();
+            StartCoroutine(ChangeInvincibleCoroutine());
+            blinkCoroutine = StartCoroutine(Blink());
+            StartCoroutine(ApplyHitEffectCoroutine());
+            StartCoroutine(ApplyForceCoroutine(Targetpos.normalized));
+                   
+        }    
     }
 
     private IEnumerator ApplyForceCoroutine(Vector2 Targetpos)
@@ -43,11 +65,81 @@ public class Player : MonoBehaviour
     }
     private IEnumerator ApplyHitEffectCoroutine()
     {
-        hitEffect.SetActive(true);
-        hitEffect.GetComponent<PlayerHitEffect>().HitPlayerEffect(new Vector2(-2.0f,2.0f),new Vector2(-2.0f,2.0f));
+        Instantiate(hitEffect, transform.position, quaternion.identity);
         yield return new WaitForSeconds(0.1f); // 0.1초 동안 힘을 가합니다.
-        hitEffect.SetActive(false);
     }
+    private IEnumerator ChangeInvincibleCoroutine()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(1.5f);
+        StopCoroutine(blinkCoroutine);
+
+        if(spriteRenderer.color.a <= 1)
+        {
+            StartCoroutine(IncreaseAlpha());
+        }
+        isInvincible = false;
+
+        yield break;
+    }
+    private void ChangePlayerRender()
+    {
+        playerRenderState = (PlayerRenderState)((int)playerRenderState + 1);
+
+        if (playerRenderState == (PlayerRenderState)4)
+        {
+            playerRenderState = PlayerRenderState.Hp1;
+        }
+
+        spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
+    }
+
+    private IEnumerator Blink()
+    {
+        while (true)
+        {
+            yield return ReduceAlpha();
+            yield return IncreaseAlpha();
+        }    
+    }
+
+    IEnumerator ReduceAlpha()
+    {
+        Color color = spriteRenderer.color;
+
+        while (true)
+        {
+            if(spriteRenderer.color.a <= 0 )
+            {
+                yield break;
+            }
+
+            color.a -= Time.deltaTime * blinkSpeed;
+            spriteRenderer.color = color;
+
+            yield return null;
+        }
+    }
+
+    IEnumerator IncreaseAlpha()
+    {
+        Color color = spriteRenderer.color;
+
+        while (true)
+        {
+            if (spriteRenderer.color.a >= 1)
+            {
+                yield break;
+            }
+
+            color.a += Time.deltaTime * blinkSpeed;
+            spriteRenderer.color = color;
+
+            yield return null;
+        }
+    }
+
+
     void limitPlayerMove()
     {
         // 중심 좌표를 뷰포트 좌표로 변환
@@ -198,38 +290,31 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerParticleSpawn spawn;
-
-
-
     [SerializeField]
     private float speed = 5.0f;
-
     [SerializeField]
     private float scaleXSpeed = 5.0f;
-
     [SerializeField]
     private float scaleYSpeed = 5.0f;
-
-
     [SerializeField]
     private float aniScaleXSpeed = 20.0f;
-
     [SerializeField]
     private float aniScaleYSpeed = 20.0f;
-
     [SerializeField]
     private float stopAniScaleX = 1.2f;
-
     [SerializeField]
     private float stopAniScaleY = 0.9f;
-
     [SerializeField]
     private GameObject dash;
     [SerializeField]
     private GameObject hitEffect;
-
     [SerializeField]
     private Transform dashTansform;
+
+    SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private List<Sprite> spriteRenderers = new List<Sprite>();
 
     private BoxCollider2D collider2D;
 
@@ -237,5 +322,19 @@ public class Player : MonoBehaviour
 
     float hp = 0;
 
+    float alpha = 0;
+
+    PlayerRenderState playerRenderState = PlayerRenderState.Hp4;
+
     private PlayerState playerState = PlayerState.Idle;
+
+    bool isInvincible = false;
+
+    private float maxAlpha = 1f;
+    private float minAlpha = 0.2f;
+
+    [SerializeField]
+    private float blinkSpeed = 0.5f;
+
+    private Coroutine blinkCoroutine;
 }

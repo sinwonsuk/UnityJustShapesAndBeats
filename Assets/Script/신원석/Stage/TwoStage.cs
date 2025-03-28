@@ -34,7 +34,8 @@ public class TwoStage : BaseGameEntity
 {
     void Start()
     {
-
+        SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage2);
+        SoundManager.GetInstance().SetSoundBgm(0.1f);
     }
 
     public override void Setup()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class SoundManager : MonoBehaviour
         Stage1,
         Stage2,
         Stage3,
-        Stage4,
     }
     private void Awake()
     {
@@ -93,11 +93,25 @@ public class SoundManager : MonoBehaviour
             sfxSound[i].volume = sfxVolume;
         }
     }
+    public void SetSoundBgm(float volume)
+    {
+        bgmPlayer.volume = volume;
+    }
+
+    public void ReduceSoundBgm()
+    {
+        if(bgmPlayer.volume <= 0)
+        {
+            bgmPlayer.volume -= Time.deltaTime * reduceSoundSpeed;
+        }     
+    }
 
     [Header("#BGM")]
     public AudioClip[] bgmClips;
     public float bgmVolume;
     AudioSource bgmPlayer;
+    public float reduceSoundSpeed;
+
 
     [Header("#SFX")]
     public AudioClip[] sfxClips;
@@ -105,5 +119,9 @@ public class SoundManager : MonoBehaviour
     public int channels;
     AudioSource[] sfxSound;
 
+
+
     static SoundManager instance;
+
+
 }

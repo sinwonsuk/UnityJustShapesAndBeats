@@ -30,7 +30,8 @@ public class OneStage : BaseGameEntity
 {
     void Start()
     {
-      
+        SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage1);
+        SoundManager.GetInstance().SetSoundBgm(0.1f);
     }
 
     private void OnDisable()

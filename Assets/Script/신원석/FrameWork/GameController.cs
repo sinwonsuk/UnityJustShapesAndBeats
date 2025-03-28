@@ -38,8 +38,6 @@ public class GameController : MonoBehaviour
 
 			stageEntities[(Stage)i] = entity;        
 		}   
-	
-        SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage1);
     }
 
     

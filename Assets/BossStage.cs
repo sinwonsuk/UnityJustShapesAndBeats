@@ -29,7 +29,8 @@ public class BossStage : BaseGameEntity
 {
     void Start()
     {
-
+        SoundManager.GetInstance().PlayBgm(SoundManager.bgm.Stage3);
+        SoundManager.GetInstance().SetSoundBgm(0.1f);
     }
 
     public override void Setup()
