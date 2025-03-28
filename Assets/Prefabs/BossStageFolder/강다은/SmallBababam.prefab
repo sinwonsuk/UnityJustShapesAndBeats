@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2630642023727360173, guid: 2f3b30232ffac9a418e28b3b152a0f41, type: 3}
+  m_Sprite: {fileID: 7679850454091061881, guid: ef488f059ba15544abc8a5f88dd7af66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -186,8 +186,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 6217234320974686265, guid: c0076c9679a591544a1ecbb78a8871ff, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1997753720862319292, guid: 196198784cc556042801f3a9539ffe6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -212,8 +212,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 0.03
   shrinkTime: 0.5
+  repeatCount: 2
   maxScale: 0.7
+  blinkCount: 3
+  blinkStrength: 0.5
   fadeCirclePrefab: {fileID: 8075217689724067659, guid: 6aaaa85382146e14eadb0579afff4a9a, type: 3}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &7403674271844523798
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +294,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6217234320974686265, guid: c0076c9679a591544a1ecbb78a8871ff, type: 3}
+  m_Sprite: {fileID: -1997753720862319292, guid: 196198784cc556042801f3a9539ffe6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

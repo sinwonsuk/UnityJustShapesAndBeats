@@ -137,7 +137,6 @@ public class MiniBossSpawner : MonoBehaviour
 	{
 		Vector3 randomPosition;
 		int attempts = 0;
-		const int maxAttempts = 10;
 		const float minDistance = 2f;
 
 		do
