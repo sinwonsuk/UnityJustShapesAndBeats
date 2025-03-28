@@ -37,7 +37,7 @@ public enum BossEPattern
     BigSnailSpawner,
     DotShootSpawner,
     MiniBossSpawner,
-    SmileBossSpawner,
+    SmileBossSpawner, boss_moom_circle
 
 }
 public class BossStage : BaseGameEntity
