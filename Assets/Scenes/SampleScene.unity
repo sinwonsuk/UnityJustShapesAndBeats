@@ -268,7 +268,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0044894665, y: -0.0029929876}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -278,7 +278,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.49, y: 0.5}
+  m_Size: {x: 0.277499, y: 0.2964779}
   m_EdgeRadius: 0
 --- !u!212 &137674101
 SpriteRenderer:
@@ -323,7 +323,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 788132751165732308, guid: f1c08f24a40405743b0ee61d743b1397, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1624,9 +1624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stagePrefab:
+  - {fileID: 3221423774192467718, guid: e9204bfb6a0ad144189b04fea3eabd7f, type: 3}
   - {fileID: 3221423774192467718, guid: 89ac3776989f3ee4b9856880d74bdf00, type: 3}
   - {fileID: 1392886950003031170, guid: 3e91d18abd506474f81273713568a03b, type: 3}
-  - {fileID: 3221423774192467718, guid: e9204bfb6a0ad144189b04fea3eabd7f, type: 3}
 --- !u!4 &1232646710
 Transform:
   m_ObjectHideFlags: 0
@@ -1813,7 +1813,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_Sprite: {fileID: 788132751165732308, guid: f1c08f24a40405743b0ee61d743b1397, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2001,4 +2001,3 @@ SceneRoots:
   - {fileID: 130616167}
   - {fileID: 736633495352270137}
   - {fileID: 599554446}
-

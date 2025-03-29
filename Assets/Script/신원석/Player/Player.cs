@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3"))
+        if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3") || collision.CompareTag("Outline"))
         {
             return;
         }
@@ -76,10 +76,10 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         playerRenderState = PlayerRenderState.Hp4;
-        spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
+        //spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
         spriteRenderer.color = Color.white;
         transform.position = Vector3.zero;
-        transform.localScale = Vector3.zero;
+        transform.localScale = Vector3.one;
 
     }
 
