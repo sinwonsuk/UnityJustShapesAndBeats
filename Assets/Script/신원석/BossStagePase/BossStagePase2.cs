@@ -15,12 +15,8 @@ public class BossStagePase2 : State<BossStage>
         entity.StopTimePattern(entity.Getpattern(BossEPattern.MiniBossSpawner), 6.9f);
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.MiniBossSpawner), 7f);
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.DotShootSpawner), 8f);
-        entity.StopTimePattern(entity.Getpattern(BossEPattern.BigSnailSpawner), 12f);
-		entity.StopTimePattern(entity.Getpattern(BossEPattern.BossBbababam), 12f);
-		entity.StopTimePattern(entity.Getpattern(BossEPattern.MiniBossSpawner), 12f);
-
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.SmileBossSpawner), 12f);
-		entity.StopTimePattern(entity.Getpattern(BossEPattern.SmileBossSpawner), 15.9f);
+		
 
 	}
 
@@ -35,7 +31,8 @@ public class BossStagePase2 : State<BossStage>
 
     public override void Exit(BossStage entity)
     {
-        
+		entity.StopPattern(entity.Getpattern(BossEPattern.MiniBossSpawner));
+		entity.StopPattern(entity.Getpattern(BossEPattern.SmileBossSpawner));
 	}
 
     private float time = 0;
