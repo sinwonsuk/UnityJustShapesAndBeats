@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 8875981795063175392}
   - component: {fileID: 3638310887899090130}
   - component: {fileID: 8466083809479329062}
+  - component: {fileID: -7928718331138028766}
   m_Layer: 0
   m_Name: BigSnail
   m_TagString: Untagged
@@ -197,6 +198,42 @@ MonoBehaviour:
   tailRotationSpeed: 380
   bulletPrefab: {fileID: 6839118294738979042, guid: 6af8247f6390c134fb4b7b85cf978feb, type: 3}
   bulletSpawnInterval: 0.05
+--- !u!58 &-7928718331138028766
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260328136303976815}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.17
 --- !u!1 &7403674271844523798
 GameObject:
   m_ObjectHideFlags: 0
