@@ -76,14 +76,20 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         playerRenderState = PlayerRenderState.Hp4;
-        //spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
+        spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
         spriteRenderer.color = Color.white;
-        transform.position = Vector3.zero;
+        transform.position = new Vector2(-6.0f, 0.0f);
         transform.localScale = Vector3.one;
 
     }
-
-
+    private void OnEnable()
+    {
+        playerRenderState = PlayerRenderState.Hp4;
+        //spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
+        //spriteRenderer.color = Color.white;
+        transform.position = new Vector2(-6.0f, 0.0f);
+        transform.localScale = Vector3.one;
+    }
 
 
     private IEnumerator ApplyForceCoroutine(Vector2 Targetpos)

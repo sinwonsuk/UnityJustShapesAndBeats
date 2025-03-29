@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System;
+using JetBrains.Annotations;
 
 public class BossStagePase6 : State<BossStage>
 {  
@@ -17,8 +19,9 @@ public class BossStagePase6 : State<BossStage>
         time += Time.deltaTime;
 
         if (time > 31f)
-        {
-           
+        {           
+           FadeManager.fadeManager.FadeOutAndChangeScene();
+           return;
         }
 
     }

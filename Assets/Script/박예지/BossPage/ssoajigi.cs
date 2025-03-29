@@ -12,6 +12,8 @@ public class ssoajigi : MonoBehaviour
     IEnumerator StartDelay()
     {
 
+        yield return new WaitForSeconds(2.0f); 
+
         while (true) // 무한 루프
         {
             transform.Translate(Vector2.left * Time.deltaTime * 1.8f);

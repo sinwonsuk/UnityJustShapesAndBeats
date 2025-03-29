@@ -8,6 +8,8 @@ public class BossStagePase3 : State<BossStage>
         entity.StartPattern(entity.Getpattern(BossEPattern.SpawnSlayerPattern1));
 
         Debug.Log(time);
+
+        time = 0;
     }
 
     public override void Execute(BossStage entity)
@@ -16,7 +18,7 @@ public class BossStagePase3 : State<BossStage>
 
         time += Time.deltaTime;
 
-        if (time > 33)
+        if (time > 19.0f)
         {
             entity.ChangeState(BossStagePase.Pase4);
             return;
@@ -25,7 +27,7 @@ public class BossStagePase3 : State<BossStage>
 
     public override void Exit(BossStage entity)
     {
-        
+        entity.AllStop();
     }
 
     private float time = 0;

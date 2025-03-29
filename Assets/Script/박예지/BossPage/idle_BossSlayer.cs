@@ -10,14 +10,29 @@ public class idle_BossSlayer : MonoBehaviour
     [SerializeField] private float shrinkTime = 0.5f;  // 크기 감소 시간
     [SerializeField] private float deleteTime = 0.1f;  // 삭제 시간
     public GameObject Bbullet;  // 총알 프리팹
-    [SerializeField] private float deleteDelayTime = 0.8f;  // 삭제 대기 시간
-    [SerializeField] private float appearDelayTime = 19f;  // 보스가 나타나는 시간 (초)
+    [SerializeField] private float deleteDelayTime = 1f;  // 삭제 대기 시간
+    [SerializeField] private float appearDelayTime = 18f;  // 보스가 나타나는 시간 (초)
 
     private void OnEnable()
     {
         // 보스를 처음에는 보이지 않게 설정
         transform.localScale = Vector3.zero;
     }
+
+    private void OnDisable()
+    {
+
+        originalScale = Vector3.one;  // 보스 원래 크기
+        firstScale = new Vector3(1.1f, 1.1f, 1.1f);  // 첫번째 크기
+        maxScale = new Vector3(1.1f, 1.1f, 1.1f);  // 최대 크기
+        growTime = 0.1f;  // 크기 증가 시간
+        shrinkTime = 0.5f;  // 크기 감소 시간
+        deleteTime = 0.1f;  // 삭제 시간
+        deleteDelayTime = 1f;  // 삭제 대기 시간
+        appearDelayTime = 18f;  // 보스가 나타나는 시간 (초)
+    }
+
+
 
     private void Start()
     {
@@ -71,7 +86,7 @@ public class idle_BossSlayer : MonoBehaviour
 
         transform.localScale = originalScale;  // 최종 크기 설정
 
-        // 일정 시간 대기 후 삭제
+        //  대기 시간
         yield return new WaitForSeconds(deleteDelayTime);
 
         // 보스가 다시 커지면서 사라짐
@@ -90,7 +105,5 @@ public class idle_BossSlayer : MonoBehaviour
             transform.localScale = Vector3.Lerp(maxScale, Vector3.zero, current / deleteTime);
             yield return null;
         }
-
-        Destroy(gameObject);  // 보스 삭제
     }
 }

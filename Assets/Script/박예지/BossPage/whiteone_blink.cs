@@ -34,6 +34,6 @@ public class whiteone_blink : MonoBehaviour
             yield return new WaitForSeconds(blinkInterval);
         }
 
-        Destroy(gameObject); //  설정된 횟수만큼 반짝인 후 삭제
+        gameObject.SetActive(false); // 반짝이기 끝나면 비활성화
     }
 }

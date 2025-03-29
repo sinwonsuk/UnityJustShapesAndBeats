@@ -11,6 +11,8 @@ public class boss_ssoajigi : MonoBehaviour
 
     IEnumerator StartDelay()
     {
+        yield return new WaitForSeconds(2.0f);
+
         while (true) 
         {
             transform.Translate(Vector2.left * Time.deltaTime * 5);

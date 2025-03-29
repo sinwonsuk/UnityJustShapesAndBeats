@@ -39,7 +39,6 @@ public class ShrinkAndDisappear : MonoBehaviour
             if (!isPaused)
             {
                 transform.localScale -= new Vector3(shrinkSpeed, shrinkSpeed, shrinkSpeed) * Time.deltaTime;
-
                 // 시간에 따라 색상 보간 (Lerp)
                 float t = (Time.time - startTime) / duration;
                 objectRenderer.material.color = Color.Lerp(startColor, endColor, t);
@@ -47,7 +46,7 @@ public class ShrinkAndDisappear : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // 크기가 0 이하로 줄어들면 객체 삭제
+            gameObject.SetActive(false);
         }
     }
 

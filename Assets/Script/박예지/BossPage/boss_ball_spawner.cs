@@ -17,8 +17,6 @@ public class boss_ball_spawner : MonoBehaviour
         // 12개의 탄을 한 번에 발사
         ShootBullets();
 
-        // 보스 오브젝트는 18초 뒤에 삭제
-        Destroy(gameObject, 18f);
     }
 
     // 12개의 탄을 한 번에 발사하는 함수

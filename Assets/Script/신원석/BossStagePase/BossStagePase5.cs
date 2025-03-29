@@ -30,9 +30,8 @@ public class BossStagePase5 : State<BossStage>
 
 	public override void Exit(BossStage entity)
 	{
-
-
-	}
+        entity.AllStop();
+    }
 
 	private float time = 0;
 }

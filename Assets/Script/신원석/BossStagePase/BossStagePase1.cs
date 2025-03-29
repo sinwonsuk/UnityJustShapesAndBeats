@@ -16,7 +16,8 @@ public class BossStagePase1 : State<BossStage>
         entity.StopTimePattern(entity.Getpattern(BossEPattern.Boss_BossBulletSpawn), 32f);
         entity.StartTimePattern(entity.Getpattern(BossEPattern.boss_moom_circle), 33);
 
-        
+       
+
     }
     float time = 0;
     public override void Execute(BossStage entity)
@@ -25,7 +26,7 @@ public class BossStagePase1 : State<BossStage>
         time += Time.deltaTime;
 
         if (time > 33)
-        {
+        {           
             entity.ChangeState(BossStagePase.Pase2);
             return;
         }
@@ -33,6 +34,6 @@ public class BossStagePase1 : State<BossStage>
     }
     public override void Exit(BossStage entity)
     {
-        
+        entity.AllStop();
     }
 }

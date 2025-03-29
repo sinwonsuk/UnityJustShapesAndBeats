@@ -44,7 +44,7 @@ public class ball_spawner2 : MonoBehaviour
             GameObject go = Instantiate(Bbullet, transform.position, Quaternion.Euler(0, 0, 30 * i));
         }
 
-        Destroy(gameObject, 18f); // 18초 뒤에 삭제
+       
     }
 
 

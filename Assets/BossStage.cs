@@ -37,7 +37,9 @@ public enum BossEPattern
     BigSnailSpawner,
     DotShootSpawner,
     MiniBossSpawner,
-    SmileBossSpawner, boss_moom_circle
+    SmileBossSpawner,
+    boss_moom_circle,
+    Pase4_idle_BossSlayer,
 
 }
 public class BossStage : BaseGameEntity
@@ -174,6 +176,14 @@ public class BossStage : BaseGameEntity
         yield return new WaitForSeconds(timeUpdate);
         pattern.SetActive(false);
         yield break;
+    }
+
+    public void AllStop()
+    {
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            pattern[i].SetActive(false);
+        }
     }
 
     // 바로 시작하고 싶다.
