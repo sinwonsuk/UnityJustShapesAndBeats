@@ -63,9 +63,16 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3"))
         {
             lobbyCollisionCheck = true;
-        }
-       
+        }     
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3"))
+        {
+            lobbyCollisionCheck = false;
+        }
+    }
+
 
     private void OnDisable()
     {
@@ -83,6 +90,7 @@ public class Player : MonoBehaviour
         //spriteRenderer.color = Color.white;
         transform.position = new Vector2(-6.0f, 0.0f);
         transform.localScale = Vector3.one;
+        lobbyCollisionCheck = false;
     }
 
 
@@ -119,8 +127,7 @@ public class Player : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
-            }
-            lobbyCollisionCheck = false;
+            }          
         }
     }
 
