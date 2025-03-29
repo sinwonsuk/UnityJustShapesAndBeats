@@ -33,35 +33,35 @@ public class BossStagePase4 : State<BossStage>
 
         entity.StartTimePattern(entity.Getpattern(BossEPattern.BossBulletSpawn), 4.0f);
 
-        entity.StopTimePattern(entity.Getpattern(BossEPattern.BossBulletSpawn), 11.0f);
+        entity.StopTimePattern(entity.Getpattern(BossEPattern.BossBulletSpawn), 9.5f);
 
-        entity.StartTimePattern(entity.Getpattern(BossEPattern.FadeToPinkCircle), 13.3f);
+        entity.StartTimePattern(entity.Getpattern(BossEPattern.FadeToPinkCircle), 11.6f);
 
-        entity.StopTimePattern(entity.Getpattern(BossEPattern.Pase4_idle_BossSlayer), 13.4f);
-      
+        entity.StopTimePattern(entity.Getpattern(BossEPattern.Pase4_idle_BossSlayer), 11.7f);
+
     }
 
     public override void Execute(BossStage entity)
     {
         time += Time.deltaTime;
 
-        if (time > 9.0f)
+        if (time > 7.3f)
         {
             entity.Getpattern(BossEPattern.BossChainUp).GetComponent<BossChainCircleSpawn>().StartReduceCircle();
             entity.Getpattern(BossEPattern.BossChainDown).GetComponent<BossChainCircleSpawn>().StartReduceCircle();
         }
 
-        if (time > 10.5f)
+        if (time > 8.7f)
         {
             entity.Getpattern(BossEPattern.SquareRotation).GetComponent<BossSquareRotation>().ReduceScaleChild();
         }
 
-        if (time > 11.0f)
+        if (time > 9.5f)
         {
             entity.Getpattern(BossEPattern.GhostParent).GetComponent<GhostParent>().ReduceScaleChild();
         }
 
-        if (time > 13.5f)
+        if (time > 11.8f)
         {
             entity.ChangeState(BossStagePase.Pase5);
             return;

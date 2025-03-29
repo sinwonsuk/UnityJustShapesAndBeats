@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1728508674789b4e8539a2ad08ebc3f, type: 3}
   m_Name: CinemachineImpulseChannels
   m_EditorClassIdentifier: 
-  ImpulseChannels: []
+  ImpulseChannels:
+  - Vertical
+  - Shake
