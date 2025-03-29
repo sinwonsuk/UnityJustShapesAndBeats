@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImagePrefab: {fileID: 2925155340803989222, guid: a624bb52c095ab8478b232812f56da75, type: 3}
+  initialBgmVolume: 0.1
