@@ -41,6 +41,8 @@ public enum BossEPattern
     SmileBossSpawner,
     boss_moom_circle,
     Pase4_idle_BossSlayer,
+    BeatCamera,
+    ShakeCamera
 
 }
 public class BossStage : BaseGameEntity

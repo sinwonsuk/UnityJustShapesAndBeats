@@ -11,6 +11,7 @@ public class BossStagePase1 : State<BossStage>
         entity.StartPattern(entity.Getpattern(BossEPattern.white_one_0));                       
         entity.StartPattern(entity.Getpattern(BossEPattern.big_white_one_0));
         entity.StartPattern(entity.Getpattern(BossEPattern.idle_BossSlayer));
+        entity.StartTimePattern(entity.Getpattern(BossEPattern.BeatCamera), 18.5f);
         entity.StopTimePattern(entity.Getpattern(BossEPattern.idle_BossSlayer), 33);
         entity.StartTimePattern(entity.Getpattern(BossEPattern.Boss_BossBulletSpawn), 18);
         entity.StopTimePattern(entity.Getpattern(BossEPattern.Boss_BossBulletSpawn), 32f);

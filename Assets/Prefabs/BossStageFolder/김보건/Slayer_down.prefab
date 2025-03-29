@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3812078984985120600}
   - component: {fileID: 4817593855833157944}
+  - component: {fileID: 6396856401373007623}
   - component: {fileID: 6678047266072255385}
   m_Layer: 0
   m_Name: BossSlayer
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305339387409220358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1037b8a0cd5d8c143808bce00b5456f8, type: 3}
   m_Name: 
@@ -56,6 +57,27 @@ MonoBehaviour:
   growTime: 0.06
   shrinkTime: 0.5
   deleteTime: 0.1
+  startTime: 0
+  deleteDelayTime: 0.15
+--- !u!114 &6396856401373007623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305339387409220358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb236203985a27a49958ccdff981dff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalScale: {x: 0.6, y: 0.6, z: 0.6}
+  firstScale: {x: 0.6, y: 0.6, z: 0.6}
+  maxScale: {x: 0.7, y: 0.7, z: 0.7}
+  growTime: 0.06
+  shrinkTime: 0.5
+  deleteTime: 0.1
+  startTime: 0
   deleteDelayTime: 0.15
 --- !u!58 &6678047266072255385
 CircleCollider2D:

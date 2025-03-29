@@ -1,30 +1,18 @@
-using System.Collections;
-using UnityEngine;
 using Unity.Cinemachine;
+using UnityEngine;
 
 public class ShakeCamera : MonoBehaviour
 {
+    public CinemachineImpulseSource impulseSource;
 
-    private void Awake()
+    public void Shake(float force = 1f)
     {
-        impulseSource = GetComponent<CinemachineImpulseSource>();
-    }
-    private void OnEnable()
-    {
-        StartCoroutine(StartShake());
-    }
+        Vector3 randomDir = new Vector3(
+            Random.Range(-1f, 1f),
+            Random.Range(-1f, 1f),
+            Random.Range(-1f, 1f)
+        ).normalized;
 
-    private IEnumerator StartShake()
-    {
-        yield return new WaitForSeconds(3f);
-        while (true)
-        {
-            impulseSource.GenerateImpulse(Vector2.up * shakeForce);
-            yield return new WaitForSeconds(shakeInterval);
-        }
+        impulseSource.GenerateImpulse(randomDir * force);
     }
-
-    private CinemachineImpulseSource impulseSource;
-    [SerializeField] private float shakeInterval = 0.2f;
-    [SerializeField] private float shakeForce = 1f;
 }

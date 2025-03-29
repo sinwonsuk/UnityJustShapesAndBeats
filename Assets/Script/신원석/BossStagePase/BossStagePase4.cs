@@ -13,6 +13,8 @@ public class BossStagePase4 : State<BossStage>
 
         entity.StopTimePattern(entity.Getpattern(BossEPattern.Pase3BossStartCircle), 3.0f);
 
+        entity.StartTimePattern(entity.Getpattern(BossEPattern.BeatCamera), 3.0f);
+
         entity.StartTimePattern(entity.Getpattern(BossEPattern.Pase4_idle_BossSlayer), 3.0f);
 
         entity.StartTimePattern(entity.Getpattern(BossEPattern.GhostParent), 3.2f);
