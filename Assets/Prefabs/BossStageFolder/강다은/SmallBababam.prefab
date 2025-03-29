@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 8875981795063175392}
   - component: {fileID: 3638310887899090130}
   - component: {fileID: 6095475735226976963}
+  - component: {fileID: -3900787148875792949}
   m_Layer: 0
   m_Name: SmallBababam
   m_TagString: Untagged
@@ -214,10 +215,45 @@ MonoBehaviour:
   shrinkTime: 0.5
   repeatCount: 2
   maxScale: 0.7
-  blinkCount: 3
   blinkStrength: 0.5
   fadeCirclePrefab: {fileID: 8075217689724067659, guid: 6aaaa85382146e14eadb0579afff4a9a, type: 3}
   flashColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!58 &-3900787148875792949
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260328136303976815}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.1969697
 --- !u!1 &7403674271844523798
 GameObject:
   m_ObjectHideFlags: 0
