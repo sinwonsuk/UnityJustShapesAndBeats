@@ -73,6 +73,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        playerRenderState = PlayerRenderState.Hp4;
+        spriteRenderer.sprite = spriteRenderers[(int)playerRenderState];
+        spriteRenderer.color = Color.white;
+        transform.position = Vector3.zero;
+        transform.localScale = Vector3.zero;
+
+    }
 
 
 
@@ -102,6 +111,12 @@ public class Player : MonoBehaviour
 
         yield break;
     }
+
+    public void DashInvincible()
+    {
+
+    }
+
     private void ChangePlayerRender()
     {
         playerRenderState = (PlayerRenderState)((int)playerRenderState + 1);
@@ -254,8 +269,11 @@ public class Player : MonoBehaviour
     }
     IEnumerator Dash()
     {
-        DashCoroutine();
-
+        StartCoroutine(DashCoroutine());
+        if(dashInvincibleCoroutine == null)
+        {
+            dashInvincibleCoroutine = StartCoroutine(DashInInvincible());
+        }
         speed *= 3.0f;
 
         while (true)
@@ -265,6 +283,17 @@ public class Player : MonoBehaviour
             yield break;
         }     
     }
+
+    IEnumerator DashInInvincible()
+    {
+        collider2D.enabled = false;
+        yield return new WaitForSeconds(0.8f);
+        collider2D.enabled = true;
+        dashInvincibleCoroutine = null;
+        yield break;
+    }
+
+
 
     IEnumerator MoveStopAni(float x,float y)
     {
@@ -357,4 +386,5 @@ public class Player : MonoBehaviour
     private float blinkSpeed = 0.5f;
 
     private Coroutine blinkCoroutine;
+    private Coroutine dashInvincibleCoroutine;
 }
