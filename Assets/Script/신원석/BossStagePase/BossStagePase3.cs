@@ -7,8 +7,6 @@ public class BossStagePase3 : State<BossStage>
     {
         entity.StartPattern(entity.Getpattern(BossEPattern.SpawnSlayerPattern1));
 
-        Debug.Log(time);
-
         time = 0;
     }
 
