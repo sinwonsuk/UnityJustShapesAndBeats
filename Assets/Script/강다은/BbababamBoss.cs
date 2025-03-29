@@ -102,7 +102,7 @@ public class BbababamBoss : MonoBehaviour
 		}
 		SetScale(Vector3.zero);
 
-		Destroy(gameObject);
+		gameObject.SetActive(false);
 	}
 
 	[SerializeField] private float growTime = 0.03f;

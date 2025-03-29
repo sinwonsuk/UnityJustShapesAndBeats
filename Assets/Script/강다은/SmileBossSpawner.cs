@@ -27,5 +27,4 @@ public class SmileBossSpawner : MonoBehaviour
 
 	[SerializeField] private GameObject BossSmilePrefab;
 	[SerializeField] private GameObject fadeCirclePrefab;
-	private float time = 0f;
 }

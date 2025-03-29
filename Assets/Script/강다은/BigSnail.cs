@@ -110,7 +110,7 @@ public class BigSnail : MonoBehaviour
 			yield return null;
 		}
 
-		Destroy(gameObject); // 보스 삭제
+		gameObject.SetActive(false);
 	}
 
 

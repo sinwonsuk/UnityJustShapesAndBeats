@@ -10,6 +10,11 @@ public class MiniBossSpawner : MonoBehaviour
 
 	private void OnEnable()
 	{
+		StartSpawnSequence();
+	}
+
+	public void StartSpawnSequence()
+	{
 		StartCoroutine(SpawnSequence());
 	}
 
@@ -57,7 +62,7 @@ public class MiniBossSpawner : MonoBehaviour
 		spawnedObjects.Add(bbabam1);
 		if (fadeCircles[0] != null)
 		{
-			Destroy(fadeCircles[0]);
+			fadeCircles[0].SetActive(false);
 			fadeCircles[0] = null;
 		}
 
@@ -71,7 +76,7 @@ public class MiniBossSpawner : MonoBehaviour
 		spawnedObjects.Add(snail1);
 		if (fadeCircles[1] != null)
 		{
-			Destroy(fadeCircles[1]);
+			fadeCircles[1].SetActive(false);
 			fadeCircles[1] = null;
 		}
 
@@ -85,7 +90,7 @@ public class MiniBossSpawner : MonoBehaviour
 		spawnedObjects.Add(bbabam2);
 		if (fadeCircles[2] != null)
 		{
-			Destroy(fadeCircles[2]);
+			fadeCircles[2].SetActive(false);
 			fadeCircles[2] = null;
 		}
 
@@ -99,12 +104,13 @@ public class MiniBossSpawner : MonoBehaviour
 		spawnedObjects.Add(snail2);
 		if (fadeCircles[3] != null)
 		{
-			Destroy(fadeCircles[3]);
+			fadeCircles[3].SetActive(false);
 			fadeCircles[3] = null;
 		}
 
 		yield return new WaitForSeconds(0.5f);
 		yield return StartCoroutine(ShrinkAndDestroy(snail2));
+		gameObject.SetActive(false);
 	}
 
 	private IEnumerator ShrinkAndDestroy(GameObject obj)
@@ -129,8 +135,9 @@ public class MiniBossSpawner : MonoBehaviour
 		if (obj != null)
 		{
 			objTransform.localScale = Vector3.zero;
-			Destroy(obj);
+			obj.SetActive(false);
 		}
+		
 	}
 
 	private Vector3 GetNonOverlappingSpawnPosition()
