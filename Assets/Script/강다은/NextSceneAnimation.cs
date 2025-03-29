@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEngine.EventSystems.EventTrigger;
+using System.Collections.Generic;
 
 public class NextSceneAnimation : MonoBehaviour
 {
+	private List<GameObject> spawnedObjects = new List<GameObject>(); // 생성된 오브젝트 추적
+
 	public void StartMoveAnimation(Vector2 startPos, Vector2 targetPos, float duration)
 	{
 		StartCoroutine(MoveFromOutside(startPos, targetPos, duration));
@@ -14,25 +16,18 @@ public class NextSceneAnimation : MonoBehaviour
 		if (!isTriggered && collision.CompareTag("Player"))
 		{
 			isTriggered = true;
-
 			StopAllCoroutines();  // 모든 코루틴 중지
 			isMoving = false;
 			StartCoroutine(AnimateSequence());
-			Vector3 spawnPosition = transform.position;
-			for (int i = 0; i < circleCount; i++)
-			{
-				GameObject circle = Instantiate(circlePrefab, spawnPosition, Quaternion.identity);
-				StartCoroutine(AnimateCircle(circle, i * circleWaveDelay));
-			}
 		}
 	}
 
-    private void Update()
-    {
-        SoundManager.GetInstance().ReduceSoundBgm();
-    }
+	private void Update()
+	{
+		SoundManager.GetInstance().ReduceSoundBgm();
+	}
 
-    private IEnumerator MoveFromOutside(Vector2 startPos, Vector2 targetPos, float duration)
+	private IEnumerator MoveFromOutside(Vector2 startPos, Vector2 targetPos, float duration)
 	{
 		isMoving = true;
 		float elapsedTime = 0f;
@@ -45,8 +40,7 @@ public class NextSceneAnimation : MonoBehaviour
 			noteTimer += Time.deltaTime;
 			float t = elapsedTime / duration;
 
-			// Bezier 곡선 계산
-			float curveT = Mathf.Sin(t * Mathf.PI * 0.5f); // Sin 함수를 사용해 더 자연스럽게 곡선 그리기
+			float curveT = Mathf.Sin(t * Mathf.PI * 0.5f);
 			Vector2 currentPos = BezierCurve(startPos, controlPoint, targetPos, curveT);
 
 			transform.position = currentPos;
@@ -61,6 +55,7 @@ public class NextSceneAnimation : MonoBehaviour
 			if (noteTimer >= noteSpawnInterval)
 			{
 				GameObject note = Instantiate(notePrefab, transform.position, Quaternion.identity);
+				spawnedObjects.Add(note);
 				StartCoroutine(AnimateNote(note));
 				noteTimer = 0f;
 			}
@@ -84,15 +79,22 @@ public class NextSceneAnimation : MonoBehaviour
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / noteLifetime;
 			float scaleVariation = Mathf.Sin(elapsedTime * Mathf.PI * 2) * noteScaleVariation;
-			note.transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, t * noteShrinkSpeed) + Vector3.one * scaleVariation;
 
-			if (sr != null)
-				sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			if (note != null) // Null 체크
+			{
+				note.transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, t * noteShrinkSpeed) + Vector3.one * scaleVariation;
+				if (sr != null)
+					sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			}
 
 			yield return null;
 		}
 
-		Destroy(note);
+		if (note != null)
+		{
+			spawnedObjects.Remove(note);
+			Destroy(note);
+		}
 	}
 
 	private IEnumerator AnimateSequence()
@@ -111,6 +113,7 @@ public class NextSceneAnimation : MonoBehaviour
 		}
 
 		GameObject expandingCircle = Instantiate(expandingCirclePrefab, startPos, Quaternion.identity);
+		spawnedObjects.Add(expandingCircle);
 		StartCoroutine(AnimateExpandingCircle(expandingCircle));
 
 		yield return new WaitForSeconds(expandDuration * 0.5f);
@@ -118,9 +121,12 @@ public class NextSceneAnimation : MonoBehaviour
 		for (int i = 0; i < circleCount; i++)
 		{
 			GameObject circle = Instantiate(circlePrefab, startPos, Quaternion.identity);
+			spawnedObjects.Add(circle);
 			StartCoroutine(AnimateCircle(circle, i * circleWaveDelay));
 		}
+
 		GameObject fadeout = Instantiate(fadeoutImage, transform.position, Quaternion.identity);
+		spawnedObjects.Add(fadeout);
 		yield return StartCoroutine(FadeOut(fadeout));
 	}
 
@@ -137,15 +143,22 @@ public class NextSceneAnimation : MonoBehaviour
 		{
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / circleFadeDuration;
-			circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
 
-			if (sr != null)
-				sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			if (circle != null) // Null 체크
+			{
+				circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
+				if (sr != null)
+					sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			}
 
 			yield return null;
 		}
 
-		Destroy(circle);
+		if (circle != null)
+		{
+			spawnedObjects.Remove(circle);
+			Destroy(circle);
+		}
 	}
 
 	private IEnumerator AnimateExpandingCircle(GameObject circle)
@@ -159,15 +172,22 @@ public class NextSceneAnimation : MonoBehaviour
 		{
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / expandDuration;
-			circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
 
-			if (sr != null)
-				sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			if (circle != null) // Null 체크
+			{
+				circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
+				if (sr != null)
+					sr.color = new Color(1, 1, 1, Mathf.Lerp(1f, 0f, t));
+			}
 
 			yield return null;
 		}
 
-		Destroy(circle);
+		if (circle != null)
+		{
+			spawnedObjects.Remove(circle);
+			Destroy(circle);
+		}
 	}
 
 	private IEnumerator FadeOut(GameObject fade)
@@ -180,32 +200,50 @@ public class NextSceneAnimation : MonoBehaviour
 		Color startColor = new Color(0f, 0f, 0f, 0f);
 		Color endColor = new Color(0f, 0f, 0f, 1f);
 
+		// FadeOut 애니메이션 진행 (화면이 검어질 때까지)
 		while (elapsedTime < fadeDuration)
 		{
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / fadeDuration;
-			fadeSpriteRender.color = Color.Lerp(startColor, endColor, t);
+
+			if (fade != null && fadeSpriteRender != null) // Null 체크
+			{
+				fadeSpriteRender.color = Color.Lerp(startColor, endColor, t);
+			}
+
 			yield return null;
 		}
+
+		// 화면이 완전히 검어진 후 모든 오브젝트 제거
+		foreach (GameObject obj in spawnedObjects.ToArray())
+		{
+			if (obj != null) // Null 체크
+			{
+				Destroy(obj);
+			}
+		}
+		spawnedObjects.Clear(); // 리스트 초기화
+
 		stage++;
-        //씬 전환 로직
-        SceneManager.ChangeScene(SceneStage.Lobby);
+		SceneManager.ChangeScene(SceneStage.Lobby); // 씬 전환
 		GameController.PluseStage();
 		entity.OffActive();
 		gameObject.SetActive(false);
 	}
+
 	private Vector2 BezierCurve(Vector2 startPos, Vector2 controlPoint, Vector2 targetPos, float t)
 	{
 		float u = 1 - t;
 		float tt = t * t;
 		float uu = u * u;
 
-		Vector2 p = uu * startPos; // (1 - t)^2 * startPos
-		p += 2 * u * t * controlPoint; // 2 * (1 - t) * t * controlPoint
-		p += tt * targetPos; // t^2 * targetPos
+		Vector2 p = uu * startPos;
+		p += 2 * u * t * controlPoint;
+		p += tt * targetPos;
 
 		return p;
 	}
+
 	[SerializeField] private GameObject circlePrefab;
 	[SerializeField] private GameObject expandingCirclePrefab;
 	[SerializeField] private GameObject notePrefab;
@@ -231,5 +269,5 @@ public class NextSceneAnimation : MonoBehaviour
 	private bool isTriggered = false;
 	private bool isMoving = false;
 	Stage stage = Stage.Stage1;
-    public BaseGameEntity entity;
+	public BaseGameEntity entity;
 }

@@ -1118,7 +1118,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4356e475e3562bc4aa912e8ed29ce5d7, type: 3}
   - {fileID: 8300000, guid: e81d3abeeb97ffd4fad590d6fdab923e, type: 3}
   bgmVolume: 0.1
-  reduceSoundSpeed: 0.02
+  reduceSoundSpeed: 0.03
   sfxClips: []
   sfxVolume: 0
   channels: 0
