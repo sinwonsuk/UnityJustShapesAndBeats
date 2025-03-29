@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UIElements;
@@ -185,6 +186,19 @@ public class BossStage : BaseGameEntity
             pattern[i].SetActive(false);
         }
     }
+    public void DisableUnlisted(GameObject[] pattern)
+    {
+        var patternSet = new HashSet<GameObject>(pattern);
+
+        foreach (var obj in this.pattern)
+        {
+            if (!patternSet.Contains(obj))
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
+
 
     // 바로 시작하고 싶다.
     public void StartPattern(GameObject pattern)

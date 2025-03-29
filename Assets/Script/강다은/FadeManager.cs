@@ -17,7 +17,7 @@ public class FadeManager : MonoBehaviour
 	}
 
 
-    public void FadeOutAndChangeScene(System.Action onBeforeSceneChange = null, System.Action onAfterSceneChange = null, float duration = 2f)
+    public void FadeOutAndChangeScene(SceneStage _stage,System.Action onBeforeSceneChange = null, System.Action onAfterSceneChange = null, float duration = 2f)
 	{
 		if (fadeImage != null)
 		{
@@ -28,10 +28,10 @@ public class FadeManager : MonoBehaviour
 		spriteRenderer = fadeImage.GetComponent<SpriteRenderer>();
 		spriteRenderer.color = new Color(0f, 0f, 0f, 0f); 
 		spriteRenderer.sortingOrder = 10; 
-		StartCoroutine(FadeRoutine(onBeforeSceneChange, onAfterSceneChange, duration));
+		StartCoroutine(FadeRoutine(_stage, onBeforeSceneChange, onAfterSceneChange, duration));
 	}
 
-	private IEnumerator FadeRoutine(System.Action onBeforeSceneChange, System.Action onAfterSceneChange, float duration)
+	private IEnumerator FadeRoutine(SceneStage _stage, System.Action onBeforeSceneChange, System.Action onAfterSceneChange, float duration)
 	{
 		float elapsed = 0f;
 		SoundManager soundManager = SoundManager.GetInstance();
@@ -65,6 +65,8 @@ public class FadeManager : MonoBehaviour
 		}
         if (onBeforeSceneChange != null)
             onAfterSceneChange?.Invoke();
+
+		SceneManager.ChangeScene(_stage);
 
         Destroy(fadeImage);
 	}

@@ -196,12 +196,13 @@ public class NextSceneAnimation : MonoBehaviour
 
 		// ✅ FadeManager로 전환
 		FadeManager.fadeManager.FadeOutAndChangeScene(
-			onBeforeSceneChange: () =>
+
+            SceneStage.Lobby,
+
+            onBeforeSceneChange: () =>
 			{
-				stage++;
 				GameController.PluseStage();
 				entity.OffActive();
-				SceneManager.ChangeScene(SceneStage.Lobby);
 			},
 			onAfterSceneChange: () =>
 			{
@@ -255,6 +256,5 @@ public class NextSceneAnimation : MonoBehaviour
 
 	private bool isTriggered = false;
 	private bool isMoving = false;
-	Stage stage = Stage.Stage1;
 	public BaseGameEntity entity;
 }

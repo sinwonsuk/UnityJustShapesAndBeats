@@ -59,7 +59,7 @@ public class BossStagePase4 : State<BossStage>
             entity.Getpattern(BossEPattern.GhostParent).GetComponent<GhostParent>().ReduceScaleChild();
         }
 
-        if (time > 12.0f)
+        if (time > 13.5f)
         {
             entity.ChangeState(BossStagePase.Pase5);
             return;
@@ -68,7 +68,13 @@ public class BossStagePase4 : State<BossStage>
 
     public override void Exit(BossStage entity)
     {
-        entity.AllStop();
+        GameObject[] gameObjects = new GameObject[]
+        {
+           entity.Getpattern(BossEPattern.BossChainDown),
+           entity.Getpattern(BossEPattern.BossChainUp)
+        };
+
+        entity.DisableUnlisted(gameObjects);
     }
 
     float time = 0;

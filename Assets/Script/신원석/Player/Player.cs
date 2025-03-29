@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -61,15 +61,15 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Stage1") && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.ChangeScene(SceneStage.Play);
+            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
         }
         else if (collision.CompareTag("Stage2") && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.ChangeScene(SceneStage.Play);
+            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
         }
         else if (collision.CompareTag("Stage3") && Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.ChangeScene(SceneStage.Play);
+            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
         }
     }
 
@@ -95,13 +95,13 @@ public class Player : MonoBehaviour
     private IEnumerator ApplyForceCoroutine(Vector2 Targetpos)
     {
         rigidbody2D.AddForce(Targetpos * 20.0f, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.1f); // 0.1ÃÊ µ¿¾È ÈûÀ» °¡ÇÕ´Ï´Ù.
-        rigidbody2D.linearVelocity = Vector2.zero; // ¼Óµµ¸¦ 0À¸·Î ¼³Á¤ÇÏ¿© ÈûÀ» ¸ØÃä´Ï´Ù.
+        yield return new WaitForSeconds(0.1f); // 0.1ì´ˆ ë™ì•ˆ í˜ì„ ê°€í•©ë‹ˆë‹¤.
+        rigidbody2D.linearVelocity = Vector2.zero; // ì†ë„ë¥¼ 0ìœ¼ë¡œ ì„¤ì •í•˜ì—¬ í˜ì„ ë©ˆì¶¥ë‹ˆë‹¤.
     }
     private IEnumerator ApplyHitEffectCoroutine()
     {
         Instantiate(hitEffect, transform.position, quaternion.identity);
-        yield return new WaitForSeconds(0.1f); // 0.1ÃÊ µ¿¾È ÈûÀ» °¡ÇÕ´Ï´Ù.
+        yield return new WaitForSeconds(0.1f); // 0.1ì´ˆ ë™ì•ˆ í˜ì„ ê°€í•©ë‹ˆë‹¤.
     }
     private IEnumerator ChangeInvincibleCoroutine()
     {
@@ -183,10 +183,10 @@ public class Player : MonoBehaviour
 
     void limitPlayerMove()
     {
-        // Áß½É ÁÂÇ¥¸¦ ºäÆ÷Æ® ÁÂÇ¥·Î º¯È¯
+        // ì¤‘ì‹¬ ì¢Œí‘œë¥¼ ë·°í¬íŠ¸ ì¢Œí‘œë¡œ ë³€í™˜
         Vector3 worldpos = Camera.main.WorldToViewportPoint(transform.position);
 
-        // ¿ùµå Å©±â¸¦ ºäÆ÷Æ® Å©±â·Î º¯È¯
+        // ì›”ë“œ í¬ê¸°ë¥¼ ë·°í¬íŠ¸ í¬ê¸°ë¡œ ë³€í™˜
         Vector3 colliderViewportSize = Camera.main.WorldToViewportPoint(transform.position + (Vector3)collider2D.size * 0.5f) - worldpos;
 
         worldpos.x = Mathf.Clamp(worldpos.x, colliderViewportSize.x, 1f - colliderViewportSize.x);
@@ -214,8 +214,8 @@ public class Player : MonoBehaviour
     }
    void UpdateIdle()
    {
-        float moveX = Input.GetAxis("Horizontal"); // A, D ¶Ç´Â ¡ç, ¡æ
-        float moveY = Input.GetAxis("Vertical");   // W, S ¶Ç´Â ¡è, ¡é
+        float moveX = Input.GetAxis("Horizontal"); // A, D ë˜ëŠ” â†, â†’
+        float moveY = Input.GetAxis("Vertical");   // W, S ë˜ëŠ” â†‘, â†“
 
         Vector2 moveDir = new Vector2(moveX, moveY);
 
@@ -230,15 +230,15 @@ public class Player : MonoBehaviour
 
    void MovePlayer()
    {
-        float moveX = Input.GetAxisRaw("Horizontal"); // A, D ¶Ç´Â ¡ç, ¡æ
-        float moveY = Input.GetAxisRaw("Vertical");   // W, S ¶Ç´Â ¡è, ¡é
+        float moveX = Input.GetAxisRaw("Horizontal"); // A, D ë˜ëŠ” â†, â†’
+        float moveY = Input.GetAxisRaw("Vertical");   // W, S ë˜ëŠ” â†‘, â†“
 
         Vector2 moveDir = new Vector2(moveX, moveY);
 
-        if (moveDir.sqrMagnitude > 0.01f) // ÀÌµ¿ ÁßÀÏ ¶§¸¸ È¸Àü
+        if (moveDir.sqrMagnitude > 0.01f) // ì´ë™ ì¤‘ì¼ ë•Œë§Œ íšŒì „
         {
             ChangeScale(1.2f,0.8f);
-            transform.right = moveDir.normalized * Time.deltaTime * speed; // ÀÌµ¿ ¹æÇâÀ» ¹Ù¶óº¸°Ô ¼³Á¤
+            transform.right = moveDir.normalized * Time.deltaTime * speed; // ì´ë™ ë°©í–¥ì„ ë°”ë¼ë³´ê²Œ ì„¤ì •
         }
         else
         {
@@ -304,20 +304,20 @@ public class Player : MonoBehaviour
     IEnumerator MoveStopAni(float x,float y)
     {
                
-       float startTime = Time.time; // ½ÃÀÛ ½Ã°£ ÀúÀå
+       float startTime = Time.time; // ì‹œì‘ ì‹œê°„ ì €ì¥
 
-       while (Time.time - startTime < 0.1f) // 0.1ÃÊ µ¿¾È¸¸ ¹İº¹
+       while (Time.time - startTime < 0.1f) // 0.1ì´ˆ ë™ì•ˆë§Œ ë°˜ë³µ
        {
            float scaleX = Mathf.MoveTowards(transform.localScale.x, x, aniScaleXSpeed * Time.deltaTime);
            float scaleY = Mathf.MoveTowards(transform.localScale.y, y, aniScaleYSpeed * Time.deltaTime);
 
            transform.localScale = new Vector3(scaleX, scaleY, 0.0f);
 
-           yield return null; // ÇÑ ÇÁ·¹ÀÓ ´ë±â (0.02ÃÊ Á¤µµ, FPS¿¡ µû¶ó ´Ù¸§)
+           yield return null; // í•œ í”„ë ˆì„ ëŒ€ê¸° (0.02ì´ˆ ì •ë„, FPSì— ë”°ë¼ ë‹¤ë¦„)
        }
 
-            // 0.1ÃÊ ÈÄ while¹® Å»Ãâ
-            Debug.Log("Å»Ãâ ¿Ï·á!");     
+            // 0.1ì´ˆ í›„ whileë¬¸ íƒˆì¶œ
+            Debug.Log("íƒˆì¶œ ì™„ë£Œ!");     
     }
 
     IEnumerator IdleAni()
