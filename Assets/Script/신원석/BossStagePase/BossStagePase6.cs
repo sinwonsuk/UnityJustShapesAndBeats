@@ -20,7 +20,7 @@ public class BossStagePase6 : State<BossStage>
 
         if (time > 31f)
         {           
-           FadeManager.fadeManager.FadeOutAndChangeScene();
+           FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Ending);
            return;
         }
 

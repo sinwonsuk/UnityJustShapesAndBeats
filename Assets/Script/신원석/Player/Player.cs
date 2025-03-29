@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        CheckLobbyCollision();
         limitPlayerMove();
         UpdatePlayerState();
     }
@@ -59,18 +60,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Stage1") && Input.GetKeyDown(KeyCode.Space))
+        if (collision.CompareTag("Stage1") || collision.CompareTag("Stage2") || collision.CompareTag("Stage3"))
         {
-            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
+            lobbyCollisionCheck = true;
         }
-        else if (collision.CompareTag("Stage2") && Input.GetKeyDown(KeyCode.Space))
-        {
-            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
-        }
-        else if (collision.CompareTag("Stage3") && Input.GetKeyDown(KeyCode.Space))
-        {
-            FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
-        }
+       
     }
 
     private void OnDisable()
@@ -118,10 +112,18 @@ public class Player : MonoBehaviour
         yield break;
     }
 
-    public void DashInvincible()
+    public void CheckLobbyCollision()
     {
-
+        if(lobbyCollisionCheck ==true)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                FadeManager.fadeManager.FadeOutAndChangeScene(SceneStage.Play);
+            }
+            lobbyCollisionCheck = false;
+        }
     }
+
 
     private void ChangePlayerRender()
     {
@@ -393,4 +395,7 @@ public class Player : MonoBehaviour
 
     private Coroutine blinkCoroutine;
     private Coroutine dashInvincibleCoroutine;
+
+    bool lobbyCollisionCheck = false;
+
 }

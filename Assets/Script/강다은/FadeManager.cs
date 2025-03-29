@@ -50,12 +50,15 @@ public class FadeManager : MonoBehaviour
 		soundManager.Bgm_Stop();
 
 
+
 		if(onBeforeSceneChange != null)
             onBeforeSceneChange?.Invoke();
 		yield return null;
 
-		// ⏫ Fade In
-		elapsed = 0f;
+        SceneManager.ChangeScene(_stage);
+
+        // ⏫ Fade In
+        elapsed = 0f;
 		while (elapsed < duration)
 		{
 			elapsed += Time.unscaledDeltaTime;
@@ -66,7 +69,7 @@ public class FadeManager : MonoBehaviour
         if (onBeforeSceneChange != null)
             onAfterSceneChange?.Invoke();
 
-		SceneManager.ChangeScene(_stage);
+		
 
         Destroy(fadeImage);
 	}
