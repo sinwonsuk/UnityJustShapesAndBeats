@@ -2,23 +2,27 @@ using UnityEngine;
 
 public class SpriteAppear : MonoBehaviour
 {
-    [Header("½ºÆù ¹üÀ§ ¼³Á¤")]
-    public Vector2 minSpawnRange;   // ½ºÆù ÃÖ¼Ò ¹üÀ§
-    public Vector2 maxSpawnRange;   // ½ºÆù ÃÖ´ë ¹üÀ§
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
+    public Vector2 minSpawnRange;   // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public Vector2 maxSpawnRange;   // ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    [Header("¸ñÇ¥ À§Ä¡ ¹üÀ§ ¼³Á¤")]
-    public Vector2 minTargetRange;  // ¸ñÇ¥ À§Ä¡ ÃÖ¼Ò ¹üÀ§
-    public Vector2 maxTargetRange;  // ¸ñÇ¥ À§Ä¡ ÃÖ´ë ¹üÀ§
+    [Header("ï¿½ï¿½Ç¥ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
+    public Vector2 minTargetRange;  // ï¿½ï¿½Ç¥ ï¿½ï¿½Ä¡ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public Vector2 maxTargetRange;  // ï¿½ï¿½Ç¥ ï¿½ï¿½Ä¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    public float speed = 5f;         // ÀÌµ¿ ¼Óµµ
-    public float rotationSpeed = 100f; // È¸Àü ¼Óµµ
-    public float growthSpeed = 1f;   // Å©±â Áõ°¡ ¼Óµµ
-    public Vector3 targetScale = new Vector3(0.8f, 0.8f, 0.8f);  // ÃÖÁ¾ ¸ñÇ¥ Å©±â
-    public Vector3 initialScale = new Vector3(0, 0, 0); // ÃÊ±â Å©±â
+    public float speed = 5f;         // ï¿½Ìµï¿½ ï¿½Óµï¿½
+    public float rotationSpeed = 100f; // È¸ï¿½ï¿½ ï¿½Óµï¿½
+    public float growthSpeed = 1f;   // Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
+    public Vector3 targetScale = new Vector3(0.8f, 0.8f, 0.8f);  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¥ Å©ï¿½ï¿½
+    public Vector3 initialScale = new Vector3(0, 0, 0); // ï¿½Ê±ï¿½ Å©ï¿½ï¿½
 
-    [Header("±ô¹ÚÀÓ ¼³Á¤")]
-    public Color blinkColor = Color.red;    // ±ô¹ÚÀÏ »ö
-    public float blinkInterval = 0.3f;      // ±ô¹ÚÀÌ´Â °£°Ý (ÃÊ)
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
+    public Color blinkColor = Color.red;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+    public float blinkInterval = 0.3f;      // ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½)
+
+    [Header("ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½")]
+    public GameObject spawnPrefab;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public float bulletSpeed = 5f;  // ï¿½ß»ï¿½ ï¿½Óµï¿½
 
     private Vector2 targetPosition;
     private bool isScaling;
@@ -35,7 +39,7 @@ public class SpriteAppear : MonoBehaviour
 
     void OnEnable()
     {
-        // ¸Å¹ø ÄÑÁú ¶§¸¶´Ù ·£´ý À§Ä¡ ¹× ÃÊ±âÈ­
+        // ï¿½Å¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ ï¿½Ê±ï¿½È­
         Vector2 randomSpawnPos = new Vector2(
             Random.Range(minSpawnRange.x, maxSpawnRange.x),
             Random.Range(minSpawnRange.y, maxSpawnRange.y)
@@ -52,9 +56,9 @@ public class SpriteAppear : MonoBehaviour
 
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = originalColor;  // ÃÊ±âÈ­
-            CancelInvoke(nameof(Blink));           // È¤½Ã ¸ô¶ó Ãë¼Ò
-            InvokeRepeating(nameof(Blink), 0, blinkInterval);  // ±ô¹ÚÀÌ±â ½ÃÀÛ
+            spriteRenderer.color = originalColor;  // ï¿½Ê±ï¿½È­
+            CancelInvoke(nameof(Blink));           // È¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            InvokeRepeating(nameof(Blink), 0, blinkInterval);  // ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
 
         Debug.Log($"Spawned at: {randomSpawnPos}, Target: {targetPosition}");
@@ -62,13 +66,13 @@ public class SpriteAppear : MonoBehaviour
 
     void Update()
     {
-        // È¸Àü
+        // È¸ï¿½ï¿½
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
 
-        // ÀÌµ¿
+        // ï¿½Ìµï¿½
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-        // Å©±â Áõ°¡
+        // Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (isScaling && transform.localScale.x < targetScale.x)
         {
             transform.localScale += new Vector3(growthSpeed, growthSpeed, 0) * Time.deltaTime;
@@ -78,18 +82,40 @@ public class SpriteAppear : MonoBehaviour
                 transform.localScale = targetScale;
                 isScaling = false;
 
-                CancelInvoke(nameof(Blink)); // ±ô¹ÚÀÌ±â ¸ØÃß±â
-                gameObject.SetActive(false); // »ç¶óÁö±â
+                CancelInvoke(nameof(Blink)); // ï¿½ï¿½ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ß±ï¿½
+                SpawnBullets(); // 8ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
+                gameObject.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
 
-    // »ö»ó ±ô¹ÚÀÌ±â
+    
     void Blink()
     {
         if (spriteRenderer == null) return;
 
         isBlinkOn = !isBlinkOn;
         spriteRenderer.color = isBlinkOn ? blinkColor : originalColor;
+    }
+
+    
+    void SpawnBullets()
+    {
+        if (spawnPrefab == null) return;
+
+        for (int i = 0; i < 8; i++)
+        {
+            float angle = i * 45f; //
+            float radian = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
+
+            GameObject bullet = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.linearVelocity = direction * bulletSpeed;
+            }
+        }
     }
 }

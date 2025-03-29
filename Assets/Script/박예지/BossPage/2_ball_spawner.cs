@@ -46,4 +46,7 @@ public class ball_spawner2 : MonoBehaviour
 
         Destroy(gameObject, 18f); // 18초 뒤에 삭제
     }
+
+
+
 }

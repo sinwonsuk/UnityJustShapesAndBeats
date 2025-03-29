@@ -45,15 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4737ac2748d4df64591460f5732b6547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 10, y: 4}
-  targetPosition: {x: 4, y: 2}
+  minSpawnRange: {x: 0, y: 0}
+  maxSpawnRange: {x: 0, y: 0}
+  minTargetRange: {x: 0, y: 0}
+  maxTargetRange: {x: 0, y: 0}
   speed: 5
   rotationSpeed: 100
   growthSpeed: 1
   targetScale: {x: 0.3, y: 0.3, z: 0.3}
   initialScale: {x: 0, y: 0, z: 0}
-  blinkColor: {r: 1, g: 0, b: 0, a: 1}
+  blinkColor: {r: 1, g: 0.1254902, b: 0.43921572, a: 1}
   blinkInterval: 0.3
+  spawnPrefab: {fileID: 1755676251603540105, guid: c07e579833794c94c9cb7161e8e256ff, type: 3}
+  bulletSpeed: 5
 --- !u!212 &6998133372653584272
 SpriteRenderer:
   m_ObjectHideFlags: 0
