@@ -1,31 +1,22 @@
 using System.Collections;
-using Unity.Cinemachine;
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class ShakeCamera : MonoBehaviour
 {
 
-    private void Start()
+    private void Awake()
     {
-        StartCoroutine(ShakeCycle());
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(StartShake());
     }
 
-    IEnumerator ShakeCycle()
+    private IEnumerator StartShake()
     {
-        yield return new WaitForSeconds(2f);
-
-        while (true)
-        {
-            startShakeCo = StartCoroutine(StartShake());
-            yield return new WaitForSeconds(4f); 
-    
-            StopCoroutine(startShakeCo);
-            yield return new WaitForSeconds(4f); 
-        }
-    }
-
-    IEnumerator StartShake()
-    {
+        yield return new WaitForSeconds(3f);
         while (true)
         {
             impulseSource.GenerateImpulse(Vector2.up * shakeForce);
@@ -33,9 +24,7 @@ public class ShakeCamera : MonoBehaviour
         }
     }
 
-    [SerializeField] private CinemachineImpulseSource impulseSource;
+    private CinemachineImpulseSource impulseSource;
     [SerializeField] private float shakeInterval = 0.2f;
     [SerializeField] private float shakeForce = 1f;
-
-    [SerializeField] private Coroutine startShakeCo;
 }
