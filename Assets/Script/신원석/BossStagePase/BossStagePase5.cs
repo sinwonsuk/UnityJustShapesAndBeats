@@ -26,7 +26,7 @@ public class BossStagePase5 : State<BossStage>
 		time += Time.deltaTime;
 		if (time > 20f)
 		{
-			entity.ChangeState(BossStagePase.Pase5);
+			entity.ChangeState(BossStagePase.Pase6);
 		}
 	}
 

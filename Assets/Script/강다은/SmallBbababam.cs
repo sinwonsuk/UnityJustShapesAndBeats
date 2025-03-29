@@ -96,13 +96,12 @@ public class SmallBbababam : MonoBehaviour
 
 	[SerializeField] private float growTime = 0.03f;
 	[SerializeField] private float shrinkTime = 0.3f;
-	[SerializeField] private int repeatCount = 4; // 반복 횟수
+	[SerializeField] private int repeatCount = 4;
 	[SerializeField] private float maxScale = 0.7f;
-	[SerializeField] private int blinkCount = 3; // 블링크 횟수
-	[SerializeField] private float blinkStrength = 0.5f; // 블링크 강도 (0~1)
-	[SerializeField] private GameObject fadeCirclePrefab; // FadeCircle 프리팹 (사용 안 함)
-	[SerializeField] private Color flashColor = Color.white; // 블링크 색상 (흰색)
-	private readonly Color originalColor = new Color(255 / 255f, 32 / 255f, 112 / 255f, 1f); // 원래 색상 (진한 핑크)
+	[SerializeField] private float blinkStrength = 0.5f;
+	[SerializeField] private GameObject fadeCirclePrefab;
+	[SerializeField] private Color flashColor = Color.white; 
+	private readonly Color originalColor = new Color(255 / 255f, 32 / 255f, 112 / 255f, 1f); 
 
 	private Transform[] childTransforms;
 	private SpriteRenderer spriteRenderer;
