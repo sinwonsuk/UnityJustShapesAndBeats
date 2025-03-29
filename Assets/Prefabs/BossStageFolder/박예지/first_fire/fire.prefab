@@ -52,7 +52,7 @@ MonoBehaviour:
   bobbingSpeed: 1
   bobbingAmount: 0.5
   center: {x: 0, y: 0}
-  Bbullet: {fileID: 671656131455859651, guid: febc244c167f43f43892e5dd023193e8, type: 3}
+  Bbullet: {fileID: 671656131455859651, guid: dd1efdc565d963442b6d409958eab3df, type: 3}
 --- !u!114 &9124903709456474121
 MonoBehaviour:
   m_ObjectHideFlags: 0

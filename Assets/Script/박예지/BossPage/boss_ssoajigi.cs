@@ -6,17 +6,15 @@ public class boss_ssoajigi : MonoBehaviour
 {
     private void Start()
     {
-        StartCoroutine(StartDelay()); // 2초 대기 후 이동 시작
+        StartCoroutine(StartDelay());
     }
 
     IEnumerator StartDelay()
     {
-
-
-        while (true) // 2초 후에 무한 루프로 이동 시작
+        while (true) 
         {
             transform.Translate(Vector2.left * Time.deltaTime * 5);
-            yield return null; // 다음 프레임까지 대기
+            yield return null; 
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3021231619982740768}
   - component: {fileID: 1398560479292660365}
   - component: {fileID: 3272058150859994176}
-  - component: {fileID: -2078472846177574436}
+  - component: {fileID: -3623066251622262525}
   m_Layer: 0
   m_Name: boss_fire
   m_TagString: Untagged
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-2078472846177574436
+--- !u!58 &-3623066251622262525
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
