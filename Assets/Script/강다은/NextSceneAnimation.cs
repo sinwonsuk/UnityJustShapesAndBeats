@@ -1,11 +1,9 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class NextSceneAnimation : MonoBehaviour
 {
-	private List<GameObject> spawnedObjects = new List<GameObject>(); // ª˝º∫µ» ø¿∫Í¡ß∆Æ √ﬂ¿˚
-
 	public void StartMoveAnimation(Vector2 startPos, Vector2 targetPos, float duration)
 	{
 		StartCoroutine(MoveFromOutside(startPos, targetPos, duration));
@@ -16,15 +14,10 @@ public class NextSceneAnimation : MonoBehaviour
 		if (!isTriggered && collision.CompareTag("Player"))
 		{
 			isTriggered = true;
-			StopAllCoroutines();  // ∏µÁ ƒ⁄∑Á∆æ ¡ﬂ¡ˆ
+			StopAllCoroutines();  // Î™®Îì† ÏΩîÎ£®Ìã¥ Ï§ëÏßÄ
 			isMoving = false;
 			StartCoroutine(AnimateSequence());
 		}
-	}
-
-	private void Update()
-	{
-		SoundManager.GetInstance().ReduceSoundBgm();
 	}
 
 	private IEnumerator MoveFromOutside(Vector2 startPos, Vector2 targetPos, float duration)
@@ -80,7 +73,7 @@ public class NextSceneAnimation : MonoBehaviour
 			float t = elapsedTime / noteLifetime;
 			float scaleVariation = Mathf.Sin(elapsedTime * Mathf.PI * 2) * noteScaleVariation;
 
-			if (note != null) // Null √º≈©
+			if (note != null) // Null Ï≤¥ÌÅ¨
 			{
 				note.transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, t * noteShrinkSpeed) + Vector3.one * scaleVariation;
 				if (sr != null)
@@ -125,9 +118,11 @@ public class NextSceneAnimation : MonoBehaviour
 			StartCoroutine(AnimateCircle(circle, i * circleWaveDelay));
 		}
 
-		GameObject fadeout = Instantiate(fadeoutImage, transform.position, Quaternion.identity);
-		spawnedObjects.Add(fadeout);
-		yield return StartCoroutine(FadeOut(fadeout));
+		fadeImage = Instantiate(fadeoutImage, Vector3.zero, Quaternion.identity);
+		SpriteRenderer fadeSprite = fadeImage.GetComponent<SpriteRenderer>();
+		fadeSprite.sortingOrder = 10;
+		spawnedObjects.Add(fadeImage);
+		yield return StartCoroutine(FadeOut());
 	}
 
 	private IEnumerator AnimateCircle(GameObject circle, float delay)
@@ -144,7 +139,7 @@ public class NextSceneAnimation : MonoBehaviour
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / circleFadeDuration;
 
-			if (circle != null) // Null √º≈©
+			if (circle != null) // Null Ï≤¥ÌÅ¨
 			{
 				circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
 				if (sr != null)
@@ -173,7 +168,7 @@ public class NextSceneAnimation : MonoBehaviour
 			elapsedTime += Time.deltaTime;
 			float t = elapsedTime / expandDuration;
 
-			if (circle != null) // Null √º≈©
+			if (circle != null) // Null Ï≤¥ÌÅ¨
 			{
 				circle.transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
 				if (sr != null)
@@ -190,46 +185,36 @@ public class NextSceneAnimation : MonoBehaviour
 		}
 	}
 
-	private IEnumerator FadeOut(GameObject fade)
+	private IEnumerator FadeOut()
 	{
-		float elapsedTime = 0f;
-		float fadeDuration = 1f;
-
-		SpriteRenderer fadeSpriteRender = fade.GetComponent<SpriteRenderer>();
-		fadeSpriteRender.sortingOrder = 10;
-		Color startColor = new Color(0f, 0f, 0f, 0f);
-		Color endColor = new Color(0f, 0f, 0f, 1f);
-
-		// FadeOut æ÷¥œ∏ﬁ¿Ãº« ¡¯«‡ (»≠∏È¿Ã ∞ÀæÓ¡˙ ∂ß±Ó¡ˆ)
-		while (elapsedTime < fadeDuration)
-		{
-			elapsedTime += Time.deltaTime;
-			float t = elapsedTime / fadeDuration;
-
-			if (fade != null && fadeSpriteRender != null) // Null √º≈©
-			{
-				fadeSpriteRender.color = Color.Lerp(startColor, endColor, t);
-			}
-
-			yield return null;
-		}
-
-		// »≠∏È¿Ã øœ¿¸»˜ ∞ÀæÓ¡¯ »ƒ ∏µÁ ø¿∫Í¡ß∆Æ ¡¶∞≈
 		foreach (GameObject obj in spawnedObjects.ToArray())
 		{
-			if (obj != null) // Null √º≈©
-			{
+			if (obj != null)
 				Destroy(obj);
-			}
 		}
-		spawnedObjects.Clear(); // ∏ÆΩ∫∆Æ √ ±‚»≠
+		spawnedObjects.Clear();
 
-		stage++;
-		SceneManager.ChangeScene(SceneStage.Lobby); // æ¿ ¿¸»Ø
-		GameController.PluseStage();
-		entity.OffActive();
-		gameObject.SetActive(false);
+		// ‚úÖ FadeManagerÎ°ú Ï†ÑÌôò
+		FadeManager.fadeManager.FadeOutAndChangeScene(
+			onBeforeSceneChange: () =>
+			{
+				stage++;
+				GameController.PluseStage();
+				entity.OffActive();
+				SceneManager.ChangeScene(SceneStage.Lobby);
+			},
+			onAfterSceneChange: () =>
+			{
+				Debug.Log("‚úÖ Ïî¨ Ï†ÑÌôò ÌõÑ FadeIn ÏßÑÌñâ Ï§ë");
+			},
+			duration: 2f
+		);
+
+		yield return null;
+
+		Destroy(gameObject); // ÏûêÍ∏∞ Ï†úÍ±∞
 	}
+
 
 	private Vector2 BezierCurve(Vector2 startPos, Vector2 controlPoint, Vector2 targetPos, float t)
 	{
@@ -265,6 +250,8 @@ public class NextSceneAnimation : MonoBehaviour
 	private float scaleFrequency = 2f;
 	private float circleWaveDelay = 0.2f;
 	private float noteScaleVariation = 0.2f;
+	public static List<GameObject> spawnedObjects = new List<GameObject>(); // ÏÉùÏÑ±Îêú Ïò§Î∏åÏ†ùÌä∏ Í¥ÄÎ¶¨
+	private GameObject fadeImage;
 
 	private bool isTriggered = false;
 	private bool isMoving = false;
