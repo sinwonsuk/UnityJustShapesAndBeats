@@ -7,7 +7,7 @@ public class BossStagePase1 : State<BossStage>
     {
         time = 0;
         entity.StartPattern(entity.Getpattern(BossEPattern.fire));
-        entity.StopTimePattern(entity.Getpattern(BossEPattern.fire), 18);
+        entity.StopTimePattern(entity.Getpattern(BossEPattern.fire),17);
         entity.StartPattern(entity.Getpattern(BossEPattern.white_one_0));                       
         entity.StartPattern(entity.Getpattern(BossEPattern.big_white_one_0));
         entity.StartPattern(entity.Getpattern(BossEPattern.idle_BossSlayer));
@@ -16,6 +16,7 @@ public class BossStagePase1 : State<BossStage>
         entity.StopTimePattern(entity.Getpattern(BossEPattern.Boss_BossBulletSpawn), 32f);
         entity.StartTimePattern(entity.Getpattern(BossEPattern.boss_moom_circle), 33);
         
+
 
 
     }
