@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7508880665515793990
+--- !u!1 &207452620682062866
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5523354959928069842}
-  - component: {fileID: 4405956634875072507}
-  - component: {fileID: 5687176819685687102}
+  - component: {fileID: 5503260833151310441}
+  - component: {fileID: 8110544576218171821}
+  - component: {fileID: 2310287478751609538}
   m_Layer: 0
-  m_Name: BeatCamera
+  m_Name: ShakeCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &5523354959928069842
+--- !u!4 &5503260833151310441
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508880665515793990}
+  m_GameObject: {fileID: 207452620682062866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4405956634875072507
+--- !u!114 &8110544576218171821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508880665515793990}
+  m_GameObject: {fileID: 207452620682062866}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ImpulseDefinition:
-    ImpulseChannel: 1
-    ImpulseShape: 2
+    ImpulseChannel: 2
+    ImpulseShape: 3
     CustomImpulseShape:
       serializedVersion: 2
       m_Curve: []
@@ -86,17 +86,16 @@ MonoBehaviour:
     DissipationDistance: 100
     PropagationSpeed: 343
   DefaultVelocity: {x: 0, y: -1, z: 0}
---- !u!114 &5687176819685687102
+--- !u!114 &2310287478751609538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508880665515793990}
+  m_GameObject: {fileID: 207452620682062866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2694a8b58240ae4e9e09ff327362436, type: 3}
+  m_Script: {fileID: 11500000, guid: 36135469d4cd60f43b85bd53383dba1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeInterval: 0.45
-  shakeForce: 0.2
+  impulseSource: {fileID: 8110544576218171821}

@@ -1,28 +1,16 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Splines.ExtrusionShapes;
 
-public class SlayerBoss : MonoBehaviour
+public class SlayetBoss_Down : MonoBehaviour
 {
-    [SerializeField] private Vector3 originalScale =new Vector3(0.6f, 0.6f, 0.6f);
+    [SerializeField] private Vector3 originalScale = new Vector3(0.6f, 0.6f, 0.6f);
     [SerializeField] private Vector3 firstScale = new Vector3(0.6f, 0.6f, 0.6f);
-    [SerializeField] private Vector3 maxScale = new Vector3(0.7f, 0.7f, 0.7f); 
+    [SerializeField] private Vector3 maxScale = new Vector3(0.7f, 0.7f, 0.7f);
     [SerializeField] private float growTime = 0.06f;
     [SerializeField] private float shrinkTime = 0.5f;
     [SerializeField] private float deleteTime = 0.1f;
     [SerializeField] private float startTime = 0f;
     [SerializeField] private float deleteDelayTime = 0.15f;
-
-    private ShakeCamera cameraShakeTrigger;
-
-    void Start()
-    {
-        cameraShakeTrigger = FindFirstObjectByType<ShakeCamera>();
-        if (cameraShakeTrigger == null)
-        {
-            Debug.LogWarning("CameraShakeTrigger를 찾을 수 없습니다!");
-        }
-    }
 
     private void OnEnable()
     {
@@ -58,8 +46,6 @@ public class SlayerBoss : MonoBehaviour
             transform.localScale = Vector3.Lerp(firstScale, maxScale, current / growTime);
             yield return null;
         }
-
-        cameraShakeTrigger?.Shake(0.1f);
 
         ChangeColor(pinkColor);
         current = 0f;

@@ -6,7 +6,9 @@ public class BossStagePase5 : State<BossStage>
 	public override void Enter(BossStage entity)
 	{
 		time = 0;
-		entity.StartTimePattern(entity.Getpattern(BossEPattern.BossBbababam), 0.5f);
+
+        entity.StartPattern(entity.Getpattern(BossEPattern.BeatCamera));
+        entity.StartTimePattern(entity.Getpattern(BossEPattern.BossBbababam), 0.5f);
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.DotShootSpawner), 0);
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.MiniBossSpawner), 2f);
 		entity.StartTimePattern(entity.Getpattern(BossEPattern.BigSnailSpawner), 5f);

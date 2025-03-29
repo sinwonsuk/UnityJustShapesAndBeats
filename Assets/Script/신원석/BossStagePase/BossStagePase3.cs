@@ -18,7 +18,7 @@ public class BossStagePase3 : State<BossStage>
 
         time += Time.deltaTime;
 
-        if (time > 19.0f)
+        if (time > 14f)
         {
             entity.ChangeState(BossStagePase.Pase4);
             return;
@@ -27,7 +27,7 @@ public class BossStagePase3 : State<BossStage>
 
     public override void Exit(BossStage entity)
     {
-        entity.AllStop();
+      
     }
 
     private float time = 0;
