@@ -69,8 +69,6 @@ public class FadeManager : MonoBehaviour
         if (onBeforeSceneChange != null)
             onAfterSceneChange?.Invoke();
 
-		
-
         Destroy(fadeImage);
 	}
 

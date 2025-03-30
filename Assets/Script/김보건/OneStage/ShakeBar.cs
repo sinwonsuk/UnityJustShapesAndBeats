@@ -13,7 +13,7 @@ public class ShakeBar : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private IEnumerator MoveUpDown(GameObject obj, float duration, float moveAmount, float interval, float startTime)

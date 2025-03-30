@@ -24,8 +24,10 @@ public class OneStagePase5 : State<OneStage>
 
         entity.StartTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 17f);
 
+
         entity.StartTimePattern(entity.Getpattern(EPattern.UppercutPattern), 15f);
         entity.StartTimePattern(entity.Getpattern(EPattern.HadoukenPattern), 19f);
+        entity.StopTimePattern(entity.Getpattern(EPattern.map_fastCreate_shake), 23f);
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 23f);
         entity.StopTimePattern(entity.Getpattern(EPattern.UppercutPattern), 23f);
 
@@ -40,6 +42,8 @@ public class OneStagePase5 : State<OneStage>
 
     public override void Exit(OneStage entity)
     {
+        entity.AllStop();
+
         time = 0;
     }
 

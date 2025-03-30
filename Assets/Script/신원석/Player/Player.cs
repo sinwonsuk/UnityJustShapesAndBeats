@@ -33,6 +33,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            Time.timeScale += 1.0f;
+        }
+
         CheckLobbyCollision();
         limitPlayerMove();
         UpdatePlayerState();

@@ -123,6 +123,14 @@ public class OneStage : BaseGameEntity
         yield break;
     }
 
+    public void AllStop()
+    {
+        for (int i = 0; i < pattern.Length; i++)
+        {
+            pattern[i].SetActive(false);
+        }
+    }
+
     // 바로 시작하고 싶다.
     public void StartPattern(GameObject pattern)
     {

@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
         Stage1,
         Stage2,
         Stage3,
+        Lobby,
     }
     private void Awake()
     {

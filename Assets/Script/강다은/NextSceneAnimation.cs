@@ -201,12 +201,13 @@ public class NextSceneAnimation : MonoBehaviour
 
             onBeforeSceneChange: () =>
 			{
-				GameController.PluseStage();
-				entity.OffActive();
+
 			},
 			onAfterSceneChange: () =>
 			{
-				Debug.Log("✅ 씬 전환 후 FadeIn 진행 중");
+                GameController.PluseStage();
+                entity.OffActive();
+                Debug.Log("✅ 씬 전환 후 FadeIn 진행 중");
 			},
 			duration: 2f
 		);
