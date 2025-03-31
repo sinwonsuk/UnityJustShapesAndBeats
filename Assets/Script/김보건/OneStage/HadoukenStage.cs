@@ -1,8 +1,5 @@
-using Mono.Cecil.Cil;
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
-
 public class HadoukenStage : MonoBehaviour
 {
 

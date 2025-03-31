@@ -1,8 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using static UnityEditor.VersionControl.Asset;
-
 public enum TestStagePase
 {
     // 테스트 스테이지입니다

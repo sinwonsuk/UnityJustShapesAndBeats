@@ -1,9 +1,5 @@
 using System.Collections;
-using System.ComponentModel;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using static UnityEditor.VersionControl.Asset;
-
 public enum StagePase 
 { 
 	Pase1 = 0,

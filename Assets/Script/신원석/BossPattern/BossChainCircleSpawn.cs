@@ -1,9 +1,6 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Splines.ExtrusionShapes;
-using static UnityEditor.PlayerSettings;
 
 public class BossChainCircleSpawn : MonoBehaviour
 {
