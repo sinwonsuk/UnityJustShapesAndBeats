@@ -25,16 +25,21 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("1"))
+        if (Input.GetKeyDown(KeyCode.Escape)) // ESC 키 입력 감지
         {
-            ChangeScene(SceneStage.Lobby);
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            ChangeScene(SceneStage.Play);
+            QuitGame();
         }
 
         UpdateScene();
+    }
+
+    void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // 에디터에서 실행 중이면 플레이 모드 종료
+#else
+        Application.Quit(); // 빌드된 게임이면 종료
+#endif
     }
 
     public void UpdateScene()

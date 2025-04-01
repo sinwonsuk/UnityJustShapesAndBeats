@@ -21,7 +21,7 @@ public class FadeManager : MonoBehaviour
 	{
 		if (fadeImage != null)
 		{
-			Destroy(fadeImage); 
+            DestroyImmediate(fadeImage); 
 		}
 
 		fadeImage = Instantiate(fadeImagePrefab, Vector3.zero, Quaternion.identity);
@@ -49,8 +49,6 @@ public class FadeManager : MonoBehaviour
 
 		soundManager.Bgm_Stop();
 
-
-
 		if(onBeforeSceneChange != null)
             onBeforeSceneChange?.Invoke();
 		yield return null;
@@ -69,7 +67,6 @@ public class FadeManager : MonoBehaviour
         if (onBeforeSceneChange != null)
             onAfterSceneChange?.Invoke();
 
-        Destroy(fadeImage);
 	}
 
 	public static FadeManager fadeManager;
